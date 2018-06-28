@@ -1069,6 +1069,11 @@ HEADER STYLES
   #logo-mobile a {
     color: #000; }
 
+.social {
+  position: absolute;
+  right: 1rem;
+  top: 2rem; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -1082,7 +1087,6 @@ NAVIGATION STYLES
 nav li {
   text-align: center; }
   nav li a {
-    text-transform: uppercase;
     font-size: 1.25rem;
     line-height: 1;
     text-decoration: none;
@@ -1092,7 +1096,7 @@ nav li {
 
 .nav {
   border-bottom: 0;
-  margin: 1.65em 0 .75em;
+  margin: 1.65em 0;
   border-top: 1px solid #0b6b4e;
   /* end .menu li */
   /* highlight current page */
@@ -1108,9 +1112,10 @@ nav li {
       this is for mobile ONLY, so there's no need
       to declare hover styles here
       */ }
-    .nav li ul.sub-menu li a,
-    .nav li ul.children li a {
-      padding-left: 30px; }
+    .nav li ul.sub-menu,
+    .nav li ul.children {
+      margin: 0;
+      padding: 0; }
 
 /*********************
 POSTS & CONTENT STYLES
@@ -1537,8 +1542,8 @@ TABLET & SMALLER LAPTOPS
   *********************/
   #logo {
     display: block;
-    width: 240px;
-    margin: 1.4rem 0;
+    width: 200px;
+    margin: 0;
     position: absolute;
     z-index: 10;
     left: 2rem;
@@ -1566,7 +1571,6 @@ TABLET & SMALLER LAPTOPS
   .nav {
     border: none;
     text-align: center;
-    margin: 4.65em 0 1.5em;
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */ }

@@ -245,6 +245,12 @@ HEADER STYLES
 	}
 }
 
+.social {
+	position: absolute;
+	right: 1rem;
+	top: 2rem;
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -263,7 +269,6 @@ nav {
 		text-align: center;
 		
 		a {
-			text-transform: uppercase;
 			font-size: 1.25rem;
 			line-height: 1;
 			text-decoration: none;
@@ -282,7 +287,7 @@ nav {
 
 .nav {
 	border-bottom: 0;
-	margin: 1.65em 0 .75em;
+	margin: 1.65em 0;
 	border-top: 1px solid $green;
 
 	li {
@@ -309,12 +314,12 @@ nav {
 
 		ul.sub-menu,
 		ul.children {
+			margin: 0;
+			padding: 0;
 
 			li {
 
 				a {
-					padding-left: 30px;
-
 					&:hover,
 					&:focus {}
 
