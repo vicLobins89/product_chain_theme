@@ -1,0 +1,86 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Button Styles
+
+Helpful Links:
+http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+
+******************************************************************/
+
+/*********************
+BUTTON DEFAULTS
+
+Quick video guide:
+http://www.youtube.com/watch?v=hwdVpKiJzac
+
+*********************/
+
+%btn {
+	display: inline-block;
+	position: relative;
+	font-family: $sans-serif;
+	text-decoration: none;
+	color: $white;
+	background-color: $black;
+	font-size: 1.4rem;
+	line-height: 1;
+	font-weight: 400;
+	padding: 0.7rem 0.75rem;
+	margin-right: 0.85rem;
+	border: 2px solid $black;
+	cursor: pointer;
+	text-transform: uppercase;
+	min-width: 8rem;
+    text-align: center;
+	@include transition(all 0.14s ease-in-out);
+
+	// hovering on the btn
+	&:hover, &:focus {
+		color: $white;
+		text-decoration: none;
+		outline: none;
+	} // end hover
+
+	// clicking on the button
+	&:active {
+		top: 1px; // adds a tiny hop to the click
+	} // end active
+	
+	a {
+		color: inherit !important;
+		text-decoration: inherit !important;
+	}
+
+} // end .button
+
+
+.green-btn, a.green-btn {
+	@extend %btn; // here we load the btn defaults
+	background-color: $green;
+	border-color: $green;
+	color: $white;
+
+	&:hover,
+	&:focus {
+		background-color: $white;
+		color: $green;
+	} // end hover// end active
+	
+	&:visited {
+		color: $white;
+	}
+	
+	&.invert {
+		background-color: $white;
+		color: $green;
+		
+		&:hover,
+		&:focus {
+			background-color: $green;
+			color: $white;
+		} // end hover
+	}
+
+} // end green button

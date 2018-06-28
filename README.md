@@ -1,1 +1,2 @@
-# product_chain_theme
+# seq_theme
+Sequentra WordPress Theme

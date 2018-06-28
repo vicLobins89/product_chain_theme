@@ -1,0 +1,218 @@
+/******************************************************************
+Site Name: Honey
+Author: Vic Lobins
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+html {
+	font-size: 80%;
+}
+
+body {}
+
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 760px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {}
+
+#logo {
+	display: block;
+	width: 240px;
+	margin: 1.4rem 0;
+	position: absolute;
+	z-index: 10;
+	left: 2rem;
+	font-size: 0;
+	
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	a {
+		color: $black;
+	}
+}
+
+#logo-mobile {
+	display: none;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.menu-button {
+	display: none;
+}
+
+nav {
+	li {
+		text-align: left;
+		
+		a {
+			font-size: 0.85rem;
+		}
+	}
+}
+
+.nav {
+	border: none;
+	text-align: center;
+	margin: 4.65em 0 1.5em;
+	
+	li {
+		display: inline-block;
+		position: relative;
+		border: none;
+
+		a {
+			border-bottom: 0;
+
+			&:hover, &:focus {
+				color: $link-hover;
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		ul.sub-menu,
+		ul.children {
+			display: block;
+			position: absolute;
+			visibility: hidden;
+			background: $white;
+			margin: 0;
+
+			li {
+
+				a {
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				third level
+				*/
+				ul {
+					top:0;
+					left:100%;
+				}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover > ul {
+			top: auto;
+			visibility:visible;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {}
+	}  /* end current highlighters */
+
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 2.2em;
+}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer-links {
+	float: left;
+	
+	ul {
+		text-align: left;
+		
+		li {
+			a {
+				margin: 0 3rem 0 0;
+				
+				&:hover {}
+			}
+			
+			ul {}
+		}
+	}
+} /* end .footer-links */
+
+.copyright {
+	margin: 0;
+	text-align: left;
+}
