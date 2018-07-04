@@ -6,21 +6,25 @@
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php if ( have_posts() ) :  ?>
+							<?php if ( have_posts() ) :
 							
-							<div class="wrap posts-main cf">
-								<?php wp_list_categories(array(
-									'exclude' => 17,
-									'hide_empty' => true,
-									'style' => 'list',
-									'title_li' => 'Filter'
-								)); ?>
+							wp_list_categories(array(
+								'exclude' => 17,
+								'hide_empty' => true,
+								'style' => 'list',
+								'title_li' => 'Filter'
+							)); ?>
+							<hr style="margin: 0.75rem 0;">
+							
+							<div class="wrap posts-main grid cf">
+								
+								<div class="grid-sizer"></div>
 								
 								<?php while (have_posts()) : the_post(); ?>
-									<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-4 cf' ); ?> role="article">
+									<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-4 grid-item cf' ); ?> role="article">
 
 										<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>" class="image-thumb">
-											<?php the_post_thumbnail('rectangle-thumb-l'); ?>
+											<?php the_post_thumbnail('thumb-s'); ?>
 										</a>
 
 										<h2 class="h2 entry-title">

@@ -64,6 +64,7 @@ if ( ! isset( $content_width ) ) {
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
+add_image_size( 'thumb-s', 640, false );
 add_image_size( 'rectangle-thumb-s', 450, 270, true );
 add_image_size( 'rectangle-thumb-l', 770, 415, true );
 

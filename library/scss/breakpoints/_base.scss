@@ -45,6 +45,10 @@ img {
 	}
 }
 
+.grid-sizer {
+	width: 33.33%;
+}
+
 /********************
 WORDPRESS BODY CLASSES
 ********************/
@@ -69,9 +73,10 @@ WORDPRESS BODY CLASSES
 		}
 	}
 	
-	.posts-main {
-		.col-4 {
+	.posts-main {		
+		.post {
 			padding: 1.5rem;
+			float: none;
 		}
 		
 		p {
@@ -354,6 +359,16 @@ POSTS & CONTENT STYLES
 *********************/
 
 #content {
+}
+
+.categories {
+	
+}
+
+.cat-item {
+	a {
+		
+	}
 }
 
 .hentry {

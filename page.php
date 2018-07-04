@@ -143,6 +143,44 @@
 										<?php endif; ?>
 									</section>
 								<?php endif; ?>
+								
+								
+								<?php // CASTE STUDIES (IF HOME PAGE) ?>
+								<?php if ( is_front_page() ) : ?>
+									<?php
+									$args = array(
+										'post_type'   => 'custom_type',
+										'post_status' => 'publish',
+										'posts_per_page'  => '3'
+//										'tax_query'   => array(
+//											array(
+//												'taxonomy' => 'custom_cat',
+//												'field'    => 'slug',
+//												'terms'    => 'food'
+//											)
+//										)
+									);
+
+									$testimonials = new WP_Query( $args );
+									if( $testimonials->have_posts() ) :
+									?>
+										<div class="case-studies">
+											<h2>Caste Studies</h2>
+											<?php while ( $testimonials->have_posts() ) : $testimonials->the_post(); ?>
+												<div class="post-item col-4">
+													<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
+														<?php the_post_thumbnail('rectangle-thumb-s'); ?>
+													</a>
+													<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
+														<?php the_title(); ?>
+													</a>
+													<?php the_excerpt(); ?>
+												</div>
+											<?php endwhile; ?>
+										</div>
+									<?php endif; ?>
+									<?php wp_reset_postdata(); ?>
+								<?php endif; ?>
 
 							</article>
 
