@@ -6,14 +6,19 @@
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-							<?php if ( have_posts() ) :
+							<?php 
+							if ( have_posts() ) :
 							
-							wp_list_categories(array(
-								'exclude' => 17,
-								'hide_empty' => true,
-								'style' => 'list',
-								'title_li' => 'Filter'
-							)); ?>
+								echo '<div class="filter-wrapper">';
+									wp_list_categories(array(
+										'hide_empty' => true,
+										'title_li' => ''
+									));
+								echo '<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+								</div>';
+							
+							?>
+							
 							<hr style="margin: 0.75rem 0;">
 							
 							<div class="wrap posts-main grid cf">

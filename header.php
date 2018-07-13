@@ -53,18 +53,14 @@
 					} else {
 						echo '<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="'. home_url() .'">'. get_bloginfo('name') .'</a></p>';
 					}
-					if($options['logo_alt']){
-						echo '<a id="logo-mobile" href="'. home_url() .'"><img src="'. $options['logo_alt'] .'" alt="'. get_bloginfo('name') .'" /></a>';
-					}
 					?>
 					
 					<a class="menu-button" title="Main Menu"></a>
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav role="navigation" class="primary-nav" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
 							'container' => false,                           // remove nav container
-							'container_class' => 'menu cf',                 // class of container (should you choose to use it)
 							'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-							'menu_class' => 'nav top-nav cf',               // adding custom nav class
+							'menu_class' => 'nav cf',               		// adding custom nav class
 							'theme_location' => 'main-nav',                 // where it's located in the theme
 							'before' => '',                                 // before the menu
 							'after' => '',                                  // after the menu
@@ -73,25 +69,25 @@
 							'depth' => 0,                                   // limit the depth of the nav
 							'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
+						
+						<?php
+						if( $options['twitter_url'] || $options['facebook_url'] || $options['instagram_url'] || $options['youtube_url'] || $options['linkedin_url']) {
+							echo '<div class="social">';
+
+							echo ($options['linkedin_url'] != '' ? '<a href="'.$options['linkedin_url'].'" target="_blank"><i class="fab fa-linkedin-in"></i></a>' : '');
+
+							echo ($options['twitter_url'] != '' ? '<a href="'.$options['twitter_url'].'" target="_blank"><i class="fab fa-twitter"></i></a>' : '');
+
+							echo ($options['facebook_url'] != '' ? '<a href="'.$options['facebook_url'].'" target="_blank"><i class="fab fa-facebook"></i></a>' : '');
+
+							echo ($options['instagram_url'] != '' ? '<a href="'.$options['instagram_url'].'" target="_blank"><i class="fab fa-instagram"></i></a>' : '');
+
+							echo ($options['youtube_url'] != '' ? '<a href="'.$options['youtube_url'].'" target="_blank"><i class="fab fa-youtube"></i></a>' : '');
+
+							echo '</div>';
+						}
+						?>
 					</nav>
-					
-					<?php
-					if( $options['twitter_url'] || $options['facebook_url'] || $options['instagram_url'] || $options['youtube_url'] || $options['linkedin_url']) {
-						echo '<div class="social">';
-						
-						echo ($options['linkedin_url'] != '' ? '<a href="'.$options['linkedin_url'].'" target="_blank"><i class="fab fa-linkedin-in"></i></a>' : '');
-						
-						echo ($options['twitter_url'] != '' ? '<a href="'.$options['twitter_url'].'" target="_blank"><i class="fab fa-twitter"></i></a>' : '');
-						
-						echo ($options['facebook_url'] != '' ? '<a href="'.$options['facebook_url'].'" target="_blank"><i class="fab fa-facebook"></i></a>' : '');
-						
-						echo ($options['instagram_url'] != '' ? '<a href="'.$options['instagram_url'].'" target="_blank"><i class="fab fa-instagram"></i></a>' : '');
-						
-						echo ($options['youtube_url'] != '' ? '<a href="'.$options['youtube_url'].'" target="_blank"><i class="fab fa-youtube"></i></a>' : '');
-						
-						echo '</div>';
-					}
-					?>
 					
 				</div>
 

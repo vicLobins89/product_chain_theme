@@ -138,7 +138,7 @@ function bones_scripts_and_styles() {
 	  
 		// adding scripts file in the footer
 		wp_register_script( 'masonry-js', get_stylesheet_directory_uri() . '/library/js/masonry.pkgd.min.js', array( 'jquery' ), '', true );
-		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '0', true );
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
@@ -287,9 +287,9 @@ function bones_page_navi() {
 RANDOM CLEANUP ITEMS
 *********************/
 
-add_filter( 'excerpt_length', function($length) {
-    return 6;
-} );
+//add_filter('excerpt_length', function($length) {
+//    return 6;
+//});
 
 // remove the p from around imgs
 function bones_filter_ptags_on_images($content){
@@ -299,10 +299,15 @@ function bones_filter_ptags_on_images($content){
 // This changes the […] to a Read More link
 function bones_excerpt_more($more) {
 	global $post;
-	// edit here if you like
 	return '...';
-//	return '...  <a class="excerpt-read-more" href="'. get_permalink( $post->ID ) . '" title="'. __( 'Read ', 'bonestheme' ) . esc_attr( get_the_title( $post->ID ) ).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
 }
+//add_filter( 'excerpt_more', 'bones_excerpt_more' );
+
+// First sentence excerpt
+function end_with_sentence($excerpt) {
+	return substr($excerpt,0,strpos($excerpt,'.')+1);
+}
+add_filter( 'get_the_excerpt', 'end_with_sentence' );
 
 
 add_filter( 'get_the_archive_title', function ($title) {
@@ -324,5 +329,11 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
+
+
+function render_ribbon($atts) {
+    return '<section class="wrap ribbon">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/ribbon.svg') . '</section>';
+}
+add_shortcode('ribbon', 'render_ribbon');
 
 ?>

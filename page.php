@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php $options = get_option('rh_settings'); ?>
 
 			<div id="content">
 
@@ -11,7 +12,13 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 								
 								<?php // HERO AREA ?>
-								<?php if ( has_post_thumbnail()) : ?>
+								<?php
+								if( !has_post_thumbnail() && is_front_page() ){
+									echo do_shortcode('[slide-anything id="6"]');
+								}
+								?>
+								
+								<?php if( has_post_thumbnail() ) : ?>
 								<div class="featured-image">
 									<?php the_post_thumbnail('full'); ?>
 									<?php
@@ -39,14 +46,13 @@
 								
 								<?php // COLUMNS CONTENT ?>
 								<?php if( have_rows('rows') ): ?>
-									<?php while( have_rows('rows') ): the_row();
-										if( get_sub_field('custom_class') ) {
-											$customClasses = get_sub_field('custom_class');
-											$customClasses = str_replace(',', '', $customClasses);
-										}
-									?>
+									<?php while( have_rows('rows') ): the_row(); ?>
 										
-										<section class="row cf <?php echo $customClasses; ?>">
+										<section 
+												 class="row cf<?php if( get_sub_field('curve') ) { echo ' curved'; } ?>"
+												 <?php if( get_sub_field('bg_color') ) { echo ' style="background: '.get_sub_field('bg_color').';"'; } ?>
+												 >
+										<div class="max-width<?php if( get_sub_field('wrap') ) { echo ' wrap entry-content'; }  ?>">
 											
 										<?php if( get_sub_field('title') ) : ?>
 											<h2><?php echo get_sub_field('title'); ?></h2>
@@ -100,6 +106,22 @@
 
 										<?php endif; ?>
 											
+										<?php if( get_sub_field('cta') ) : ?>
+											<div class="cf"></div>
+											<a href="<?php echo get_sub_field('cta_link'); ?>" class="btn primary-btn"><?php echo get_sub_field('cta_copy'); ?></a>
+										<?php endif; ?>
+											
+										<?php 
+											if( get_sub_field('arrow_graphic') === 'arrow1' ) {
+												echo '<div class="arrow arrow1">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-01.svg') . '</div>';
+											} elseif( get_sub_field('arrow_graphic') === 'arrow2' ) {
+												echo '<div class="arrow arrow2">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-02.svg') . '</div>';
+											} elseif( get_sub_field('arrow_graphic') === 'arrow3' ) {
+												echo '<div class="arrow arrow3">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-01.svg') . '</div>';
+											}
+										?>
+											
+										</div>
 										</section>
 									<?php endwhile; ?>
 								<?php endif; ?>
@@ -113,73 +135,86 @@
 									) ); ?>
 								
 									<?php if ( have_posts() ) : ?>
-										<div class="wrap">
-											<h2>Blog</h2>
-											<?php while ( have_posts() ) : the_post(); ?>
-												<div class="post-item">
-													<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
-														<?php the_post_thumbnail('rectangle-thumb-s'); ?>
-													</a>
-													<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
-														<?php the_title(); ?>
-													</a>
-													<?php the_excerpt(); ?>
-												</div>
-											<?php endwhile; ?>
-										</div>
+										<section class="row blog-highlights cf">
+											<div class="wrap entry-content">
+												<h2>Blog</h2>
+												<?php while ( have_posts() ) : the_post(); ?>
+													<div class="post-item cf">
+														<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
+															<?php the_post_thumbnail('rectangle-thumb-s'); ?>
+														</a>
+														
+														<div class="post-details">
+															<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
+																<?php the_title(); ?>
+															</a>
+															<?php echo '<p class="date">'.get_the_date().'</p>'; the_excerpt(); ?>
+														</div>
+													</div>
+												<?php endwhile; ?>
+											</div>
+										</section>
 									<?php endif; ?>
 									<?php wp_reset_query(); ?>
 								<?php endif; ?>
 								
 								
-								<?php // PRE-FOOTER ?>
-								<?php if( !empty(get_field('pre_footer')) ) : ?>
-									<section class="pre-footer wrap cf">
-										<?php if( !empty(get_field('pre_footer_media')) ) : ?>
-											<div class="col-6"><?php the_field('pre_footer_media') ?></div>
-											<div class="col-6"><?php the_field('pre_footer') ?></div>
-										<?php else : ?>
-											<div class="col-12"><?php the_field('pre_footer') ?></div>
-										<?php endif; ?>
-									</section>
-								<?php endif; ?>
-								
-								
 								<?php // CASTE STUDIES (IF HOME PAGE) ?>
-								<?php if ( is_front_page() ) : ?>
+								<?php if ( is_front_page() && ($options['case_studies_switch']) ) : ?>
 									<?php
 									$args = array(
 										'post_type'   => 'custom_type',
 										'post_status' => 'publish',
-										'posts_per_page'  => '3'
-//										'tax_query'   => array(
-//											array(
-//												'taxonomy' => 'custom_cat',
-//												'field'    => 'slug',
-//												'terms'    => 'food'
-//											)
-//										)
+										'posts_per_page'  => '3',
+										'tax_query'   => array(
+											array(
+												'taxonomy' => 'custom_cat',
+												'field'    => 'slug',
+												'terms'    => 'featured'
+											)
+										)
 									);
 
 									$testimonials = new WP_Query( $args );
 									if( $testimonials->have_posts() ) :
 									?>
-										<div class="case-studies">
-											<h2>Caste Studies</h2>
-											<?php while ( $testimonials->have_posts() ) : $testimonials->the_post(); ?>
-												<div class="post-item col-4">
-													<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
-														<?php the_post_thumbnail('rectangle-thumb-s'); ?>
-													</a>
-													<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
-														<?php the_title(); ?>
-													</a>
-													<?php the_excerpt(); ?>
-												</div>
-											<?php endwhile; ?>
-										</div>
+										<section class="row cf case-studies">
+											<div class="max-width">
+												<h2>Case Studies</h2>
+												<?php while ( $testimonials->have_posts() ) : $testimonials->the_post(); ?>
+													<div class="post-item col-4">
+														<p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
+															<?php the_post_thumbnail('rectangle-thumb-s'); ?>
+														</a></p>
+														
+														<h3>
+															<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
+																<?php the_title(); ?>
+															</a>
+														</h3>
+														
+														<?php the_excerpt(); ?>
+													</div>
+												<?php endwhile; ?>
+											</div>
+										</section>
 									<?php endif; ?>
 									<?php wp_reset_postdata(); ?>
+								<?php endif; ?>
+								
+								
+								<?php // PRE-FOOTER ?>
+								<?php if( !empty(get_field('pre_footer')) ) : ?>
+									<section class="pre-footer row cf">
+										<div class="max-width cf wrap">
+											<?php if( !empty(get_field('pre_footer_media')) ) : ?>
+												<div class="col-6"><?php the_field('pre_footer_media') ?></div>
+												<div class="col-6"><?php the_field('pre_footer') ?></div>
+											<?php else : ?>
+												<div class="col-12"><?php the_field('pre_footer') ?></div>
+											<?php endif; ?>
+										</div>
+									</section>
 								<?php endif; ?>
 
 							</article>

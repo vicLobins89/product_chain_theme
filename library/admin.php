@@ -192,6 +192,14 @@ function display_theme_panel_fields() {
 		'rh-settings-page_section'
 	);
 	
+	add_settings_field(
+		'case_studies_switch',
+		'Enable Case Studies',
+		'display_case_studies_el',
+		'rh-settings-page',
+		'rh-settings-page_section'
+	);
+	
 //	add_settings_field(
 //		'max_width_switch',
 //		'Enable Max Width',
@@ -298,6 +306,16 @@ function display_max_width_el() {
 	?>
 	<label class="switch">
 		<input type='checkbox' name='rh_settings[max_width_switch]' <?php checked( $options['max_width_switch'], 1 ); ?> value='1'>
+		<span class="slider round"></span>
+	</label>
+	<?php
+}
+
+function display_case_studies_el() {
+	$options = get_option('rh_settings');
+	?>
+	<label class="switch">
+		<input type='checkbox' name='rh_settings[case_studies_switch]' <?php checked( $options['case_studies_switch'], 1 ); ?> value='1'>
 		<span class="slider round"></span>
 	</label>
 	<?php

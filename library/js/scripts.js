@@ -33,6 +33,17 @@ jQuery(document).ready(function($) {
 		$(this).parents('.header').toggleClass('active');
 	});
 	
+	$('#menu-main-menu > .menu-item-has-children > a').on('click', function(e){
+		e.preventDefault();
+		$('.sub-menu').not( $(this).next('.sub-menu') ).removeClass('active');
+		$(this).next('.sub-menu').toggleClass('active');
+		if( $('.sub-menu').hasClass('active') ) {
+			$('#content').addClass('sub-menu-active');
+		} else {
+			$('#content').removeClass('sub-menu-active');
+		}
+	});
+	
 	// Ajax Filter
 	var postHtml = {},
 		catLinkHref,
@@ -56,8 +67,10 @@ jQuery(document).ready(function($) {
 		
 		function checkLoad() {
 			if( !postHtml[i] ) {
+				$('.lds-ellipsis').addClass('loading');
 				setTimeout(checkLoad, 200);
 			} else {
+				$('.lds-ellipsis').removeClass('loading');
 				var $content = postHtml[i],
 					$current = $contentArea.contents();
 				
@@ -75,6 +88,44 @@ jQuery(document).ready(function($) {
 			}
 		});
 	});
+	
+	// Check if in view
+	var $window = $(window),
+		$animationElements = $('.arrow, .ribbon');
+	
+	function checkIfInView() {
+		var windowHeight = $window.height(),
+		  windowTopPosition = $window.scrollTop(),
+		  windowBottomPosition = (windowTopPosition + windowHeight);
+
+		$.each($animationElements, function() {
+			var $element = $(this),
+				elementHeight = $element.outerHeight(),
+				elementTopPosition = $element.offset().top,
+				elementBottomPosition = (elementTopPosition + elementHeight);
+
+			//check to see if this current container is within viewport
+			if ( (elementBottomPosition >= windowTopPosition) && (elementBottomPosition+10 <= windowBottomPosition) ) {
+				$element.addClass('in-view');
+			} else {
+				//$element.removeClass('in-view');
+			}
+		});
+	}
+	
+	function headerResize() {
+		var windowTopPosition = $window.scrollTop();
+		
+		if( windowTopPosition >= 200 ) {
+			$('.header').addClass('sticky');
+		} else {
+			$('.header').removeClass('sticky');
+		}
+	}
+
+	$window.on('scroll resize', checkIfInView);
+	$window.on('scroll resize', headerResize);
+	$window.trigger('scroll');
 	
 
 }); /* end of as page load scripts */

@@ -18,69 +18,77 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 *********************/
 
 %btn {
-	display: inline-block;
+	display: block;
 	position: relative;
-	font-family: $sans-serif;
 	text-decoration: none;
 	color: $white;
-	background-color: $black;
+	border: 2px solid $gray;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	background-color: $gray;
 	font-size: 1.4rem;
 	line-height: 1;
-	font-weight: 400;
-	padding: 0.7rem 0.75rem;
-	margin-right: 0.85rem;
-	border: 2px solid $black;
+	font-weight: 800;
+	padding: 0.95rem 0;
+	margin: 0.85rem auto;
 	cursor: pointer;
-	text-transform: uppercase;
-	min-width: 8rem;
+	width: 40rem;
     text-align: center;
-	@include transition(all 0.14s ease-in-out);
+	clear: both;
+	outline: none;
+	@include transition(all 0.2s ease-in-out);
 
 	// hovering on the btn
 	&:hover, &:focus {
 		color: $white;
 		text-decoration: none;
-		outline: none;
 	} // end hover
 
 	// clicking on the button
 	&:active {
-		top: 1px; // adds a tiny hop to the click
+		top: 1px;
 	} // end active
 	
 	a {
 		color: inherit !important;
 		text-decoration: inherit !important;
 	}
+	
+	&:after {
+		content: '';
+		position: relative;
+		top: 1px;
+		left: 4px;
+    	border: solid $white;
+		border-width: 0 4px 4px 0;
+		display: inline-block;
+		padding: 7px;
+		transform: rotate(-45deg);
+		@include transition(all 0.2s ease-in-out);
+	}
 
 } // end .button
 
 
-.green-btn, a.green-btn {
+.primary-btn, a.primary-btn {
 	@extend %btn; // here we load the btn defaults
-	background-color: $green;
-	border-color: $green;
+	background-color: $orange;
+	border-color: $orange;
 	color: $white;
 
 	&:hover,
 	&:focus {
 		background-color: $white;
-		color: $green;
+		color: $orange;
+		
+		&:after {
+			border-color: $orange;
+			left: 12px;
+		}
 	} // end hover// end active
 	
 	&:visited {
 		color: $white;
-	}
-	
-	&.invert {
-		background-color: $white;
-		color: $green;
-		
-		&:hover,
-		&:focus {
-			background-color: $green;
-			color: $white;
-		} // end hover
 	}
 
 } // end green button

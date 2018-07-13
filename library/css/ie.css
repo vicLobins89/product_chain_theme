@@ -34,6 +34,10 @@ Stylesheet: Typography
 
 ******************************************************************/
 /*********************
+GOOGLE
+*********************/
+@import url("https://fonts.googleapis.com/css?family=Muli:400,800,900");
+/*********************
 FONT FACE
 *********************/
 p {
@@ -82,6 +86,9 @@ CSS ANIMATIONS
   100% { left: 200px; }
 }
 */
+/*********************
+BOX SHADOW
+*********************/
 /******************************************************************
 Site Name: Honey
 Author: Vic Lobins
@@ -161,20 +168,19 @@ HEADER STYLES
 *********************/
 #logo {
   display: block;
-  width: 200px;
-  margin: 0;
+  width: 180px;
   position: absolute;
-  z-index: 10;
+  top: 1.3rem;
   left: 2rem;
-  font-size: 0; }
+  z-index: 10;
+  font-size: 0;
+  float: none;
+  margin: 0; }
   #logo img {
     max-width: 100%;
     height: auto; }
   #logo a {
     color: #000; }
-
-#logo-mobile {
-  display: none; }
 
 /*********************
 NAVIGATION STYLES
@@ -182,49 +188,72 @@ NAVIGATION STYLES
 .menu-button {
   display: none; }
 
-nav li {
-  text-align: left; }
-  nav li a {
-    font-size: 0.85rem; }
-
 .nav {
   border: none;
   text-align: center;
+  display: inline-block;
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */ }
-  .nav li {
+  .nav > li {
     display: inline-block;
     position: relative;
     border: none;
-    /* showing sub-menus */ }
-    .nav li a {
-      border-bottom: 0; }
-      .nav li a:hover, .nav li a:focus {
-        color: #8b8b8a; }
-    .nav li ul.sub-menu,
-    .nav li ul.children {
+    /* showing sub-menus 
+    &:hover > ul {
+    	top: auto;
+    	max-height: 500px;
+    }*/ }
+    .nav > li > a:hover, .nav > li > a:focus {
+      color: #ed691c; }
+    .nav > li ul.sub-menu,
+    .nav > li ul.children {
       display: block;
       position: absolute;
-      visibility: hidden;
-      background: #fff;
-      margin: 0;
+      left: 50%;
+      top: 113px;
+      overflow: hidden;
+      background: #ed691c;
+      margin: 0 0 0 -180px;
+      padding: 0 20px;
+      width: 360px;
+      border-bottom-right-radius: 60px;
       /* highlight sub-menu current page */ }
-      .nav li ul.sub-menu li,
-      .nav li ul.children li {
+      .nav > li ul.sub-menu li,
+      .nav > li ul.children li {
+        text-align: left;
         /*
         third level
         */ }
-        .nav li ul.sub-menu li:last-child a,
-        .nav li ul.children li:last-child a {
+        .nav > li ul.sub-menu li a,
+        .nav > li ul.children li a {
+          color: #fff;
+          border-bottom: 1px solid #fff; }
+          .nav > li ul.sub-menu li a:hover, .nav > li ul.sub-menu li a:focus,
+          .nav > li ul.children li a:hover,
+          .nav > li ul.children li a:focus {
+            text-decoration: underline;
+            text-decoration-style: dotted; }
+        .nav > li ul.sub-menu li:last-child a,
+        .nav > li ul.children li:last-child a {
           border-bottom: 0; }
-        .nav li ul.sub-menu li ul,
-        .nav li ul.children li ul {
+        .nav > li ul.sub-menu li ul,
+        .nav > li ul.children li ul {
           top: 0;
           left: 100%; }
-    .nav li:hover > ul {
-      top: auto;
-      visibility: visible; }
+  .nav > li.current_page_item > a:after,
+  .nav > li.current-menu-ancestor > a:after,
+  .nav > li.current_page_ancestor > a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 7px;
+    background: #ed691c;
+    left: 0;
+    bottom: -1px;
+    z-index: 10;
+    -webkit-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out; }
 
 /*********************
 SIDEBARS & ASIDES
