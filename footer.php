@@ -1,7 +1,28 @@
 <?php $options = get_option('rh_settings'); ?>
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
-				<div id="inner-footer" class="wrap cf">
+				<div id="inner-footer" class="cf">
+					
+					<?php
+					if($options['copyright_txt']){
+						echo '<p class="copyright">'. $options['copyright_txt'] .'</p>';
+					} else {
+						echo '<p class="copyright">&copy; ' . get_bloginfo( 'name' ) . ' ' . date('Y') . '</p>';
+					}
+					?>
+					
+					<?php
+					if($options['phone_txt'] || $options['email_txt']){
+						echo '<div class="contact-details">';
+						if($options['email_txt']) {
+							echo '<a href="mailto:'. $options['email_txt'] .'">'. $options['email_txt'] .'</a>';
+						}
+						if($options['phone_txt']) {
+							echo '<a href="tel:'. str_replace(' ', '', $options['phone_txt']) .'">'. $options['phone_txt'] .'</a>';
+						}
+						echo '</div>';
+					}
+					?>
 
 					<?php wp_nav_menu(array(
     					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
@@ -16,14 +37,6 @@
     					'depth' => 0,                                   // limit the depth of the nav
     					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 					)); ?>
-					
-					<?php
-					if($options['copyright_txt']){
-						echo '<p class="copyright">'. $options['copyright_txt'] .'</p>';
-					} else {
-						echo '<p class="copyright">&copy; ' . get_bloginfo( 'name' ) . ' ' . date('Y') . '</p>';
-					}
-					?>
 
 				</div>
 

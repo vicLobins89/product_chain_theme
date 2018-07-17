@@ -193,6 +193,22 @@ function display_theme_panel_fields() {
 	);
 	
 	add_settings_field(
+		'phone_txt',
+		'Phone Number',
+		'display_phone_el',
+		'rh-settings-page',
+		'rh-settings-page_section'
+	);
+	
+	add_settings_field(
+		'email_txt',
+		'Email Address',
+		'display_email_el',
+		'rh-settings-page',
+		'rh-settings-page_section'
+	);
+	
+	add_settings_field(
 		'case_studies_switch',
 		'Enable Case Studies',
 		'display_case_studies_el',
@@ -298,6 +314,20 @@ function display_copyright_el() {
 	$options = get_option('rh_settings');
 	?>
 	<input type='text' name='rh_settings[copyright_txt]' value='<?php echo $options['copyright_txt']; ?>'>
+	<?php
+}
+
+function display_phone_el() {
+	$options = get_option('rh_settings');
+	?>
+	<input type='text' name='rh_settings[phone_txt]' value='<?php echo $options['phone_txt']; ?>'>
+	<?php
+}
+
+function display_email_el() {
+	$options = get_option('rh_settings');
+	?>
+	<input type='text' name='rh_settings[email_txt]' value='<?php echo $options['email_txt']; ?>'>
 	<?php
 }
 

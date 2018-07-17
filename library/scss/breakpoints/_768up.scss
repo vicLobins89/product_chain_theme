@@ -17,6 +17,9 @@ html {
 
 body {}
 
+#content {
+	padding-top: 114px;
+}
 
 /*********************
 LAYOUT & GRID STYLES
@@ -30,7 +33,34 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	&:after, &:before {
+		content: '';
+		display: block;
+		position: absolute;
+		@include transition(all 0.2s ease-in-out);
+	}
+	
+	&:after {
+		left: -1px;
+		bottom: -97px;
+		width: 110px;
+		height: 99px;
+		background: url(../images/top-left-corner.png) no-repeat 0 0;
+		background-size: contain;
+		z-index: 10;
+	}
+	
+	&:before {
+		left: 109px;
+		bottom: -58px;
+		width: 100%;
+		height: 60px;
+		background: url(../images/shadow-bg.png) repeat 0 0;
+		background-size: contain;
+		z-index: 10;
+	}
+}
 
 #logo {
 	display: block;
@@ -53,12 +83,24 @@ HEADER STYLES
 	}
 }
 
+.social {
+	position: absolute;
+	right: 2rem;
+	top: 2.7rem;
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/
 
 .menu-button {
 	display: none;
+}
+
+.primary-nav {
+	position: relative;
+	max-height: none;
+	overflow: visible;
 }
 
 .nav {
@@ -204,21 +246,6 @@ FOOTER STYLES
 *********************/
 
 .footer-links {
-	float: left;
-	
-	ul {
-		text-align: left;
-		
-		li {
-			a {
-				margin: 0 3rem 0 0;
-				
-				&:hover {}
-			}
-			
-			ul {}
-		}
-	}
 } /* end .footer-links */
 
 .copyright {

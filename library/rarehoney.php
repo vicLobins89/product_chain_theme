@@ -305,7 +305,12 @@ function bones_excerpt_more($more) {
 
 // First sentence excerpt
 function end_with_sentence($excerpt) {
-	return substr($excerpt,0,strpos($excerpt,'.')+1);
+	$newExcerpt = substr($excerpt,0,strpos($excerpt,'.')+1);
+	if( strlen($newExcerpt) <= 1 ) {
+		return $excerpt;
+	} else {
+		return $newExcerpt;
+	}
 }
 add_filter( 'get_the_excerpt', 'end_with_sentence' );
 
