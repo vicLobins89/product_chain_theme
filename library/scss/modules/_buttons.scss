@@ -69,7 +69,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 } // end .button
 
-
 .primary-btn, a.primary-btn {
 	@extend %btn; // here we load the btn defaults
 	background-color: $orange;
@@ -90,5 +89,27 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 	&:visited {
 		color: $white;
 	}
+}
 
-} // end green button
+.alt-btn, a.alt-btn {
+	@extend %btn; // here we load the btn defaults
+	background-color: $alt-blue;
+	border-color: $alt-blue;
+	color: $white;
+
+	&:hover,
+	&:focus {
+		background-color: $white;
+		color: $alt-blue;
+		
+		&:after {
+			border-color: $alt-blue;
+			left: 12px;
+		}
+	} // end hover// end active
+	
+	&:visited {
+		color: $white;
+	}
+
+}

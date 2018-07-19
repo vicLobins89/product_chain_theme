@@ -64,14 +64,14 @@ if ( ! isset( $content_width ) ) {
 // Thumbnail sizes
 add_image_size( 'thumb-s', 640, false );
 add_image_size( 'rectangle-thumb-s', 450, 270, true );
-add_image_size( 'rectangle-thumb-l', 770, 415, true );
+add_image_size( 'rectangle-thumb-l', 900, 570, true );
 
 add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'rectangle-thumb-s' => __('450px by 270px'),
-        'rectangle-thumb-l' => __('770px by 415px'),
+        'rectangle-thumb-l' => __('900px by 570px'),
     ) );
 }
 
@@ -108,7 +108,15 @@ function bones_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 	
-} // don't remove this bracket!
+	register_sidebar(array(
+		'id' => 'ribbon',
+		'name' => __( 'Ribbon', 'bonestheme' ),
+		'description' => __( 'Ribbon area', 'bonestheme' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+	));
+	
+}
 
 
 /************* COMMENT LAYOUT *********************/

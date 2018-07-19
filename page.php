@@ -52,7 +52,7 @@
 												 class="row cf<?php if( get_sub_field('curve') ) { echo ' curved'; } ?>"
 												 <?php if( get_sub_field('bg_color') ) { echo ' style="background: '.get_sub_field('bg_color').';"'; } ?>
 												 >
-										<div class="max-width<?php if( get_sub_field('wrap') ) { echo ' wrap entry-content'; }  ?>">
+										<div class="max-width cf<?php if( get_sub_field('wrap') ) { echo ' wrap entry-content'; }  ?>">
 											
 										<?php if( get_sub_field('title') ) : ?>
 											<h2><?php echo get_sub_field('title'); ?></h2>
@@ -117,7 +117,9 @@
 											} elseif( get_sub_field('arrow_graphic') === 'arrow2' ) {
 												echo '<div class="arrow arrow2">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-02.svg') . '</div>';
 											} elseif( get_sub_field('arrow_graphic') === 'arrow3' ) {
-												echo '<div class="arrow arrow3">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-01.svg') . '</div>';
+												echo '<div class="arrow arrow3">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-03.svg') . '</div>';
+											} elseif( get_sub_field('arrow_graphic') === 'arrow4' ) {
+												echo '<div class="arrow arrow4">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-04.svg') . '</div>';
 											}
 										?>
 											
@@ -175,13 +177,13 @@
 										)
 									);
 
-									$testimonials = new WP_Query( $args );
-									if( $testimonials->have_posts() ) :
+									$case_studies = new WP_Query( $args );
+									if( $case_studies->have_posts() ) :
 									?>
-										<section class="row cf case-studies">
+										<section class="row case-highlights cf">
 											<div class="max-width">
 												<h2>Case Studies</h2>
-												<?php while ( $testimonials->have_posts() ) : $testimonials->the_post(); ?>
+												<?php while ( $case_studies->have_posts() ) : $case_studies->the_post(); ?>
 													<div class="post-item col-4">
 														<p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
 															<?php the_post_thumbnail('rectangle-thumb-s'); ?>
@@ -214,6 +216,16 @@
 												<div class="col-12"><?php the_field('pre_footer') ?></div>
 											<?php endif; ?>
 										</div>
+										
+										<?php 
+											if( get_field('arrow_graphic') === 'arrow1' ) {
+												echo '<div class="arrow arrow1">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-01.svg') . '</div>';
+											} elseif( get_field('arrow_graphic') === 'arrow2' ) {
+												echo '<div class="arrow arrow2">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-02.svg') . '</div>';
+											} elseif( get_field('arrow_graphic') === 'arrow3' ) {
+												echo '<div class="arrow arrow3">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-03.svg') . '</div>';
+											}
+										?>
 									</section>
 								<?php endif; ?>
 

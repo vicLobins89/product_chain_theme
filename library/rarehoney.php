@@ -303,9 +303,16 @@ function bones_excerpt_more($more) {
 }
 //add_filter( 'excerpt_more', 'bones_excerpt_more' );
 
+remove_filter('term_description','wpautop');
+
 // First sentence excerpt
 function end_with_sentence($excerpt) {
-	return substr($excerpt,0,strpos($excerpt,'.')+1);
+	$newExcerpt = substr($excerpt,0,strpos($excerpt,'.')+1);
+	if( strlen($newExcerpt) <= 1 ) {
+		return $excerpt;
+	} else {
+		return $newExcerpt;
+	}
 }
 add_filter( 'get_the_excerpt', 'end_with_sentence' );
 
@@ -332,7 +339,7 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 
 function render_ribbon($atts) {
-    return '<section class="wrap ribbon">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/ribbon.svg') . '</section>';
+	return file_get_contents(get_template_directory_uri() . '/library/images/svg/ribbon.svg');
 }
 add_shortcode('ribbon', 'render_ribbon');
 

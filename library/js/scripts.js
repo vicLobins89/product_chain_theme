@@ -105,18 +105,23 @@ jQuery(document).ready(function($) {
 				elementBottomPosition = (elementTopPosition + elementHeight);
 
 			//check to see if this current container is within viewport
-			if ( (elementBottomPosition >= windowTopPosition) && (elementBottomPosition+10 <= windowBottomPosition) ) {
-				$element.addClass('in-view');
+			if( $element.hasClass('arrow4') ) {
+				if( (elementBottomPosition >= windowTopPosition) && (elementTopPosition <= (windowBottomPosition-500)) ) {
+					$element.addClass('in-view');
+				}
 			} else {
-				//$element.removeClass('in-view');
+				if( (elementBottomPosition >= windowTopPosition) && (elementBottomPosition+10 <= windowBottomPosition) ) {
+					$element.addClass('in-view');
+				}
 			}
 		});
 	}
 	
 	function headerResize() {
 		var windowTopPosition = $window.scrollTop();
+		viewport = updateViewportDimensions();
 		
-		if( windowTopPosition >= 200 ) {
+		if( windowTopPosition >= 200 && viewport.width >= 768 ) {
 			$('.header').addClass('sticky');
 		} else {
 			$('.header').removeClass('sticky');

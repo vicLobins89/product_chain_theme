@@ -157,6 +157,9 @@ GENERAL STYLES
 html {
   font-size: 80%; }
 
+#content {
+  padding-top: 114px; }
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -166,6 +169,29 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
+.header:after, .header:before {
+  content: '';
+  display: block;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+.header:after {
+  left: -1px;
+  bottom: -97px;
+  width: 110px;
+  height: 99px;
+  background: url(../images/top-left-corner.png) no-repeat 0 0;
+  background-size: contain;
+  z-index: 10; }
+.header:before {
+  left: 109px;
+  bottom: -58px;
+  width: 100%;
+  height: 60px;
+  background: url(../images/shadow-bg.png) repeat 0 0;
+  background-size: contain;
+  z-index: 10; }
+
 #logo {
   display: block;
   width: 180px;
@@ -182,11 +208,21 @@ HEADER STYLES
   #logo a {
     color: #000; }
 
+.social {
+  position: absolute;
+  right: 2rem;
+  top: 2.7rem; }
+
 /*********************
 NAVIGATION STYLES
 *********************/
 .menu-button {
   display: none; }
+
+.primary-nav {
+  position: relative;
+  max-height: none;
+  overflow: visible; }
 
 .nav {
   border: none;
@@ -243,6 +279,7 @@ NAVIGATION STYLES
           left: 100%; }
   .nav > li.current_page_item > a:after,
   .nav > li.current-menu-ancestor > a:after,
+  .nav > li.current-menu-item > a:after,
   .nav > li.current_page_ancestor > a:after {
     content: '';
     position: absolute;
@@ -278,13 +315,6 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-.footer-links {
-  float: left; }
-  .footer-links ul {
-    text-align: left; }
-    .footer-links ul li a {
-      margin: 0 3rem 0 0; }
-
 /* end .footer-links */
 .copyright {
   margin: 0;
