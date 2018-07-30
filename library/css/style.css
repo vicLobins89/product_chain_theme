@@ -592,7 +592,7 @@ Quick video guide:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.primary-btn, a.comment-reply-link, #submit, a.primary-btn, .alt-btn, a.alt-btn {
+.primary-btn, a.comment-reply-link, #submit, a.primary-btn, .alt-btn, a.alt-btn, .reverse-btn, a.reverse-btn {
   display: block;
   position: relative;
   text-decoration: none;
@@ -613,15 +613,15 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   outline: none;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  .primary-btn:hover, a.comment-reply-link:hover, #submit:hover, .alt-btn:hover, .primary-btn:focus, a.comment-reply-link:focus, #submit:focus, .alt-btn:focus {
+  .primary-btn:hover, a.comment-reply-link:hover, #submit:hover, .alt-btn:hover, .reverse-btn:hover, .primary-btn:focus, a.comment-reply-link:focus, #submit:focus, .alt-btn:focus, .reverse-btn:focus {
     color: #fff;
     text-decoration: none; }
-  .primary-btn:active, a.comment-reply-link:active, #submit:active, .alt-btn:active {
+  .primary-btn:active, a.comment-reply-link:active, #submit:active, .alt-btn:active, .reverse-btn:active {
     top: 1px; }
-  .primary-btn a, a.comment-reply-link a, #submit a, .alt-btn a {
+  .primary-btn a, a.comment-reply-link a, #submit a, .alt-btn a, .reverse-btn a {
     color: inherit !important;
     text-decoration: inherit !important; }
-  .primary-btn:after, a.comment-reply-link:after, #submit:after, .alt-btn:after {
+  .primary-btn:after, a.comment-reply-link:after, #submit:after, .alt-btn:after, .reverse-btn:after {
     content: '';
     position: relative;
     top: 1px;
@@ -644,8 +644,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     .primary-btn:hover:after, a.comment-reply-link:hover:after, #submit:hover:after, .primary-btn:focus:after, a.comment-reply-link:focus:after, #submit:focus:after, a.primary-btn:hover:after, a.comment-reply-link:hover:after, a#submit:hover:after, a.primary-btn:focus:after, a.comment-reply-link:focus:after, a#submit:focus:after {
       border-color: #ed691c;
       left: 12px; }
-  .primary-btn:visited, a.comment-reply-link:visited, #submit:visited, a.primary-btn:visited, a.comment-reply-link:visited, a#submit:visited {
-    color: #fff; }
 
 .alt-btn, a.alt-btn {
   background-color: #00bfb2;
@@ -657,8 +655,19 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     .alt-btn:hover:after, .alt-btn:focus:after, a.alt-btn:hover:after, a.alt-btn:focus:after {
       border-color: #00bfb2;
       left: 12px; }
-  .alt-btn:visited, a.alt-btn:visited {
+
+.reverse-btn, a.reverse-btn {
+  background-color: #fff;
+  border-color: #fff;
+  color: #545959; }
+  .reverse-btn:after, a.reverse-btn:after {
+    border-color: #ed691c; }
+  .reverse-btn:hover, .reverse-btn:focus, a.reverse-btn:hover, a.reverse-btn:focus {
+    background-color: #ed691c;
     color: #fff; }
+    .reverse-btn:hover:after, .reverse-btn:focus:after, a.reverse-btn:hover:after, a.reverse-btn:focus:after {
+      border-color: #fff;
+      left: 12px; }
 
 /******************************************************************
 Site Name: Honey
@@ -996,8 +1005,6 @@ img {
 /********************
 WORDPRESS BODY CLASSES
 ********************/
-/* for sites that are read right to left (i.e. hebrew) */
-/* home page */
 .blog .entry-title, .archive .entry-title {
   line-height: 1;
   font-size: 1rem;
@@ -1039,6 +1046,9 @@ LAYOUT & GRID STYLES
   position: relative;
   padding: 3rem 5rem;
   background: #fff; }
+  .row .entry-content {
+    padding-top: 0;
+    padding-bottom: 0; }
   .row .primary-btn, .row a.comment-reply-link, .row #submit {
     margin: 3rem auto; }
   .row.curved {
@@ -1055,6 +1065,9 @@ LAYOUT & GRID STYLES
       z-index: 2; }
   .row.blog-highlights {
     background: #eeeeee; }
+    .row.blog-highlights .primary-btn, .row.blog-highlights a.comment-reply-link, .row.blog-highlights #submit {
+      margin-top: 2rem;
+      margin-bottom: 2rem; }
     .row.blog-highlights .entry-content {
       padding-top: 2rem;
       padding-bottom: 3rem;
@@ -1090,7 +1103,7 @@ LAYOUT & GRID STYLES
   .row [class*="col-"] h2 {
     padding-left: 0; }
   .row h3 {
-    font-size: 1.3rem; }
+    font-size: 1.8rem; }
 
 .case-studies {
   background: #eeeeee; }
@@ -1160,35 +1173,50 @@ LAYOUT & GRID STYLES
       margin: .5rem 0 0 1rem;
       min-height: 5rem; }
 
-.extra-content .wrap {
-  background: #ed691c;
+.cs-row.odd {
+  background: #eeeeee; }
+.cs-row .col-6 {
+  padding: 1.5rem; }
+  .cs-row .col-6:last-child p, .cs-row .col-6:last-child img {
+    margin-bottom: 0; }
+
+.quote.quote-xl {
+  background: #00bfb2;
+  color: #fff;
   border-bottom-right-radius: 60px;
   border-top-left-radius: 60px;
-  padding: 3rem 3rem 2.5rem;
-  margin-bottom: 3rem; }
-.extra-content h1, .extra-content h2, .extra-content h3, .extra-content h4, .extra-content h5, .extra-content p, .extra-content a, .extra-content span, .extra-content li {
-  color: #fff; }
-.extra-content h2 {
-  padding-left: 0;
-  margin-top: 0; }
-.extra-content ul {
-  padding-left: 1.35rem; }
-.extra-content li {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  list-style-type: disc; }
+  padding: 3.5rem; }
+  .quote.quote-xl p {
+    font-weight: 800;
+    font-size: 2.25rem;
+    line-height: 1.35;
+    padding-right: 1rem; }
+  .quote.quote-xl span {
+    display: block; }
+  .quote.quote-xl .xl {
+    font-size: 470%;
+    line-height: 0.9;
+    text-indent: -9px; }
+  .quote.quote-xl .name {
+    font-weight: normal;
+    font-size: 72.5%;
+    margin-top: 2.5rem; }
+  .quote.quote-xl.quote-arrow {
+    background: #00bfb2 url(../images/icon-arrow-01.png) no-repeat left bottom;
+    background-size: 90%;
+    padding-bottom: 40%; }
 
 /*********************
 LINK STYLES
 *********************/
-a, a:visited {
+a {
   color: #545959;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
-  a:hover, a:focus, a:visited:hover, a:visited:focus {
+  a:hover, a:focus {
     color: #ed691c; }
-  a:link, a:visited:link {
+  a:link {
     /*
     this highlights links on iPhones/iPads.
     so it basically works like the :hover selector
@@ -1217,12 +1245,11 @@ h2, .h2 {
   font-weight: 800; }
 
 h3, .h3 {
-  font-size: 1.65rem;
+  font-size: 1.9rem;
   margin: 0 0 1rem; }
 
 h4, .h4 {
-  font-size: 1.3rem;
-  margin: 0.25rem 0; }
+  font-size: 1.75rem; }
 
 h5, .h5 {
   font-size: 1.2rem; }
@@ -1231,6 +1258,11 @@ p {
   line-height: 1.5;
   font-size: 1.15rem;
   margin: 0.85rem 0 1.2rem; }
+
+.narrow-para {
+  max-width: 80%;
+  margin-left: auto !important;
+  margin-right: auto !important; }
 
 .nowrap {
   white-space: nowrap;
@@ -1596,6 +1628,19 @@ POSTS & CONTENT STYLES
   position: absolute;
   left: -8px;
   bottom: 2rem; }
+  .page-about-us .arrow1, .page-consultancy .arrow1
+  .page-new-product-launches .arrow1, .page-account-management .arrow1 {
+    width: 28%;
+    right: -8%;
+    left: auto;
+    bottom: 0;
+    transform: scale(-1); }
+  .page-consultancy .arrow1 .arrow1--path, .page-new-product-launches .arrow1 .arrow1--path, .postid-82 .arrow1 .arrow1--path {
+    stroke: #00bfb2; }
+  .page-consultancy .arrow1 .arrow1--arrowhead, .page-new-product-launches .arrow1 .arrow1--arrowhead, .postid-82 .arrow1 .arrow1--arrowhead {
+    fill: #00bfb2; }
+  .page-the-product-chain-process .arrow1 {
+    transform: scaleY(-1); }
   .arrow1.in-view .arrow1--path {
     animation: draw-line 1500ms ease-out forwards; }
   .arrow1.in-view .arrow1--arrowhead {
@@ -1623,6 +1668,10 @@ POSTS & CONTENT STYLES
       animation: draw-line 1500ms ease-out forwards; }
     .arrow2.in-view .arrow2--arrowhead {
       animation: opacity--in 100ms linear 1400ms forwards; }
+  .postid-139 .arrow2 .arrow2--path {
+    stroke: #00bfb2; }
+  .postid-139 .arrow2 .arrow2--arrowhead path {
+    fill: #00bfb2; }
 
 .arrow2--path {
   stroke-dasharray: 700;
@@ -1649,9 +1698,10 @@ POSTS & CONTENT STYLES
 
 .arrow4 {
   position: absolute;
-  width: 110%;
-  left: -5%;
-  bottom: -79%; }
+  width: 100%;
+  left: -7%;
+  bottom: -16%;
+  transform: rotate(-50deg); }
   .arrow4.in-view {
     opacity: 1; }
     .arrow4.in-view .arrow4--path {
@@ -1761,7 +1811,7 @@ POSTS & CONTENT STYLES
     line-height: 1.3; }
   .icon-list img, .thumbs-list img, .centered-list img {
     padding: 2rem;
-    margin-bottom: 0; }
+    margin-bottom: 0 !important; }
   .icon-list.left-align li, .left-align.thumbs-list li, .left-align.centered-list li {
     vertical-align: top;
     text-align: left; }
@@ -1777,6 +1827,38 @@ POSTS & CONTENT STYLES
       font-weight: 400; }
     .icon-list.left-align li b, .left-align.thumbs-list li b, .left-align.centered-list li b, .icon-list.left-align li strong, .left-align.thumbs-list li strong, .left-align.centered-list li strong {
       font-size: 2rem; }
+  .icon-list.alt, .alt.thumbs-list, .alt.centered-list {
+    text-align: left;
+    margin-bottom: 0; }
+    .icon-list.alt li, .alt.thumbs-list li, .alt.centered-list li {
+      width: 50%;
+      font-size: 1.5rem;
+      font-weight: normal;
+      text-align: left;
+      margin-bottom: 1rem;
+      text-indent: -1.9rem;
+      padding-left: 1.5rem;
+      vertical-align: top; }
+      .icon-list.alt li:before, .alt.thumbs-list li:before, .alt.centered-list li:before {
+        content: '';
+        position: relative;
+        top: 0;
+        left: 4px;
+        border: solid #fff;
+        border-width: 0 4px 4px 0;
+        display: inline-block;
+        padding: 5px;
+        margin-right: 17px;
+        transform: rotate(-45deg); }
+    .icon-list.alt.copy li, .alt.copy.thumbs-list li, .alt.copy.centered-list li {
+      width: 100%;
+      font-size: 1.35rem;
+      text-indent: -1.9rem;
+      padding-left: 1.5rem; }
+    .icon-list.alt.copy.dark li:before, .alt.copy.dark.thumbs-list li:before, .alt.copy.dark.centered-list li:before {
+      border-color: #545959; }
+    .icon-list.alt.copy.light li:before, .alt.copy.light.thumbs-list li:before, .alt.copy.light.centered-list li:before {
+      border-color: #fff; }
 
 .thumbs-list li, .centered-list li {
   width: 50%;
@@ -1795,13 +1877,27 @@ POSTS & CONTENT STYLES
 
 .centered-list {
   width: 40%;
-  margin: 18% auto;
-  left: 2%;
+  margin: 17% auto 6%;
   position: relative;
   z-index: 50; }
+  .page-our-services .centered-list {
+    margin: 22% auto 12%; }
   .centered-list li {
     font-weight: 800;
-    font-size: 1.75rem; }
+    font-size: 1.75rem;
+    padding-right: 0 !important;
+    width: 100%;
+    text-align: center; }
+
+.quarter-list {
+  width: 80%;
+  margin: 0 auto 3rem;
+  font-size: 0; }
+  .quarter-list li {
+    width: 25%;
+    display: inline-block;
+    font-size: 1.35rem;
+    vertical-align: top; }
 
 /* end .hentry */
 .single-title,
@@ -1825,14 +1921,15 @@ POSTS & CONTENT STYLES
   color: #545959;
   margin-bottom: 2rem; }
 
-.archive-description {
-  text-align: center; }
-
 /* entry content */
 .entry-content {
   padding: 5rem 4rem; }
   .entry-content.max-width {
     padding-top: 0;
+    padding-bottom: 0; }
+  .home .entry-content.top-row p {
+    font-size: 190%; }
+  .page-our-core-team .entry-content.top-row {
     padding-bottom: 0; }
   .entry-content h2 {
     font-size: 2.25rem;
@@ -1840,14 +1937,34 @@ POSTS & CONTENT STYLES
   .entry-content p {
     font-size: 1.35rem;
     margin: 0 0 1.5em; }
-    .home .entry-content p {
-      font-size: 190%; }
     .entry-content p.fw900 {
       margin-bottom: 0.8rem; }
       .entry-content p.fw900 b, .entry-content p.fw900 strong {
         font-weight: 900; }
     .entry-content p img {
       margin: 0; }
+  .entry-content ul:not(.centered-list), .entry-content ol {
+    font-size: 0; }
+    .entry-content ul:not(.centered-list) li, .entry-content ol li {
+      font-size: 1.35rem;
+      margin-bottom: 1rem; }
+    .entry-content ul:not(.centered-list).arrows li, .entry-content ol.arrows li {
+      text-indent: -1.9rem;
+      padding-left: 1.5rem; }
+      .entry-content ul:not(.centered-list).arrows li:before, .entry-content ol.arrows li:before {
+        content: '';
+        position: relative;
+        top: 0;
+        left: 4px;
+        border: solid #fff;
+        border-width: 0 4px 4px 0;
+        display: inline-block;
+        padding: 5px;
+        margin-right: 17px;
+        transform: rotate(-45deg); }
+  .entry-content ol {
+    list-style-type: decimal;
+    padding-left: 1.35rem; }
   .entry-content table {
     width: 100%;
     border: 1px solid #545959;
@@ -1874,11 +1991,20 @@ POSTS & CONTENT STYLES
     .entry-content th:last-child {
       border-right: 0; }
   .entry-content blockquote {
-    margin: 0 0 1.5em 0.75em;
-    padding: 0 0 0 0.75em;
-    border-left: 3px solid #0096a8;
-    font-style: italic;
-    color: #ccc; }
+    color: #fff;
+    position: relative;
+    margin: 0;
+    padding: 0 5rem 0 12rem; }
+    .entry-content blockquote:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      display: block;
+      width: 9rem;
+      height: 9rem;
+      background: url(../images/icon-quotes.png) no-repeat 0 0;
+      background-size: contain; }
   .entry-content dd {
     margin-left: 0;
     font-size: 0.9em;
@@ -2216,6 +2342,9 @@ FOOTER STYLES
       content: '';
       display: none; }
 
+.mb0 {
+  margin-bottom: 0 !important; }
+
 /*********************
 LARGER MOBILE DEVICES
 *********************/
@@ -2419,6 +2548,12 @@ TABLET & SMALLER LAPTOPS
       z-index: 10;
       -webkit-transition: width 0.2s ease-in-out;
       transition: width 0.2s ease-in-out; }
+    .nav > li.current_page_item > a.active:after,
+    .nav > li.current-menu-ancestor > a.active:after,
+    .nav > li.current-menu-item > a.active:after,
+    .nav > li.current_page_ancestor > a.active:after {
+      content: '';
+      display: none; }
 
   /*********************
   SIDEBARS & ASIDES
@@ -2443,7 +2578,14 @@ TABLET & SMALLER LAPTOPS
   /*********************
   FOOTER STYLES
   *********************/
-  /* end .footer-links */
+  .footer-nav li a:after {
+    display: none; }
+  .footer-nav > li.current_page_item > a,
+  .footer-nav > li.current-menu-ancestor > a,
+  .footer-nav > li.current-menu-item > a,
+  .footer-nav > li.current_page_ancestor > a {
+    color: #ed691c; }
+
   .copyright {
     margin: 0;
     text-align: left; } }

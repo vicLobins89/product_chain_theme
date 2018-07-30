@@ -38,8 +38,8 @@
 								
 								<?php // MAIN CONTENT ?>
 								<?php if( !empty(get_the_content()) ) : ?>
-									<section class="entry-content wrap cf" itemprop="articleBody">
-										<?php the_content(); ?>
+									<section class="entry-content wrap cf top-row" itemprop="articleBody">
+										<div class="col-12"><?php the_content(); ?></div>
 									</section>
 								<?php endif; ?>
 								
@@ -50,9 +50,27 @@
 										
 										<section 
 												 class="row cf<?php if( get_sub_field('curve') ) { echo ' curved'; } ?>"
-												 <?php if( get_sub_field('bg_color') ) { echo ' style="background: '.get_sub_field('bg_color').';"'; } ?>
+												 <?php
+												 $bgColor = get_sub_field('bg_color');
+												 $paddingTop = get_sub_field('padding_top');
+												 $paddingBottom = get_sub_field('padding_bottom');
+												 if( $bgColor || $paddingTop || $paddingBottom ) { 
+													 $styles = ' style="';
+													 if( $bgColor ) { $styles .= 'background: '.$bgColor.';'; }
+													 if( $paddingTop == '0' ) { $styles .= ' padding-top: '.$paddingTop.';'; }
+													 if( $paddingBottom == '0' ) { $styles .= ' padding-bottom: '.$paddingBottom.';'; }
+													 $styles .= '"';
+													 echo $styles;
+												 }
+												 ?>
 												 >
-										<div class="max-width cf<?php if( get_sub_field('wrap') ) { echo ' wrap entry-content'; }  ?>">
+										<?php
+											if( get_sub_field('wrap') ) { 
+												echo '<div class="cf wrap entry-content">';
+											} else {
+												echo '<div class="max-width cf entry-content">';
+											}
+										?>
 											
 										<?php if( get_sub_field('title') ) : ?>
 											<h2><?php echo get_sub_field('title'); ?></h2>
@@ -108,7 +126,11 @@
 											
 										<?php if( get_sub_field('cta') ) : ?>
 											<div class="cf"></div>
-											<a href="<?php echo get_sub_field('cta_link'); ?>" class="btn primary-btn"><?php echo get_sub_field('cta_copy'); ?></a>
+											<a
+											   href="<?php echo get_sub_field('cta_link'); ?>" 
+											   class="btn primary-btn<?php if( get_sub_field('cta_reverse') ) { echo ' reverse-btn'; } ?>">
+												<?php echo get_sub_field('cta_copy'); ?>
+											</a>
 										<?php endif; ?>
 											
 										<?php 
@@ -154,7 +176,10 @@
 														</div>
 													</div>
 												<?php endwhile; ?>
+												
 											</div>
+											
+											<a href="blog" class="btn primary-btn">Check out more insights</a>
 										</section>
 									<?php endif; ?>
 									<?php wp_reset_query(); ?>

@@ -84,10 +84,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 			border-color: $orange;
 			left: 12px;
 		}
-	} // end hover// end active
-	
-	&:visited {
-		color: $white;
 	}
 }
 
@@ -106,10 +102,27 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 			border-color: $alt-blue;
 			left: 12px;
 		}
-	} // end hover// end active
+	}
+}
+
+.reverse-btn, a.reverse-btn {
+	@extend %btn; // here we load the btn defaults
+	background-color: $white;
+	border-color: $white;
+	color: $gray;
 	
-	&:visited {
-		color: $white;
+	&:after {
+		border-color: $orange;
 	}
 
+	&:hover,
+	&:focus {
+		background-color: $orange;
+		color: $white;
+		
+		&:after {
+			border-color: $white;
+			left: 12px;
+		}
+	}
 }

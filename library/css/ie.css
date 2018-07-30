@@ -291,6 +291,12 @@ NAVIGATION STYLES
     z-index: 10;
     -webkit-transition: width 0.2s ease-in-out;
     transition: width 0.2s ease-in-out; }
+  .nav > li.current_page_item > a.active:after,
+  .nav > li.current-menu-ancestor > a.active:after,
+  .nav > li.current-menu-item > a.active:after,
+  .nav > li.current_page_ancestor > a.active:after {
+    content: '';
+    display: none; }
 
 /*********************
 SIDEBARS & ASIDES
@@ -315,7 +321,14 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* end .footer-links */
+.footer-nav li a:after {
+  display: none; }
+.footer-nav > li.current_page_item > a,
+.footer-nav > li.current-menu-ancestor > a,
+.footer-nav > li.current-menu-item > a,
+.footer-nav > li.current_page_ancestor > a {
+  color: #ed691c; }
+
 .copyright {
   margin: 0;
   text-align: left; }

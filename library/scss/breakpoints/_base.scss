@@ -49,9 +49,6 @@ img {
 WORDPRESS BODY CLASSES
 ********************/
 
-.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {}                          /* home page */
-
 .blog {
 	.entry-title {
 		line-height: 1;
@@ -124,6 +121,11 @@ LAYOUT & GRID STYLES
 	padding: 3rem 5rem;
 	background: $white;
 	
+	.entry-content {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
 	.primary-btn {
 		margin: 3rem auto;
 	}
@@ -152,6 +154,11 @@ LAYOUT & GRID STYLES
 	
 	&.blog-highlights {
 		background: $light-gray;
+		
+		.primary-btn {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
 	
 		.entry-content {
 			padding-top: 2rem;
@@ -213,7 +220,7 @@ LAYOUT & GRID STYLES
 	}
 	
 	h3 {
-		font-size: 1.3rem;
+		font-size: 1.8rem;
 	}
 }
 
@@ -332,32 +339,62 @@ LAYOUT & GRID STYLES
 	}
 }
 
-.extra-content {
-	.wrap {
-		background: $orange;
+.cs-row {
+	&.odd {
+		background: $light-gray;
+	}
+	
+	&.even {
+		
+	}
+	
+	.col-6 {
+		padding: 1.5rem;
+		
+		&:last-child {
+			p, img {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.quote {
+	&.quote-xl {
+		background: $alt-blue;
+		color: $white;
 		border-bottom-right-radius: 60px;
 		border-top-left-radius: 60px;
-		padding: 3rem 3rem 2.5rem;
-		margin-bottom: 3rem;
-	}
-	
-	h1, h2, h3, h4, h5, p, a, span, li {
-		color: $white;
-	}
-	
-	h2 {
-		padding-left: 0;
-		margin-top: 0;
-	}
-	
-	ul {
-		padding-left: 1.35rem;
-	}
-	
-	li {
-		font-size: 1.3rem;
-		margin-bottom: 0.5rem;
-		list-style-type: disc;
+		padding: 3.5rem;
+		
+		p {
+			font-weight: 800;
+			font-size: 2.25rem;
+			line-height: 1.35;
+			padding-right: 1rem;
+		}
+		
+		span {
+			display: block;
+		}
+		
+		.xl {
+			font-size: 470%;
+			line-height: 0.9;
+			text-indent: -9px;
+		}
+		
+		.name {
+			font-weight: normal;
+			font-size: 72.5%;
+    		margin-top: 2.5rem;
+		}
+		
+		&.quote-arrow {
+			background: $alt-blue url(../images/icon-arrow-01.png) no-repeat left bottom;
+			background-size: 90%;
+    		padding-bottom: 40%;
+		}
 	}
 }
 
@@ -365,7 +402,7 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 
-a, a:visited {
+a {
 	color: $link-color;
 
 	/* on hover */
@@ -416,13 +453,12 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-size: 1.65rem;
+	font-size: 1.9rem;
 	margin: 0 0 1rem;
 }
 
 h4, .h4 {
-	font-size: 1.3rem;
-	margin: 0.25rem 0;
+	font-size: 1.75rem;
 }
 
 h5, .h5 {
@@ -433,6 +469,12 @@ p {
 	line-height: 1.5;
 	font-size: 1.15rem;
 	margin: 0.85rem 0 1.2rem;
+}
+
+.narrow-para {
+	max-width: 80%;
+	margin-left: auto !important;
+	margin-right: auto !important;
 }
 
 .nowrap {
@@ -905,6 +947,33 @@ POSTS & CONTENT STYLES
 	left: -8px;
 	bottom: 2rem;
 	
+	.page-about-us &,
+	.page-consultancy &
+	.page-new-product-launches &,
+	.page-account-management & {
+		width: 28%;
+		right: -8%;
+		left: auto;
+		bottom: 0;
+		transform: scale(-1);
+	}
+	
+	.page-consultancy &, 
+	.page-new-product-launches &,
+	.postid-82 & {
+		.arrow1--path {
+			stroke: #00bfb2;
+		}
+		
+		.arrow1--arrowhead {
+			fill: #00bfb2;
+		}
+	}
+	
+	.page-the-product-chain-process & {
+		transform: scaleY(-1);
+	}
+	
 	&.in-view {
 		.arrow1--path { animation: draw-line 1500ms ease-out forwards; }
 		.arrow1--arrowhead { animation: opacity--in 100ms linear 1400ms forwards; }
@@ -931,6 +1000,16 @@ POSTS & CONTENT STYLES
 		opacity: 1;
 		.arrow2--path { animation: draw-line 1500ms ease-out forwards; }
 		.arrow2--arrowhead { animation: opacity--in 100ms linear 1400ms forwards; }
+	}
+	
+	.postid-139 & {
+		.arrow2--path {
+			stroke: #00bfb2;
+		}
+		
+		.arrow2--arrowhead path {
+			fill: #00bfb2;
+		}
 	}
 }
 .arrow2--path {
@@ -959,9 +1038,10 @@ POSTS & CONTENT STYLES
 
 .arrow4 {
 	position: absolute;
-    width: 110%;
-    left: -5%;
-    bottom: -79%;
+    width: 100%;
+    left: -7%;
+    bottom: -16%;
+	transform: rotate(-50deg);
 	
 	&.in-view {
 		opacity: 1;
@@ -1075,7 +1155,7 @@ POSTS & CONTENT STYLES
 	
 	img {
 		padding: 2rem;
-		margin-bottom: 0;
+		margin-bottom: 0 !important;
 	}
 	
 	&.left-align {
@@ -1099,6 +1179,56 @@ POSTS & CONTENT STYLES
 			
 			b, strong {
 				font-size: 2rem;
+			}
+		}
+	}
+	
+	&.alt {
+		text-align: left;
+		margin-bottom: 0;
+		
+		li {
+			width: 50%;
+			font-size: 1.5rem;
+			font-weight: normal;
+			text-align: left;
+			margin-bottom: 1rem;
+			text-indent: -1.9rem;
+			padding-left: 1.5rem;
+			vertical-align: top;
+			
+			&:before {
+				content: '';
+				position: relative;
+				top: 0;
+				left: 4px;
+				border: solid $white;
+				border-width: 0 4px 4px 0;
+				display: inline-block;
+				padding: 5px;
+				margin-right: 17px;
+				transform: rotate(-45deg);
+			}
+		}
+		
+		&.copy {
+			li {
+				width: 100%;
+				font-size: 1.35rem;
+				text-indent: -1.9rem;
+    			padding-left: 1.5rem;
+			}
+			
+			&.dark li {
+				&:before {
+					border-color: $gray;
+				}
+			}
+			
+			&.light li {
+				&:before {
+					border-color: $white;
+				}
 			}
 		}
 	}
@@ -1133,14 +1263,33 @@ POSTS & CONTENT STYLES
 .centered-list {
 	@extend .thumbs-list;
 	width: 40%;
-    margin: 18% auto;
-    left: 2%;
+    margin: 17% auto 6%;
 	position: relative;
 	z-index: 50;
+	
+	.page-our-services & {
+		margin: 22% auto 12%;
+	}
 	
 	li {
 		font-weight: 800;
 		font-size: 1.75rem;
+		padding-right: 0 !important;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.quarter-list {
+	width: 80%;
+    margin: 0 auto 3rem;
+    font-size: 0;
+	
+	li {
+		width: 25%;
+		display: inline-block;
+		font-size: 1.35rem;
+		vertical-align: top;
 	}
 }
 
@@ -1179,7 +1328,6 @@ POSTS & CONTENT STYLES
 }
 
 .archive-description {
-	text-align: center;
 }
 
 /* entry content */
@@ -1188,6 +1336,16 @@ POSTS & CONTENT STYLES
 	
 	&.max-width {
 		padding-top: 0;
+		padding-bottom: 0;
+	}
+	
+	.home &.top-row {
+		p {
+			font-size: 190%;
+		}
+	}
+	
+	.page-our-core-team &.top-row {
 		padding-bottom: 0;
 	}
 
@@ -1199,10 +1357,6 @@ POSTS & CONTENT STYLES
 	p {
 		font-size: 1.35rem;
 		margin: 0 0 1.5em;
-		
-		.home & {
-			font-size: 190%;
-		}
 		
 		&.fw900 {
 			margin-bottom: 0.8rem;
@@ -1219,19 +1373,47 @@ POSTS & CONTENT STYLES
 
 	ul, ol, table, dl {}
 
-	ul, ol {
+	ul:not(.centered-list), ol {
+		font-size: 0;
 
-		li {}
+		li {
+			font-size: 1.35rem;
+			margin-bottom: 1rem;
+		}
+		
+		&.arrows {
+			li {
+				text-indent: -1.9rem;
+    			padding-left: 1.5rem;
+				
+				&:before {
+					content: '';
+					position: relative;
+					top: 0;
+					left: 4px;
+					border: solid #fff;
+					border-width: 0 4px 4px 0;
+					display: inline-block;
+					padding: 5px;
+					margin-right: 17px;
+					transform: rotate(-45deg);
+				}
+			}
+		}
 
 	}
 
 	ul {
 
-		li {}
+		li {
+			
+		}
 
 	}
 
 	ol {
+		list-style-type: decimal;
+		padding-left: 1.35rem;
 
 		li {}
 
@@ -1279,13 +1461,22 @@ POSTS & CONTENT STYLES
 	}
 
 	blockquote {
-		margin: 0 0 1.5em 0.75em;
-		padding: 0 0 0 0.75em;
-		border-left: 3px solid $blue;
-		font-style: italic;
-		color: $meta-gray;
+		color: $white;
+		position: relative;
+		margin: 0;
+		padding: 0 5rem 0 12rem;
 
-		&:before {}
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			display: block;
+			width: 9rem;
+			height: 9rem;
+			background: url(../images/icon-quotes.png) no-repeat 0 0;
+			background-size: contain;
+		}
 
 	}
 
@@ -1810,4 +2001,11 @@ FOOTER STYLES
 			display: none;
 		}
 	}
+}
+
+
+// OVERRIDES
+
+.mb0 {
+	margin-bottom: 0 !important;
 }

@@ -36,7 +36,9 @@ jQuery(document).ready(function($) {
 	$('#menu-main-menu > .menu-item-has-children > a').on('click', function(e){
 		e.preventDefault();
 		$('.sub-menu').not( $(this).next('.sub-menu') ).removeClass('active');
+		$('#menu-main-menu > .menu-item-has-children > a').not( $(this) ).removeClass('active');
 		$(this).next('.sub-menu').toggleClass('active');
+		$(this).toggleClass('active');
 		if( $('.sub-menu').hasClass('active') ) {
 			$('#content').addClass('sub-menu-active');
 		} else {
@@ -106,7 +108,7 @@ jQuery(document).ready(function($) {
 
 			//check to see if this current container is within viewport
 			if( $element.hasClass('arrow4') ) {
-				if( (elementBottomPosition >= windowTopPosition) && (elementTopPosition <= (windowBottomPosition-500)) ) {
+				if( (elementBottomPosition >= windowTopPosition) && (elementTopPosition <= (windowBottomPosition-elementHeight)) ) {
 					$element.addClass('in-view');
 				}
 			} else {

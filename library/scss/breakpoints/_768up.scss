@@ -202,6 +202,11 @@ NAVIGATION STYLES
 				z-index: 10;
 				@include transition(width 0.2s ease-in-out);
 			}
+			
+			&.active:after {
+				content: '';
+				display: none;
+			}
 		}
 	}  /* end current highlighters */
 
@@ -246,8 +251,24 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
-.footer-links {
-} /* end .footer-links */
+.footer-nav {
+	li {
+		a {
+			&:after {
+				display: none;
+			}
+		}
+	}
+	
+	> li.current_page_item,
+	> li.current-menu-ancestor,
+	> li.current-menu-item,
+	> li.current_page_ancestor {
+		> a {
+			color: $orange;
+		}
+	}
+}
 
 .copyright {
 	margin: 0;
