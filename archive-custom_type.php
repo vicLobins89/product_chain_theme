@@ -8,7 +8,6 @@
 
 			<div id="content">
 
-<<<<<<< HEAD
 				<div id="inner-content" class="cf">
 
 					<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
@@ -24,26 +23,6 @@
 						</header>
 						
 						<?php						
-=======
-				<div id="inner-content" class="wrap cf">
-
-					<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-						<h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
-						
-							<?php							
-							$cat_desc = category_description(5);
-							if( $cat_desc != null ) : ?>
-							<header class="entry-header article-header">
-								<div class="wrap">
-									<?php
-										echo '<p>' . $cat_desc . '</p>';
-									?>
-								</div>
-							</header>
-							<?php endif;
-						
->>>>>>> 7a875004dcac5dde3347e7081835a2ef5b1f9a32
 							$args = array(
 								'post_type'   => 'custom_type',
 								'post_status' => 'publish',
@@ -61,7 +40,6 @@
 							if( $case_studies_f->have_posts() ) :
 							?>
 						
-<<<<<<< HEAD
 								<section class="row cf case-studies featured">
 									<div class="max-width wrap">
 										<?php while ( $case_studies_f->have_posts() ) : $case_studies_f->the_post();
@@ -86,24 +64,6 @@
 										<?php endwhile; ?>
 										<?php get_sidebar('ribbon'); ?>
 									</div>
-=======
-								<section class="cf case-studies">
-									<?php while ( $case_studies_f->have_posts() ) : $case_studies_f->the_post(); ?>
-										<div class="post-item col-12">
-											<p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
-												<?php the_post_thumbnail('rectangle-thumb-s'); ?>
-											</a></p>
-
-											<h3>
-												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
-													<?php the_title(); ?>
-												</a>
-											</h3>
-
-											<?php the_excerpt(); ?>
-										</div>
-									<?php endwhile; ?>
->>>>>>> 7a875004dcac5dde3347e7081835a2ef5b1f9a32
 								</section>
 							<?php endif; ?>
 							<?php wp_reset_postdata(); ?>
@@ -127,7 +87,6 @@
 							if( $case_studies->have_posts() ) :
 							?>
 						
-<<<<<<< HEAD
 								<section class="row curved cf case-studies">
 									<div class="max-width wrap cf">
 										<h4 class="more">More case studies</h4>
@@ -149,24 +108,6 @@
 											</div>
 										<?php endwhile; ?>
 									</div>
-=======
-								<section class="cf case-studies">
-									<?php while ( $case_studies->have_posts() ) : $case_studies->the_post(); ?>
-										<div class="post-item col-12">
-											<p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
-												<?php the_post_thumbnail('rectangle-thumb-s'); ?>
-											</a></p>
-
-											<h3>
-												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
-													<?php the_title(); ?>
-												</a>
-											</h3>
-
-											<?php the_excerpt(); ?>
-										</div>
-									<?php endwhile; ?>
->>>>>>> 7a875004dcac5dde3347e7081835a2ef5b1f9a32
 								</section>
 							<?php wp_reset_postdata(); ?>
 
