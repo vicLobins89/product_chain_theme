@@ -697,6 +697,8 @@ INPUTS
   .wpcf7-form-control.wpcf7-submit:hover, .wpcf7-form-control.wpcf7-submit:focus {
     background: #fff;
     color: #ed691c; }
+  #wpcf7-f366-p31-o1 .wpcf7-form-control.wpcf7-submit {
+    float: none; }
 
 input[type="text"],
 input[type="password"],
@@ -730,6 +732,27 @@ textarea,
   background-color: #fff;
   -webkit-transition: background-color 0.24s ease-in-out;
   transition: background-color 0.24s ease-in-out; }
+  #wpcf7-f366-p31-o1 input[type="text"], #wpcf7-f366-p31-o1
+  input[type="password"], #wpcf7-f366-p31-o1
+  input[type="datetime"], #wpcf7-f366-p31-o1
+  input[type="datetime-local"], #wpcf7-f366-p31-o1
+  input[type="date"], #wpcf7-f366-p31-o1
+  input[type="month"], #wpcf7-f366-p31-o1
+  input[type="time"], #wpcf7-f366-p31-o1
+  input[type="week"], #wpcf7-f366-p31-o1
+  input[type="number"], #wpcf7-f366-p31-o1
+  input[type="email"], #wpcf7-f366-p31-o1
+  input[type="url"], #wpcf7-f366-p31-o1
+  input[type="search"], #wpcf7-f366-p31-o1
+  input[type="tel"], #wpcf7-f366-p31-o1
+  input[type="color"], #wpcf7-f366-p31-o1
+  select, #wpcf7-f366-p31-o1
+  textarea, #wpcf7-f366-p31-o1
+  .field {
+    float: none;
+    margin-bottom: 0;
+    width: 50%;
+    border-bottom-right-radius: 60px; }
   input[type="text"]:focus, input[type="text"]:active,
   input[type="password"]:focus,
   input[type="password"]:active,
@@ -954,6 +977,9 @@ textarea {
   max-width: 100%;
   min-height: 120px;
   line-height: 1.5em; }
+  #wpcf7-f366-p31-o1 textarea {
+    width: 100%;
+    border-bottom-right-radius: 60px; }
 
 select {
   -webkit-appearance: none;
