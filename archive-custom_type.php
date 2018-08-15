@@ -16,7 +16,7 @@
 							
 							<?php
 							$cat_desc = category_description(5);
-							if( $cat_desc != null ) {
+							if( $cat_desc ) {
 								echo '<p class="archive-description">' . $cat_desc . '</p>';
 							}
 							?>
@@ -90,6 +90,7 @@
 								<section class="row curved cf case-studies">
 									<div class="max-width wrap cf">
 										<h4 class="more">More case studies</h4>
+										<div class="cf cs-thumbs">
 										<?php while ( $case_studies->have_posts() ) : $case_studies->the_post(); ?>
 											<div class="col-4">
 												<div class="post-item">
@@ -107,6 +108,7 @@
 												</div>
 											</div>
 										<?php endwhile; ?>
+										</div>
 									</div>
 								</section>
 							<?php wp_reset_postdata(); ?>

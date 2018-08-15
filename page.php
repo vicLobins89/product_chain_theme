@@ -128,7 +128,7 @@
 											<div class="cf"></div>
 											<a
 											   href="<?php echo get_sub_field('cta_link'); ?>" 
-											   class="btn primary-btn<?php if( get_sub_field('cta_reverse') ) { echo ' reverse-btn'; } ?>">
+											   class="btn primary-btn<?php if( get_sub_field('cta_reverse') ) { echo ' alt1-btn'; } ?>">
 												<?php echo get_sub_field('cta_copy'); ?>
 											</a>
 										<?php endif; ?>
@@ -142,6 +142,8 @@
 												echo '<div class="arrow arrow3">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-03.svg') . '</div>';
 											} elseif( get_sub_field('arrow_graphic') === 'arrow4' ) {
 												echo '<div class="arrow arrow4">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-04.svg') . '</div>';
+											} elseif( get_sub_field('arrow_graphic') === 'arrow5' ) {
+												echo '<div class="arrow arrow5">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-05.svg') . '</div>';
 											}
 										?>
 											
@@ -152,9 +154,8 @@
 								
 								
 								<?php // BLOG HIGHLIGHTS (IF HOME PAGE) ?>
-								<?php if ( is_front_page() ) : ?>
+								<?php if( is_front_page() ) : ?>
 									<?php query_posts( array(
-										'category_name'  => 'featured',
 										'posts_per_page' => 3
 									) ); ?>
 								
@@ -177,9 +178,8 @@
 													</div>
 												<?php endwhile; ?>
 												
+												<a href="blog" class="btn primary-btn">Check out more insights</a>
 											</div>
-											
-											<a href="blog" class="btn primary-btn">Check out more insights</a>
 										</section>
 									<?php endif; ?>
 									<?php wp_reset_query(); ?>
@@ -187,7 +187,7 @@
 								
 								
 								<?php // CASTE STUDIES (IF HOME PAGE) ?>
-								<?php if ( is_front_page() && ($options['case_studies_switch']) ) : ?>
+								<?php if( is_front_page() && ($options['case_studies_switch']) ) : ?>
 									<?php
 									$args = array(
 										'post_type'   => 'custom_type',
@@ -206,7 +206,7 @@
 									if( $case_studies->have_posts() ) :
 									?>
 										<section class="row case-highlights cf">
-											<div class="max-width">
+											<div class="cf wrap entry-content">
 												<h2>Case Studies</h2>
 												<?php while ( $case_studies->have_posts() ) : $case_studies->the_post(); ?>
 													<div class="post-item col-4">
@@ -230,8 +230,35 @@
 								<?php endif; ?>
 								
 								
+								<?php // CONTACT US ?>
+								<?php if( get_field('details') || get_field('map_image') ) : ?>
+									<section class="contact-us curved row cf">
+										<div class="col-8">
+											<?php
+											if( get_field('map_image') ) {
+												echo '<div class="map-image"><img src="'.get_field('map_image').'" alt="Map Image"></div>';
+											}
+											
+											/*$location = get_field('google_maps');
+
+											if( !empty($location) ): */?>
+												<!--<div class="acf-map">
+													<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
+														<p class="address"><?php echo $location['address']; ?></p>
+													</div>
+												</div>-->
+											<?php //endif; ?>
+										</div>
+										
+										<div class="col-4">
+											<?php the_field('details'); ?>
+										</div>
+									</section>
+								<?php endif; ?>
+								
+								
 								<?php // PRE-FOOTER ?>
-								<?php if( !empty(get_field('pre_footer')) ) : ?>
+								<?php if( get_field('pre_footer') ) : ?>
 									<section class="pre-footer row cf">
 										<div class="max-width cf wrap">
 											<?php if( !empty(get_field('pre_footer_media')) ) : ?>

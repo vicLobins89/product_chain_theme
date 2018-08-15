@@ -2,7 +2,7 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="cf">
+				<div id="inner-content" class="wrap cf">
 
 						<div id="main" class="cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
@@ -20,25 +20,28 @@
 									the_tags( '<li>Tags</li><ul><li>', '</li><li>', '</li></ul>' );
 								}
 								?>
-								<hr style="margin: 0.75rem 0;">
 							</div>
 							
-							<div class="wrap posts-main grid cf">
+							<div class="posts-main grid cf">
 								
 								<div class="grid-sizer"></div>
 								
 								<?php while (have_posts()) : the_post(); ?>
 									<article id="post-<?php the_ID(); ?>" <?php post_class( 'col-4 grid-item cf' ); ?> role="article">
 
-										<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>" class="image-thumb">
-											<?php the_post_thumbnail('thumb-s'); ?>
-										</a>
+										<div class="post-item">
+											<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>" class="image-thumb">
+												<?php the_post_thumbnail('full'); ?>
+											</a>
 
-										<h2 class="h2 entry-title">
-											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-										</h2>
+											<h3 class="h2">
+												<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+											</h3>
 
-										<?php the_excerpt(); ?>
+											<p class="meta"><?php echo get_the_date( 'F Y' ); ?> | <?php $categories = get_the_category(); echo esc_html( $categories[0]->name ); ?></p>
+
+											<?php the_excerpt(); ?>
+										</div>
 
 									</article>
 

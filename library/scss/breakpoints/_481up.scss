@@ -14,48 +14,19 @@ html {
 	font-size: 81%;
 }
 
+.icon-list {
+	li {
+		width: 50%;
+	}
+}
 
-/*********************
-NAVIGATION STYLES
-*********************/
-
-.nav {}
-
-	/* .menu is clearfixed inside mixins.scss */
-	.menu {
-		ul {
-			li {
-				a {
-					&:hover, &:focus {
-
-					}
-				}
-
-				&:first-child {}
-				&:last-child {}
-
-				ul.sub-menu,
-				ul.children {
-					li {
-						a {
-							&:hover,
-							&:focus {}
-							&:link {}
-						}
-						&:first-child {}
-						&:last-child {}
-					}
-				}
-			} /* end .menu ul li */
-
-			/* highlight current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current_page_ancestor {
-				a {}
-			}  /* end current highlighters */
-		} /* end .menu ul */
-	} /* end .menu */
+.circle-el {
+	ul {
+		li {
+			font-size: 1rem !important;
+		}
+	}
+}
 
 /*********************
 POSTS & CONTENT STYLES
@@ -82,14 +53,3 @@ POSTS & CONTENT STYLES
 	}
 
 } /* end .entry-content */
-
-/*********************
-FOOTER STYLES
-*********************/
-
-.footer-links {
-	ul {
-		li {}
-	}
-} /* end .footer-links */
-

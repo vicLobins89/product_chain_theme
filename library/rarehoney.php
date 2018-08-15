@@ -139,6 +139,8 @@ function bones_scripts_and_styles() {
 		// adding scripts file in the footer
 		wp_register_script( 'masonry-js', get_stylesheet_directory_uri() . '/library/js/masonry.pkgd.min.js', array( 'jquery' ), '', true );
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '0', true );
+		wp_register_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAYkSQ40G1hKISa4JT2Ryk7ushGIWEOpjI', array( 'jquery' ), '', true );
+		wp_register_script( 'google-maps-acf', get_stylesheet_directory_uri() . '/library/js/google-maps-acf.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
@@ -150,6 +152,8 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'masonry-js' );
 		wp_enqueue_script( 'bones-js' );
+		wp_enqueue_script( 'google-maps' );
+		wp_enqueue_script( 'google-maps-acf' );
 
 	}
 }
@@ -225,37 +229,71 @@ RELATED POSTS FUNCTION
 // Related Posts Function (call using bones_related_posts(); )
 function bones_related_posts() {
 	global $post;
-	$tags = wp_get_post_tags( $post->ID );
+	
+	if( !wp_get_post_tags( $post->ID ) ) {
+		$tags = wp_get_post_terms($post->ID, 'custom_tag', array("fields" => "all"));
+	} else {
+		$tags = wp_get_post_tags( $post->ID );
+	}
+	
 	if($tags) {
-		echo '<h4>YOU MAY ALSO LIKE...</h4>';
-		echo '<ul class="related-posts cf">';
-		foreach( $tags as $tag ) {
-			$tag_arr .= $tag->slug . ',';
+		if( !wp_get_post_tags( $post->ID ) ) {
+			echo '<section class="row case-highlights cf curved">
+				<div class="cf wrap entry-content">
+				<h2>Related Case Studies</h2>';
+			foreach( $tags as $tag ) {
+				$tag_arr .= $tag->slug . ',';
+			}
+			
+			$args = array(
+				'tax_query' => array(
+						array(
+							'taxonomy' => 'custom_tag',
+							'field' => 'slug',
+							'terms' => array( $tag_arr )
+						)
+				),
+				'post_type'=>'custom_type',
+				'numberposts' => 3,
+				'post__not_in' => array($post->ID)
+			);
+		} else {
+			echo '<section class="row case-highlights cf curved">
+				<div class="cf wrap entry-content">
+				<h2>Related Posts</h2>';
+			foreach( $tags as $tag ) {
+				$tag_arr .= $tag->slug . ',';
+			}
+			
+			$args = array(
+				'tag' => $tag_arr,
+				'numberposts' => 3,
+				'post__not_in' => array($post->ID)
+			);
 		}
-		$args = array(
-			'tag' => $tag_arr,
-			'numberposts' => 2, /* you can change this to show more */
-			'post__not_in' => array($post->ID)
-		);
 		$related_posts = get_posts( $args );
 		if($related_posts) {
 			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
-				<li class="related-post col-6">
-					<?php if ( has_post_thumbnail()) : ?>
-					<a class="related-thumb" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>">
+				<div class="post-item col-4">
+					<p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
 						<?php the_post_thumbnail('rectangle-thumb-s'); ?>
-					</a>
-					<?php endif; ?>
-					<a class="entry-title" href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+					</a></p>
+
+					<h3>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
+							<?php the_title(); ?>
+						</a>
+					</h3>
+
 					<?php the_excerpt(); ?>
-				</li>
+				</div>
 			<?php endforeach; }
 		else { ?>
-			<?php echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'bonestheme' ) . '</li>'; ?>
+			<?php echo '<p class="no_related_post">' . __( 'No Related Posts Yet!', 'bonestheme' ) . '</p>'; ?>
 		<?php }
 	}
 	wp_reset_postdata();
-	echo '</ul>';
+	echo '</div></section>';
 } /* end bones related posts function */
 
 /*********************
@@ -342,5 +380,20 @@ function render_ribbon($atts) {
 	return file_get_contents(get_template_directory_uri() . '/library/images/svg/ribbon.svg');
 }
 add_shortcode('ribbon', 'render_ribbon');
+
+function render_haggis($atts) {
+	return file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-05.svg');
+}
+add_shortcode('haggis', 'render_haggis');
+
+function render_arrow6($atts) {
+	return file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-06.svg');
+}
+add_shortcode('arrow6', 'render_arrow6');
+
+function render_arrow7($atts) {
+	return file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-07.svg');
+}
+add_shortcode('arrow7', 'render_arrow7');
 
 ?>

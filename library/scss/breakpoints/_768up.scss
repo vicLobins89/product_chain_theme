@@ -18,7 +18,209 @@ html {
 body {}
 
 #content {
-	padding-top: 114px;
+	padding-top: 86px;
+	
+	&:before {
+		content: '';
+		@include transition(all 0.2s ease-in-out);
+	}
+	
+	&.sub-menu-active:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.5);
+		z-index: 100;
+	}
+}
+
+.row {
+	&.blog-highlights {
+		.post-thumb {
+			float: left;
+			width: 25%;
+		}
+		
+		.post-details {
+			margin-top: 0;
+			float: left;
+			width: 75%;
+			padding-left: 20px;
+		}
+	}
+	
+	.contact-us {
+		.col-8 {
+			padding-right: 10px;
+		}
+	}
+}
+
+.entry-content {
+	padding: 4rem 3rem;
+	
+	blockquote {
+		padding: 0 5rem 0 12rem;
+		
+		&:before {
+			width: 9rem;
+			height: 9rem;
+		}
+		
+		p {
+			font-size: 1.5rem;
+		}
+	}
+	
+	ul:not(.centered-list):not(.icon-list), ol {
+		.arrows {
+			li {
+				text-indent: -1.9rem;
+    			padding-left: 1.5rem;
+			}
+		}
+	}
+}
+
+.page-title {
+	top: 0;
+	bottom: auto;
+	padding: 3rem;
+	
+	p {
+		font-size: 2.8rem;
+	}
+}
+
+.icon-list {
+	li {
+		width: 33.33%;
+		margin-bottom: 0;
+	}
+	
+	&.alt {
+		li {
+			width: 50%;
+			text-indent: -1.9rem;
+			padding-left: 1.5rem;
+		}
+		
+		&.copy {
+			li {
+				text-indent: -1.9rem;
+    			padding-left: 1.5rem;
+			}
+		}
+	}
+}
+
+.thumbs-list {
+	li {
+		width: 50%;
+		
+		&:nth-child(odd) {
+			padding-right: 10px;
+		}
+		
+		&:nth-child(even) {
+			padding-left: 10px;
+		}
+	}
+}
+
+.quiz-end {
+	background: $orange;
+	
+	.social {
+		p {
+			font-size: 1.75rem;
+		}
+		
+		a {
+			margin-left: 1rem;
+		}
+	}
+}
+
+.circle-el {
+	ul {
+		width: 80%;
+		
+		li {
+			font-size: 1.5rem !important;
+			padding: 0 10px;
+		}
+	}
+	
+	h2 {
+		font-size: 4rem;
+	}
+	
+	h3 {
+		font-size: 2.5rem;
+		margin: 3rem 0;
+	}
+	
+	p {
+		.entry-content & {
+			margin: 0 0 1.5em;
+		}
+	}
+}
+
+.case-studies {
+	.case-study {
+		margin-bottom: 2.5rem;
+	}
+	
+	&.featured {
+		padding-bottom: 3rem;
+	}
+	
+	.more {
+
+		margin: 0 0 1rem;
+	}
+}
+
+.cs-thumbs {
+	margin-left: -20px;
+	margin-right: -20px;
+}
+
+.ribbon {
+	margin: 3rem auto !important;
+	
+	.widget_text {
+		width: 50%;
+		
+		p, a {
+			font-size: 3rem;
+		}
+	}
+}
+
+.quote {
+	&.quote-xl {
+		p {
+			font-size: 2rem;
+		}
+	}
+}
+
+.filter-wrapper {
+	li {
+		margin: 0 6px;
+	}
+}
+
+.page-contact-us {
+	.top-row + .curved {
+		border-bottom-right-radius: 60px;
+	}
 }
 
 /*********************
@@ -26,7 +228,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 760px;
+	max-width: 760px;
 }
 
 /*********************
@@ -34,6 +236,50 @@ HEADER STYLES
 *********************/
 
 .header {
+	&.sticky {
+		.primary-nav {
+			.menu-item a {
+				font-size: 1rem;
+				padding: 1.2rem 0.75em;
+			}
+			
+			.sub-menu {
+				top: 44px;
+			}
+		}
+		
+		.social {
+			top: 0.8rem;
+		}
+		
+		#logo {
+			width: 26px;
+			top: 0.45rem;
+			background-size: 21px !important;
+			
+			img {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+		
+		&:before {
+			left: 53px;
+			bottom: -30px;
+			height: 30px;
+		}
+		
+		&:after {
+			bottom: -49px;
+			width: 60px;
+			height: 49px;
+		}
+		
+		& + #content {
+			padding-top: 55px;
+		}
+	}
+	
 	&:after, &:before {
 		content: '';
 		display: block;
@@ -64,7 +310,7 @@ HEADER STYLES
 
 #logo {
 	display: block;
-	width: 180px;
+	width: 130px;
 	position: absolute;
 	top: 1.3rem;
 	left: 2rem;
@@ -72,6 +318,9 @@ HEADER STYLES
 	font-size: 0;
 	float: none;
 	margin: 0;
+	background-image: url(../images/product-chain-logo-alt.png);
+	background-repeat: no-repeat;
+	background-size: 33px !important;
 	
 	img {
 		max-width: 100%;
@@ -101,12 +350,24 @@ NAVIGATION STYLES
 	position: relative;
 	max-height: none;
 	overflow: visible;
+	top: auto;
+	
+	.social {
+		text-align: left;
+    	padding: 0;
+		background: none;
+		
+		a i {
+			background: $blue;
+		}
+	}
 }
 
 .nav {
 	border: none;
 	text-align: center;
 	display: inline-block;
+	background: none;
 	
 	> li {
 		display: inline-block;
@@ -114,8 +375,15 @@ NAVIGATION STYLES
 		border: none;
 
 		> a {
+			padding: 2.9rem .75em;
+			text-align: center;
+			
 			&:hover, &:focus {
 				color: $link-hover;
+			}
+			
+			&:after {
+				display: none;
 			}
 		}
 
@@ -127,18 +395,36 @@ NAVIGATION STYLES
 			display: block;
 			position: absolute;
 			left: 50%;
-			top: 113px;
+			top: 86px;
 			overflow: hidden;
 			background: $orange;
-			margin: 0 0 0 -180px;
+			margin: 0 0 0 -136px;
 			padding: 0 20px;
-			width: 360px;
+			width: 278px;
 			border-bottom-right-radius: 60px;
+			
+			&.active {
+				&:before {
+					content: '';
+					position: absolute;
+					width: 0; 
+					height: 0;
+					left: 50%;
+					top: 0;
+					margin-left: -14px;
+					border-left: 14px solid transparent;
+					border-right: 14px solid transparent;
+					border-top: 12px solid $white;
+				}
+			}
 
 			li {
 				text-align: left;
+				border: none;
 
 				a {
+					padding: 20px 0;
+					font-size: 1.15rem;
 					color: $white;
 					border-bottom: 1px solid $white;
 
@@ -203,7 +489,7 @@ NAVIGATION STYLES
 				@include transition(width 0.2s ease-in-out);
 			}
 			
-			&.active:after {
+			.sub-menu-active &:after {
 				content: '';
 				display: none;
 			}
@@ -212,44 +498,19 @@ NAVIGATION STYLES
 
 }
 
-/*********************
-SIDEBARS & ASIDES
-*********************/
-
-.sidebar {
-	margin-top: 2.2em;
-}
-
-	.widgettitle {
-		border-bottom: 2px solid #444;
-		margin-bottom: 0.75em;
-	}
-
-	.widget {
-		padding: 0 10px;
-		margin: 2.2em 0;
-
-		ul {
-			li {
-				margin-bottom: 0.75em;
-
-				&:first-child {}
-				&:last-child {}
-				a {}
-				/* deep nesting */
-
-				ul {
-					margin-top: 0.75em;
-					padding-left: 1em;
-				}
-			}
-		}
-	}
-
 
 /*********************
 FOOTER STYLES
 *********************/
+
+.footer {
+	padding: 2rem 4rem;
+}
+
+.pre-footer {
+	padding-top: 12rem;
+    padding-bottom: 5rem;
+}
 
 .footer-nav {
 	li {
@@ -271,6 +532,13 @@ FOOTER STYLES
 }
 
 .copyright {
-	margin: 0;
+	float: left;
+	font-size: 0.85rem;
+    text-align: left;
+}
+
+.contact-details {
+	float: right;
 	text-align: left;
+	margin: 0;
 }

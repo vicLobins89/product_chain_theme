@@ -1,0 +1,234 @@
+.arrow {
+	display: block;
+}
+
+.arrow1 {
+	width: 27%;
+	position: absolute;
+	left: -1%;
+	bottom: 2rem;
+	
+	.page-about-us &,
+	.page-consultancy &,
+	.page-new-product-launches &,
+	.page-account-management &,
+	.page-business-channel-development & {
+		width: 28%;
+		right: -2%;
+		left: auto;
+		bottom: -1rem;
+		transform: scale(-1);
+	}
+	
+	.page-consultancy &, 
+	.page-new-product-launches &,
+	.single-custom_type &,
+	.page-business-channel-development & {
+		.arrow1--path {
+			stroke: $alt-blue;
+		}
+		
+		.arrow1--arrowhead {
+			fill: $alt-blue;
+		}
+	}
+	
+	.page-the-product-chain-process & {
+		transform: scaleY(-1);
+	}
+	
+	&.in-view {
+		.arrow1--path { animation: draw-line 800ms ease-out forwards; }
+		.arrow1--arrowhead { animation: opacity--in 100ms linear 700ms forwards; }
+	}
+}
+.arrow1--path {
+	stroke: $orange;
+	stroke-dasharray: 400;
+	stroke-dashoffset: 400;
+}
+.arrow1--arrowhead, .arrow2--arrowhead, .arrow3--pencil, .arrow4--fill {
+	opacity: 0;
+}
+
+.arrow2 {
+	width: 32%;
+    position: absolute;
+    right: -7%;
+    bottom: 4.5rem;
+	opacity: 0;
+	@include transition(opacity 0.2s ease-in-out);
+	
+	&.in-view {
+		opacity: 1;
+		.arrow2--path { animation: draw-line 900ms ease-out forwards; }
+		.arrow2--arrowhead { animation: opacity--in 100ms linear 800ms forwards; }
+	}
+	
+	.postid-139 & {
+		.arrow2--path {
+			stroke: #00bfb2;
+		}
+		
+		.arrow2--arrowhead path {
+			fill: #00bfb2;
+		}
+	}
+}
+.arrow2--path {
+	stroke-dasharray: 700;
+	stroke-dashoffset: 700;
+}
+
+.arrow3 {
+	width: 54%;
+    position: absolute;
+    left: -10px;
+    top: 2rem;
+	opacity: 0;
+	@include transition(opacity 0.2s ease-in-out);
+	
+	&.in-view {
+		opacity: 1;
+		.arrow3--path { animation: draw-line 1100ms ease-out forwards; }
+		.arrow3--pencil { animation: opacity--in 100ms linear 1000ms forwards; }
+	}
+}
+.arrow3--path {
+	stroke-dasharray: 850;
+	stroke-dashoffset: 850;
+}
+
+.arrow4 {
+	position: absolute;
+    width: 100%;
+    left: -7%;
+    bottom: -16%;
+	transform: rotate(-50deg);
+	
+	&.in-view {
+		opacity: 1;
+		.arrow4--path { animation: draw-line 3000ms ease-out forwards; }
+		.arrow4--fill { animation: opacity--in 300ms linear 2500ms forwards; }
+	}
+}
+
+.arrow4--path {
+	stroke-dasharray: 3800;
+	stroke-dashoffset: -3800;
+}
+
+.arrow8 {
+	position: absolute;
+    width: 30%;
+    top: -3%;
+    right: 4%;
+	
+	&.in-view {
+		opacity: 1;
+		.st0 { animation: draw-line 1300ms ease-out forwards; }
+		.st1, .st2 { animation: opacity--in 100ms linear 1200ms forwards; }
+	}
+	
+	.st1, .st2 {
+		opacity: 0;
+	}
+	
+	.st0 {
+		stroke-dasharray: 870;
+		stroke-dashoffset: 870;
+	}
+}
+
+.haggis-wrapper {
+	position: relative;
+	
+	.centered-list {
+		position: absolute;
+		width: 40%;
+		top: 13rem;
+    	left: 34%;
+		
+		li {
+			width: 50%;
+			margin: 1.5rem 0;
+			
+			&:first-child {
+				width: 100%;
+			}
+			
+			&:last-child {
+				width: 100%;
+			}
+			
+			.page-our-services & {
+				width: 100%;
+				margin: 0.75rem 0;
+			}
+		}
+	}
+	
+	svg {
+		width: 100%;
+	}
+	
+	&.in-view {
+		.cls-3 { animation: draw-line 1500ms ease-out forwards; }
+		.cls-4 { animation: opacity--in 200ms linear 1400ms forwards; }
+	}
+	
+	.cls-3 {
+		stroke-dasharray: 2601;
+		stroke-dashoffset: -2601;
+	}
+}
+
+.bcd {
+	position: relative;
+	
+	svg {
+		position: absolute;
+		z-index: 10;
+	}
+	
+	&.in-view {
+		.st1, .cls-4 { animation: draw-line 800ms ease-out forwards; }
+		.st0, .cls-3 { animation: opacity--in 100ms linear 700ms forwards; }
+	}
+	
+	.st1, .cls-4 {
+		stroke-dasharray: 210;
+		stroke-dashoffset: 210;
+	}
+	
+	.st0, .cls-3 {
+		opacity: 0;
+	}
+}
+
+.bcd1, .bcd3 {
+	svg {
+		width: 8rem;
+		bottom: -6.5rem;
+		left: -4rem;
+	}
+}
+
+.bcd2 {
+	svg {
+		width: 12rem;
+		bottom: -11rem;
+		right: -5rem;
+	}
+	
+	.st1, .cls-4 {
+		stroke-dasharray: 370;
+		stroke-dashoffset: 370;
+	}
+}
+
+.bcd3 {
+	svg {
+		transform: rotate(26deg);
+	}
+}

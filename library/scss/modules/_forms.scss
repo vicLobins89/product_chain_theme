@@ -14,6 +14,10 @@ http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
 INPUTS
 *********************/
 
+.wpcf7-form {
+	margin-top: 3rem;
+}
+
 .wpcf7-form-control.wpcf7-submit {
 	float: right;
 	width: 27%;
@@ -73,6 +77,10 @@ textarea,
 		margin-bottom: 0;
 		width: 50%;
 		border-bottom-right-radius: 60px;
+		
+		@media only screen and (max-width: 767px) {
+			width: 100%;
+		}
 	}
 
   // a focused input (or hovered on)

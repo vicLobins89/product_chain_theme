@@ -29,24 +29,24 @@
 	<title>Product Chain</title>
 	<link>http://localhost/product-chain</link>
 	<description>Passionate about food.</description>
-	<pubDate>Tue, 31 Jul 2018 14:17:59 +0000</pubDate>
+	<pubDate>Wed, 15 Aug 2018 13:23:02 +0000</pubDate>
 	<language></language>
 	<wp:wxr_version>1.1</wp:wxr_version>
 	<wp:base_site_url>http://localhost/product-chain</wp:base_site_url>
 	<wp:base_blog_url>http://localhost/product-chain</wp:base_blog_url>
 	<wp:author><wp:author_id>1</wp:author_id><wp:author_login>vic@admin</wp:author_login><wp:author_email>vic@honey.co.uk</wp:author_email><wp:author_display_name><![CDATA[vic@admin]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 	<item>
-		<title>Location</title>
-		<link>http://localhost/product-chain/?acf=acf_location</link>
-		<pubDate>Tue, 31 Jul 2018 11:50:36 +0000</pubDate>
+		<title>Page content</title>
+		<link>http://localhost/product-chain/?acf=acf_page-content</link>
+		<pubDate>Wed, 16 May 2018 10:13:34 +0000</pubDate>
 		<dc:creator>vic@admin</dc:creator>
-		<guid isPermaLink="false">http://localhost/product-chain/?post_type=acf&#038;p=370</guid>
-		<wp:post_id>370</wp:post_id>
-		<wp:post_date>2018-07-31 12:50:36</wp:post_date>
-		<wp:post_date_gmt>2018-07-31 11:50:36</wp:post_date_gmt>
+		<guid isPermaLink="false">http://rarecontent.co.uk/sequentra/?post_type=acf&#038;p=49</guid>
+		<wp:post_id>56</wp:post_id>
+		<wp:post_date>2018-05-16 11:13:34</wp:post_date>
+		<wp:post_date_gmt>2018-05-16 10:13:34</wp:post_date_gmt>
 		<wp:comment_status>closed</wp:comment_status>
 		<wp:ping_status>closed</wp:ping_status>
-		<wp:post_name>acf_location</wp:post_name>
+		<wp:post_name>acf_page-content</wp:post_name>
 		<wp:status>publish</wp:status>
 		<wp:post_parent>0</wp:post_parent>
 		<wp:menu_order>0</wp:menu_order>
@@ -57,16 +57,8 @@
 			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>field_5b604cd837483</wp:meta_key>
-			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_5b604cd837483";s:5:"label";s:3:"Map";s:4:"name";s:3:"map";s:4:"type";s:10:"google_map";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"center_lat";s:0:"";s:10:"center_lng";s:0:"";s:4:"zoom";s:0:"";s:6:"height";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>field_5b604cf137484</wp:meta_key>
-			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5b604cf137484";s:5:"label";s:7:"Find us";s:4:"name";s:7:"find_us";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key>rule</wp:meta_key>
-			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:2:"31";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+			<wp:meta_key>field_5afc042f50355</wp:meta_key>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5afc042f50355";s:5:"label";s:9:"Hero text";s:4:"name";s:9:"hero_text";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -79,6 +71,212 @@
 		<wp:postmeta>
 			<wp:meta_key>hide_on_screen</wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5afc1bbd77250</wp:meta_key>
+			<wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_5afc1bbd77250";s:5:"label";s:9:"Hero area";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5afc1bdd77251</wp:meta_key>
+			<wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_5afc1bdd77251";s:5:"label";s:12:"Page content";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5afc1c1777252</wp:meta_key>
+			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5afc1c1777252";s:5:"label";s:4:"Rows";s:4:"name";s:4:"rows";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:22:{i:0;a:13:{s:3:"key";s:19:"field_5afc1c8077253";s:5:"label";s:11:"Column size";s:4:"name";s:11:"column_size";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:4:{s:4:"1col";s:8:"1 Column";s:4:"2col";s:9:"2 Columns";s:4:"3col";s:9:"3 Columns";s:4:"4col";s:9:"4 Columns";}s:13:"default_value";s:4:"1col";s:10:"allow_null";s:1:"0";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_5b34d498a37e9";s:5:"label";s:5:"Title";s:4:"name";s:5:"title";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"1col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:10:{s:3:"key";s:19:"field_5b34e336f18d3";s:5:"label";s:10:"Background";s:4:"name";s:8:"bg_color";s:4:"type";s:12:"color_picker";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"1col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}i:3;a:12:{s:3:"key";s:19:"field_5b3f7a62cb1dd";s:5:"label";s:4:"Wrap";s:4:"name";s:4:"wrap";s:4:"type";s:8:"checkbox";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:1:{s:3:"yes";s:17:"Wrap the content?";}s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"1col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}i:4;a:12:{s:3:"key";s:19:"field_5b476cdca5902";s:5:"label";s:5:"Curve";s:4:"name";s:5:"curve";s:4:"type";s:8:"checkbox";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:1:{s:3:"yes";s:33:"Add curve to bottom right corner?";}s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"1col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}i:5;a:12:{s:3:"key";s:19:"field_5afc1ceb77254";s:5:"label";s:16:"Column 1 Content";s:4:"name";s:4:"col1";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:2:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"1col";}i:1;a:3:{s:5:"field";s:19:"field_5afd9b098c5e5";s:8:"operator";s:2:"!=";s:5:"value";s:3:"yes";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}i:6;a:12:{s:3:"key";s:19:"field_5afc1d5377255";s:5:"label";s:18:"Column 2 Content A";s:4:"name";s:6:"col2_a";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"2col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}i:7;a:12:{s:3:"key";s:19:"field_5afc1d7177256";s:5:"label";s:18:"Column 2 Content B";s:4:"name";s:6:"col2_b";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"2col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}i:8;a:12:{s:3:"key";s:19:"field_5afc1e1c22e5e";s:5:"label";s:18:"Column 3 Content A";s:4:"name";s:6:"col3_a";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"3col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:8;}i:9;a:12:{s:3:"key";s:19:"field_5afc1e3622e5f";s:5:"label";s:18:"Column 3 Content B";s:4:"name";s:6:"col3_b";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"3col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:9;}i:10;a:12:{s:3:"key";s:19:"field_5afc1e4322e60";s:5:"label";s:18:"Column 3 Content C";s:4:"name";s:6:"col3_c";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"3col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:10;}i:11;a:12:{s:3:"key";s:19:"field_5afc1e5622e61";s:5:"label";s:18:"Column 4 Content A";s:4:"name";s:6:"col4_a";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"4col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:11;}i:12;a:12:{s:3:"key";s:19:"field_5afc1ea422e62";s:5:"label";s:18:"Column 4 Content B";s:4:"name";s:6:"col4_b";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"4col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:12;}i:13;a:12:{s:3:"key";s:19:"field_5afc1eb922e63";s:5:"label";s:18:"Column 4 Content C";s:4:"name";s:6:"col4_c";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"4col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:13;}i:14;a:12:{s:3:"key";s:19:"field_5afc1ec422e64";s:5:"label";s:18:"Column 4 Content D";s:4:"name";s:6:"col4_d";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"4col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:14;}i:15;a:12:{s:3:"key";s:19:"field_5b3e072ad0ebe";s:5:"label";s:14:"Call to action";s:4:"name";s:3:"cta";s:4:"type";s:8:"checkbox";s:12:"instructions";s:23:"Include call to action?";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:1:{s:3:"yes";s:3:"Yes";}s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"1col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:15;}i:16;a:15:{s:3:"key";s:19:"field_5b3e078dd0ebf";s:5:"label";s:8:"CTA Copy";s:4:"name";s:8:"cta_copy";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5b3e072ad0ebe";s:8:"operator";s:2:"==";s:5:"value";s:3:"yes";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:16;}i:17;a:15:{s:3:"key";s:19:"field_5b3e07aed0ec0";s:5:"label";s:8:"CTA Link";s:4:"name";s:8:"cta_link";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5b3e072ad0ebe";s:8:"operator";s:2:"==";s:5:"value";s:3:"yes";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:17;}i:18;a:12:{s:3:"key";s:19:"field_5b572ad382550";s:5:"label";s:11:"CTA Reverse";s:4:"name";s:11:"cta_reverse";s:4:"type";s:8:"checkbox";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:1:{s:3:"yes";s:23:"Reverse button colours?";}s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5b3e072ad0ebe";s:8:"operator";s:2:"==";s:5:"value";s:3:"yes";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:18;}i:19;a:13:{s:3:"key";s:19:"field_5b3e07d4d0ec1";s:5:"label";s:13:"Arrow graphic";s:4:"name";s:13:"arrow_graphic";s:4:"type";s:6:"select";s:12:"instructions";s:30:"Add an animated arrow graphic?";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:5:{s:6:"arrow1";s:7:"Arrow 1";s:6:"arrow2";s:7:"Arrow 2";s:6:"arrow3";s:7:"Arrow 3";s:6:"arrow4";s:7:"Arrow 4";s:6:"arrow5";s:7:"Arrow 5";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"1";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"1col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:19;}i:20;a:15:{s:3:"key";s:19:"field_5b5733c6bd163";s:5:"label";s:11:"Padding Top";s:4:"name";s:11:"padding_top";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"1col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:20;}i:21;a:15:{s:3:"key";s:19:"field_5b57350da6112";s:5:"label";s:14:"Padding Bottom";s:4:"name";s:14:"padding_bottom";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5afc1c8077253";s:8:"operator";s:2:"==";s:5:"value";s:4:"1col";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:21;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:3:"row";s:12:"button_label";s:7:"Add Row";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5b4c714123212";s:8:"operator";s:2:"==";s:5:"value";s:6:"arrow1";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5afc43d6e4e98</wp:meta_key>
+			<wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_5afc43d6e4e98";s:5:"label";s:10:"Pre-footer";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5afc4402e4e99</wp:meta_key>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5afc4402e4e99";s:5:"label";s:10:"Pre-footer";s:4:"name";s:10:"pre_footer";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5afc4a71bff56</wp:meta_key>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5afc4a71bff56";s:5:"label";s:16:"Pre-footer media";s:4:"name";s:16:"pre_footer_media";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b4c714123212</wp:meta_key>
+			<wp:meta_value><![CDATA[a:12:{s:3:"key";s:19:"field_5b4c714123212";s:5:"label";s:13:"Arrow graphic";s:4:"name";s:13:"arrow_graphic";s:4:"type";s:6:"select";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:7:"choices";a:4:{s:6:"arrow1";s:7:"Arrow 1";s:6:"arrow2";s:7:"Arrow 2";s:6:"arrow3";s:7:"Arrow 3";s:6:"arrow4";s:7:"Arrow 4";}s:13:"default_value";s:29:"Add an animated arrow graphic";s:10:"allow_null";s:1:"1";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:4:"page";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"!=";s:5:"value";s:2:"17";s:8:"order_no";i:1;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"!=";s:5:"value";s:3:"475";s:8:"order_no";i:2;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Case Studies</title>
+		<link>http://localhost/product-chain/?acf=acf_case-studies</link>
+		<pubDate>Tue, 17 Jul 2018 14:08:50 +0000</pubDate>
+		<dc:creator>vic@admin</dc:creator>
+		<guid isPermaLink="false">http://localhost/product-chain/?post_type=acf&#038;p=194</guid>
+		<wp:post_id>194</wp:post_id>
+		<wp:post_date>2018-07-17 15:08:50</wp:post_date>
+		<wp:post_date_gmt>2018-07-17 14:08:50</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>acf_case-studies</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>acf</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b4df83b3313a</wp:meta_key>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5b4df83b3313a";s:5:"label";s:15:"Case Study Logo";s:4:"name";s:7:"cs_logo";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:6:"object";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>position</wp:meta_key>
+			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>layout</wp:meta_key>
+			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>hide_on_screen</wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b4e03b9985b6</wp:meta_key>
+			<wp:meta_value><![CDATA[a:9:{s:3:"key";s:19:"field_5b4e03b9985b6";s:5:"label";s:12:"Panel Colour";s:4:"name";s:12:"panel_colour";s:4:"type";s:12:"color_picker";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b4f38bfdbc26</wp:meta_key>
+			<wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_5b4f38bfdbc26";s:5:"label";s:13:"Featured Only";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b4f38dbdbc27</wp:meta_key>
+			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5b4f38dbdbc27";s:5:"label";s:15:"Case Study Rows";s:4:"name";s:7:"cs_rows";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:2:{i:0;a:12:{s:3:"key";s:19:"field_5b4f391fdbc28";s:5:"label";s:8:"Column A";s:4:"name";s:8:"column_a";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:12:{s:3:"key";s:19:"field_5b4f3a4ddbc29";s:5:"label";s:9:"Columns B";s:4:"name";s:9:"columns_b";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:5:"table";s:12:"button_label";s:7:"Add Row";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b4f3b1032f7d</wp:meta_key>
+			<wp:meta_value><![CDATA[a:8:{s:3:"key";s:19:"field_5b4f3b1032f7d";s:5:"label";s:7:"Content";s:4:"name";s:0:"";s:4:"type";s:3:"tab";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b585f61ec79d</wp:meta_key>
+			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5b585f61ec79d";s:5:"label";s:13:"Extra Content";s:4:"name";s:13:"extra_content";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:8:{i:0;a:10:{s:3:"key";s:19:"field_5b585fb2ec79f";s:5:"label";s:17:"Background Colour";s:4:"name";s:9:"bg_colour";s:4:"type";s:12:"color_picker";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:12:{s:3:"key";s:19:"field_5b585fc4ec7a0";s:5:"label";s:5:"Curve";s:4:"name";s:5:"curve";s:4:"type";s:8:"checkbox";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:1:{s:3:"yes";s:30:"Curve the bottom right corner?";}s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:12:{s:3:"key";s:19:"field_5b585fa0ec79e";s:5:"label";s:7:"Content";s:4:"name";s:7:"content";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}i:3;a:13:{s:3:"key";s:19:"field_5b586a668d6df";s:5:"label";s:13:"Arrow Graphic";s:4:"name";s:13:"arrow_graphic";s:4:"type";s:6:"select";s:12:"instructions";s:30:"Add an animated arrow graphic?";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:4:{s:6:"arrow1";s:7:"Arrow 1";s:6:"arrow2";s:7:"Arrow 2";s:6:"arrow3";s:7:"Arrow 3";s:6:"arrow4";s:7:"Arrow 4";}s:13:"default_value";s:0:"";s:10:"allow_null";s:1:"1";s:8:"multiple";s:1:"0";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5b585fc4ec7a0";s:8:"operator";s:2:"==";s:5:"value";s:3:"yes";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}i:4;a:12:{s:3:"key";s:19:"field_5b586ab58d6e0";s:5:"label";s:14:"Call to action";s:4:"name";s:3:"cta";s:4:"type";s:8:"checkbox";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:1:{s:3:"yes";s:26:"Add call to action button?";}s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5b585fc4ec7a0";s:8:"operator";s:2:"==";s:5:"value";s:3:"yes";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:4;}i:5;a:15:{s:3:"key";s:19:"field_5b586acc8d6e1";s:5:"label";s:8:"CTA Copy";s:4:"name";s:8:"cta_copy";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5b586ab58d6e0";s:8:"operator";s:2:"==";s:5:"value";s:3:"yes";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}i:6;a:15:{s:3:"key";s:19:"field_5b586adf8d6e2";s:5:"label";s:8:"CTA Link";s:4:"name";s:8:"cta_link";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5b586ab58d6e0";s:8:"operator";s:2:"==";s:5:"value";s:3:"yes";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:6;}i:7;a:12:{s:3:"key";s:19:"field_5b586af48d6e3";s:5:"label";s:11:"CTA Reverse";s:4:"name";s:11:"cta_reverse";s:4:"type";s:8:"checkbox";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:7:"choices";a:1:{s:3:"yes";s:19:"Reverse CTA colour?";}s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"1";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5b586ab58d6e0";s:8:"operator";s:2:"==";s:5:"value";s:3:"yes";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:7;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:3:"row";s:12:"button_label";s:7:"Add Row";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:5;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:11:"custom_type";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Contact Us</title>
+		<link>http://localhost/product-chain/?acf=acf_contact-us</link>
+		<pubDate>Fri, 10 Aug 2018 11:29:59 +0000</pubDate>
+		<dc:creator>vic@admin</dc:creator>
+		<guid isPermaLink="false">http://localhost/product-chain/?post_type=acf&#038;p=449</guid>
+		<wp:post_id>449</wp:post_id>
+		<wp:post_date>2018-08-10 12:29:59</wp:post_date>
+		<wp:post_date_gmt>2018-08-10 11:29:59</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>acf_contact-us</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>acf</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b6d769a21e90</wp:meta_key>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5b6d769a21e90";s:5:"label";s:9:"Map Image";s:4:"name";s:9:"map_image";s:4:"type";s:5:"image";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:11:"save_format";s:3:"url";s:12:"preview_size";s:9:"thumbnail";s:7:"library";s:3:"all";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b6d772821e91</wp:meta_key>
+			<wp:meta_value><![CDATA[a:11:{s:3:"key";s:19:"field_5b6d772821e91";s:5:"label";s:7:"Details";s:4:"name";s:7:"details";s:4:"type";s:7:"wysiwyg";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:7:"toolbar";s:4:"full";s:12:"media_upload";s:3:"yes";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>position</wp:meta_key>
+			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>layout</wp:meta_key>
+			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>hide_on_screen</wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:2:"31";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Quiz</title>
+		<link>http://localhost/product-chain/?acf=acf_quiz</link>
+		<pubDate>Mon, 13 Aug 2018 09:38:00 +0000</pubDate>
+		<dc:creator>vic@admin</dc:creator>
+		<guid isPermaLink="false">http://localhost/product-chain/?post_type=acf&#038;p=458</guid>
+		<wp:post_id>458</wp:post_id>
+		<wp:post_date>2018-08-13 10:38:00</wp:post_date>
+		<wp:post_date_gmt>2018-08-13 09:38:00</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>acf_quiz</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>acf</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b714c4bead51</wp:meta_key>
+			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5b714c4bead51";s:5:"label";s:9:"Questions";s:4:"name";s:9:"questions";s:4:"type";s:8:"repeater";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:10:"sub_fields";a:4:{i:0;a:15:{s:3:"key";s:19:"field_5b714c66ead52";s:5:"label";s:8:"Question";s:4:"name";s:8:"question";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}i:1;a:15:{s:3:"key";s:19:"field_5b714ce8ead53";s:5:"label";s:8:"Option A";s:4:"name";s:8:"option_a";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}i:2;a:15:{s:3:"key";s:19:"field_5b7150e6ead54";s:5:"label";s:8:"Option B";s:4:"name";s:8:"option_b";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}i:3;a:15:{s:3:"key";s:19:"field_5b7150ebead55";s:5:"label";s:8:"Option C";s:4:"name";s:8:"option_c";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:12:"column_width";s:0:"";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}}s:7:"row_min";s:0:"";s:9:"row_limit";s:0:"";s:6:"layout";s:3:"row";s:12:"button_label";s:12:"Add Question";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b71510aead56</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5b71510aead56";s:5:"label";s:9:"Outcome A";s:4:"name";s:9:"outcome_a";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b715153ead58</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5b715153ead58";s:5:"label";s:9:"Outcome B";s:4:"name";s:9:"outcome_b";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5b715170ead5a</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5b715170ead5a";s:5:"label";s:9:"Outcome C";s:4:"name";s:9:"outcome_c";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"html";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>position</wp:meta_key>
+			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>layout</wp:meta_key>
+			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>hide_on_screen</wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:2:"17";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:4:"page";s:8:"operator";s:2:"==";s:5:"value";s:3:"475";s:8:"order_no";i:0;s:8:"group_no";i:1;}]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 </channel>

@@ -23,12 +23,22 @@ jQuery(document).ready(function($) {
 	
 	viewport = updateViewportDimensions();
 	
-	$('.grid').masonry({
-		itemSelector: '.post',
-		columnWidth: '.grid-sizer',
-  		percentPosition: true
+	
+	// Masonry
+	function masonryInit() {
+		$('.grid').masonry({
+			itemSelector: '.post',
+			columnWidth: '.grid-sizer',
+			percentPosition: true
+		});
+	}
+	
+	$(window).on('load resize', function(){
+		masonryInit();
 	});
 	
+	
+	// Menu
 	$('.menu-button').on('click', function(){
 		$(this).parents('.header').toggleClass('active');
 	});
@@ -40,11 +50,18 @@ jQuery(document).ready(function($) {
 		$(this).next('.sub-menu').toggleClass('active');
 		$(this).toggleClass('active');
 		if( $('.sub-menu').hasClass('active') ) {
-			$('#content').addClass('sub-menu-active');
+			$('#content, .header').addClass('sub-menu-active');
 		} else {
-			$('#content').removeClass('sub-menu-active');
+			$('#content, .header').removeClass('sub-menu-active');
 		}
 	});
+	
+	$('#content').on('click', function(){
+		$('.sub-menu, .primary-nav a').removeClass('active');
+		$(this).removeClass('sub-menu-active');
+		$('.header').removeClass('sub-menu-active');
+	});
+	
 	
 	// Ajax Filter
 	var postHtml = {},
@@ -93,7 +110,7 @@ jQuery(document).ready(function($) {
 	
 	// Check if in view
 	var $window = $(window),
-		$animationElements = $('.arrow, .ribbon');
+		$animationElements = $('.arrow, .ribbon, .haggis-wrapper, .icon-list img, .animate-element, .bcd');
 	
 	function checkIfInView() {
 		var windowHeight = $window.height(),
@@ -119,6 +136,10 @@ jQuery(document).ready(function($) {
 		});
 	}
 	
+	$window.on('scroll resize', checkIfInView);
+	
+	
+	// Header
 	function headerResize() {
 		var windowTopPosition = $window.scrollTop();
 		viewport = updateViewportDimensions();
@@ -129,10 +150,165 @@ jQuery(document).ready(function($) {
 			$('.header').removeClass('sticky');
 		}
 	}
-
-	$window.on('scroll resize', checkIfInView);
-	$window.on('scroll resize', headerResize);
-	$window.trigger('scroll');
 	
+	$window.on('scroll resize', headerResize);
+	
+	
+	// Quiz
+	function indexOfMax(arr) {
+		if(arr.length === 0) {
+			return -1;
+		}
+
+		var max = arr[0];
+		var maxIndex = 0;
+
+		for(var i = 1; i < arr.length; i++) {
+			if( arr[i] >= max ) {
+				maxIndex = i;
+				max = arr[i];
+			}
+		}
+		
+		return maxIndex;
+	}
+	
+	function quiz() {
+		var option = [0,0,0],
+			clicks = 0,
+			quizLength = $('.quiz').length,
+			progressPercentage = 100/quizLength;
+		
+		$('.quiz-option').on('click', function(){
+			clicks ++;
+			$(this).addClass('selected');
+			$(this).siblings().andSelf().prop('disabled', true);
+			$('.progress-bar .fill').css('width', (progressPercentage*clicks)+'%');
+			$(this).parent().next('.quiz-next').addClass('active');
+			
+			switch( $(this).data('option') ) {
+				case 'a':
+					option[0] ++;
+					break;
+				case 'b':
+					option[1] ++;
+					break;
+				case 'c':
+					option[2] ++;
+					break;
+			}
+			
+			if( clicks >= quizLength ) {
+				switch( indexOfMax(option) ) {
+					case 0:
+						$('.outcome-a').addClass('selected');
+						$('.quiz-end .btn').hide();
+						break;
+					case 1:
+						$('.outcome-b').addClass('selected');
+						$('.quiz-end .btn').show();
+						break;
+					case 2:
+						$('.outcome-c').addClass('selected');
+						$('.quiz-end .btn').show();
+						break;
+				}
+			}
+		});
+		
+		$('.quiz-next').on('click', function(){
+			if( clicks === 0 ) { $('.progress-bar').show(); }
+			if( clicks >= quizLength ) { $('.progress-bar').hide(); }
+			$(this).parents('.entry-content').removeClass('active').css('left', '-100%');
+			$(this).parents('.entry-content').next('.entry-content').addClass('active');
+			$(this).removeClass('active');
+		});
+	}
+	
+	function quiz2() {
+		var option = [0,0,0],
+			clicks = 0,
+			quizLength = $('.quiz').length,
+			progressPercentage = 100/quizLength;
+		
+		for(var i = 1; i < quizLength; i++) {
+			$('.progress-bar').append('<span class="marker" style="left: '+(100/quizLength)*i+'%;"></span>');
+		}
+		
+		$('.quiz-option').on('click', function(){
+			clicks ++;
+			$('.marker').toggleClass('odd');
+			$(this).addClass('selected');
+			$(this).siblings().andSelf().prop('disabled', true);
+			$('.progress-bar .fill').css('width', (progressPercentage*clicks)+'%');
+			$(this).parent().next('.quiz-next').addClass('active');
+			
+			switch( $(this).data('option') ) {
+				case 'a':
+					option[0] ++;
+					break;
+				case 'b':
+					option[1] ++;
+					break;
+				case 'c':
+					option[2] ++;
+					break;
+			}
+			
+			if( clicks >= quizLength ) {
+				switch( indexOfMax(option) ) {
+					case 0:
+						$('.outcome-a').addClass('selected');
+						$('.quiz-end .btn').hide();
+						break;
+					case 1:
+						$('.outcome-b').addClass('selected');
+						$('.quiz-end .btn').show();
+						break;
+					case 2:
+						$('.outcome-c').addClass('selected');
+						$('.quiz-end .btn').show();
+						break;
+				}
+			}
+			
+			if( clicks >= quizLength ) { $('.progress-bar').hide(); }
+			$(this).parents('.entry-content').removeClass('active').css('left', '-100%');
+			$(this).parents('.entry-content').next('.entry-content').addClass('active');
+		});
+		
+		$('.quiz-start .quiz-next').on('click', function(){
+			$('.progress-bar').show();
+			$(this).parents('.entry-content').removeClass('active').css('left', '-100%');
+			$(this).parents('.entry-content').next('.entry-content').addClass('active');
+		});
+	}
+	
+	function fullScreenQuiz() {
+		var headerHeight = $('.header').outerHeight();
+		viewport = updateViewportDimensions();
+		
+		$('.page-template-page-quiz .page').css('min-height', (viewport.height-headerHeight));
+	}
+	
+	/*if( $('body').hasClass('page-template-page-quiz') ) {
+		quiz();
+		
+		$window.on('scroll resize', fullScreenQuiz);
+	}*/
+	
+	if( $('body').hasClass('page-are-we-right-for-you') ) {
+		quiz();
+		
+		$window.on('scroll resize', fullScreenQuiz);
+	}
+	
+	if( $('body').hasClass('page-are-we-right-for-you-2') ) {
+		quiz2();
+		
+		$window.on('scroll resize', fullScreenQuiz);
+	}
+	
+	$window.trigger('scroll');
 
 }); /* end of as page load scripts */

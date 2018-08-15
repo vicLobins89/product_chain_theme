@@ -45,16 +45,16 @@
 										
 										<div class="entry-content cf wrap">
 											<div class="col-12"><?php the_sub_field('content'); ?></div>
+											
+											<?php if( get_sub_field('cta') ) : ?>
+												<div class="cf"></div>
+												<a
+												   href="<?php echo get_sub_field('cta_link'); ?>" 
+												   class="btn cta<?php if( get_sub_field('cta_reverse') ) { echo ' alt1-btn'; } ?>">
+													<?php echo get_sub_field('cta_copy'); ?>
+												</a>
+											<?php endif; ?>
 										</div>
-										
-										<?php if( get_sub_field('cta') ) : ?>
-											<div class="cf"></div>
-											<a
-											   href="<?php echo get_sub_field('cta_link'); ?>" 
-											   class="btn primary-btn<?php if( get_sub_field('cta_reverse') ) { echo ' reverse-btn'; } ?>">
-												<?php echo get_sub_field('cta_copy'); ?>
-											</a>
-										<?php endif; ?>
 										
 										<?php 
 											if( get_sub_field('arrow_graphic') === 'arrow1' ) {
@@ -69,6 +69,8 @@
 										?>
 									</section>
 								<?php endwhile; endif; ?>
+								
+								<?php bones_related_posts(); ?>
 
 							</article>
 

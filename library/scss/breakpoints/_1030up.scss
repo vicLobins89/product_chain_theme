@@ -6,6 +6,56 @@ Stylesheet: Desktop Stylsheet
 
 ******************************************************************/
 
+#content {
+	padding-top: 90px;
+}
+
 .wrap {
-  width: 1020px;
+  max-width: 1020px;
+}
+
+.row {
+	padding: 3rem 5rem;
+}
+
+.pre-footer {
+	padding: 12rem 5rem 5rem;
+}
+
+#logo {
+	width: 150px;
+	background-size: 39px !important;
+}
+
+.nav {
+	> li {
+		ul.sub-menu,
+		ul.children {
+			margin: 0 0 0 -180px;
+			width: 360px;
+			top: 90px;
+		}
+	}
+}
+
+.centered-list {
+	li {
+		margin-bottom: 0;
+	}
+}
+
+.circle-el {
+	ul {
+		li {
+			font-size: 1.75rem !important;
+		}
+	}
+}
+
+.quote {
+	&.quote-xl {
+		p {
+			font-size: 2.25rem;
+		}
+	}
 }

@@ -29,19 +29,29 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 	font-size: 1.4rem;
 	line-height: 1;
 	font-weight: 800;
-	padding: 0.95rem 0;
+	padding: 0.95rem 1rem;
 	margin: 0.85rem auto;
 	cursor: pointer;
 	width: 40rem;
+	max-width: 100%;
     text-align: center;
 	clear: both;
 	outline: none;
 	@include transition(all 0.2s ease-in-out);
+	
+	@media only screen and (max-width: 767px) {
+		font-size: 1.2rem;
+		line-height: 1.3;
+	}
 
 	// hovering on the btn
 	&:hover, &:focus {
 		color: $white;
 		text-decoration: none;
+		
+		&:after {
+			left: 12px;
+		}
 	} // end hover
 
 	// clicking on the button
@@ -65,6 +75,11 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 		padding: 7px;
 		transform: rotate(-45deg);
 		@include transition(all 0.2s ease-in-out);
+		
+		@media only screen and (max-width: 767px) {
+			border-width: 0 2px 2px 0;
+			padding: 5px;
+		}
 	}
 
 } // end .button
@@ -77,17 +92,36 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
 	&:hover,
 	&:focus {
-		background-color: $white;
-		color: $orange;
+		background-color: $alt-orange;
+		color: $white;
+		border-color: $alt-orange;
 		
 		&:after {
-			border-color: $orange;
+			border-color: $white;
 			left: 12px;
 		}
 	}
 }
 
 .alt-btn, a.alt-btn {
+	@extend %btn; // here we load the btn defaults
+	background-color: $orange;
+	border-color: $orange;
+	color: $white;
+
+	&:hover,
+	&:focus {
+		background-color: $white;
+		border-color: $white;
+		color: $orange;
+		
+		&:after {
+			border-color: $orange;
+		}
+	}
+}
+
+.alt1-btn, a.alt1-btn {
 	@extend %btn; // here we load the btn defaults
 	background-color: $alt-blue;
 	border-color: $alt-blue;
@@ -96,33 +130,29 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 	&:hover,
 	&:focus {
 		background-color: $white;
+		border-color: $white;
 		color: $alt-blue;
 		
 		&:after {
 			border-color: $alt-blue;
-			left: 12px;
 		}
 	}
 }
 
-.reverse-btn, a.reverse-btn {
+.alt2-btn, a.alt2-btn {
 	@extend %btn; // here we load the btn defaults
-	background-color: $white;
-	border-color: $white;
-	color: $gray;
-	
-	&:after {
-		border-color: $orange;
-	}
+	background-color: $alt-blue;
+	border-color: $alt-blue;
+	color: $white;
 
 	&:hover,
 	&:focus {
-		background-color: $orange;
+		background-color: $blue;
+		border-color: $blue;
 		color: $white;
 		
 		&:after {
 			border-color: $white;
-			left: 12px;
 		}
 	}
 }

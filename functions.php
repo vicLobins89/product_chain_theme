@@ -165,4 +165,11 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
+// Google Maps API for ACF
+function my_acf_google_map_api( $api ){
+	$api['key'] = 'AIzaSyAYkSQ40G1hKISa4JT2Ryk7ushGIWEOpjI';
+	return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
