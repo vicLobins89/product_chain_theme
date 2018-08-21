@@ -1292,6 +1292,12 @@ POSTS & CONTENT STYLES
 		
 		h1, h2, h3, h4, h5, p {
 			text-align: right;
+			
+			#sample_slider_slide01 & {
+				@media only screen and (max-width: 767px) {
+					text-align: left;
+				}
+			}
 		}
 	}
 	
@@ -1398,7 +1404,7 @@ POSTS & CONTENT STYLES
 	
 	img {
 		position: relative;
-		@media only screen and (max-width: 480px) { width: 55%; }
+		@media only screen and (max-width: 480px) { max-width: 55%; }
 		bottom: -30px;
 		padding: 2rem;
 		margin-bottom: 0 !important;

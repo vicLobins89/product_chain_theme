@@ -1765,6 +1765,9 @@ POSTS & CONTENT STYLES
     right: -100px; }
     .page-title.right h1, .page-title.right h2, .page-title.right h3, .page-title.right h4, .page-title.right h5, .page-title.right p {
       text-align: right; }
+      @media only screen and (max-width: 767px) {
+        #sample_slider_slide01 .page-title.right h1, #sample_slider_slide01 .page-title.right h2, #sample_slider_slide01 .page-title.right h3, #sample_slider_slide01 .page-title.right h4, #sample_slider_slide01 .page-title.right h5, #sample_slider_slide01 .page-title.right p {
+          text-align: left; } }
   .page-title.bottom {
     top: auto !important;
     bottom: 0; }
@@ -1834,7 +1837,7 @@ POSTS & CONTENT STYLES
     transition: all 0.6s ease-in-out; }
     @media only screen and (max-width: 480px) {
       .icon-list img {
-        width: 55%; } }
+        max-width: 55%; } }
     .icon-list img.in-view {
       bottom: 0;
       opacity: 1; }
