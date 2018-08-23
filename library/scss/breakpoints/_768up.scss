@@ -430,11 +430,14 @@ NAVIGATION STYLES
 
 					&:hover,
 					&:focus {
-						text-decoration: underline;
-						text-decoration-style: dotted;
+						color: $gray;
 					}
 
 					&:link {}
+				}
+				
+				&.current_page_item a {
+					color: $gray;
 				}
 
 				&:first-child {}
@@ -496,6 +499,37 @@ NAVIGATION STYLES
 		}
 	}  /* end current highlighters */
 
+}
+
+.parent-pageid-265, .page-id-265 {
+	#menu-item-267 {
+		ul.sub-menu {
+			position: fixed;
+			left: 0;
+			width: 100%;
+			max-height: 500px;
+			margin: 0;
+			padding-left: 8%;
+			border-bottom-right-radius: 0;
+			z-index: 10;
+			@include transition(all 0.2s ease-in-out);
+
+			li {
+				display: inline-block;
+				width: calc(92% / 6);
+				vertical-align: top;
+				padding-right: 2rem;
+
+				a {
+					border: none;
+				}
+			}
+		}
+	}
+	
+	#content {
+		margin-top: 3rem;
+	}
 }
 
 

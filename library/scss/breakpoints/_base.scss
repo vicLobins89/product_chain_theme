@@ -108,8 +108,8 @@ img {
 	}
 }
 .ribbon-path {
-	stroke-dasharray: 1690;
-	stroke-dashoffset: 1690;
+	stroke-dasharray: 1690px;
+	stroke-dashoffset: 1690px;
 }
 
 .ribbon-shape, .haggis-wrapper .cls-4 {
@@ -118,7 +118,7 @@ img {
 
 @include keyframes(draw-line) {
 	to {
-		stroke-dashoffset: 0;
+		stroke-dashoffset: 0px;
 	}
 }
 @include keyframes(opacity--in) {
@@ -292,7 +292,6 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.blog-highlights {
-		background: $light-gray;
 		padding-bottom: 0;
 		
 		.primary-btn {
@@ -344,6 +343,14 @@ LAYOUT & GRID STYLES
 					color: $orange;
 				}
 			}
+		}
+	}
+	
+	&.case-highlights {
+		background: $light-gray;
+		
+		h2 {
+			padding-left: 20px;
 		}
 	}
 	
@@ -399,6 +406,7 @@ LAYOUT & GRID STYLES
 	
 	.case-study {
 		font-size: 0;
+		cursor: pointer;
 		
 		&:nth-child(even) {
 			.post-thumb {
@@ -465,6 +473,7 @@ LAYOUT & GRID STYLES
 	
 	img {
 		max-width: 100%;
+		margin: 0 !important;
 	}
 	
 	.cs-logo {
@@ -507,6 +516,7 @@ LAYOUT & GRID STYLES
 		p {
 			margin: .5rem 0 0 1rem;
 			min-height: 5rem;
+			font-size: 1.15rem;
 		}
 		
 		h3 a, p {
@@ -1138,6 +1148,10 @@ nav {
 			
 			&.active {
 				max-height: 550px;
+				z-index: 11;
+				-webkit-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.25);
+				-moz-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.25);
+				box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.25);
 			}
 
 			li {
@@ -1148,15 +1162,6 @@ nav {
 					padding: 1.9rem 1.75em;
 					outline:0;
 					text-align: left;
-					
-					&:hover,
-					&:focus {						
-						text-decoration:none;
-						opacity:0.8;
-					}
-
-					&:link {}
-
 				}
 
 				&:first-child {}
@@ -1200,7 +1205,7 @@ POSTS & CONTENT STYLES
     width: 64px;
     height: 11px;
     left: 50%;
-    bottom: -35px;
+    bottom: -30px;
     margin-left: -32px;
 	
 	&.loading {
@@ -2226,10 +2231,6 @@ FOOTER STYLES
 	border-bottom-right-radius: 60px;
 	padding-top: 3rem;
     padding-bottom: 2rem;
-	
-	.home & {
-		background: $light-gray;
-	}
 	
 	h2 {
 		font-weight: 900;

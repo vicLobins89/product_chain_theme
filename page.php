@@ -205,22 +205,24 @@
 									$case_studies = new WP_Query( $args );
 									if( $case_studies->have_posts() ) :
 									?>
-										<section class="row case-highlights cf">
+										<section class="row case-highlights case-studies cf">
 											<div class="cf wrap entry-content">
 												<h2>Case Studies</h2>
 												<?php while ( $case_studies->have_posts() ) : $case_studies->the_post(); ?>
-													<div class="post-item col-4">
-														<p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
-															<?php the_post_thumbnail('rectangle-thumb-s'); ?>
-														</a></p>
-														
-														<h3>
-															<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
-																<?php the_title(); ?>
+													<div class="col-4">
+														<div class="post-item">
+															<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
+																<?php the_post_thumbnail('rectangle-thumb-s'); ?>
 															</a>
-														</h3>
-														
-														<?php the_excerpt(); ?>
+
+															<h3>
+																<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
+																	<?php the_title(); ?>
+																</a>
+															</h3>
+
+															<?php the_excerpt(); ?>
+														</div>
 													</div>
 												<?php endwhile; ?>
 											</div>
@@ -235,19 +237,19 @@
 									<section class="contact-us curved row cf">
 										<div class="col-8">
 											<?php
-											if( get_field('map_image') ) {
+											/*if( get_field('map_image') ) {
 												echo '<div class="map-image"><img src="'.get_field('map_image').'" alt="Map Image"></div>';
-											}
+											}*/
 											
-											/*$location = get_field('google_maps');
+											$location = get_field('google_maps');
 
-											if( !empty($location) ): */?>
-												<!--<div class="acf-map">
+											if( $location ): ?>
+												<div class="acf-map">
 													<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>">
 														<p class="address"><?php echo $location['address']; ?></p>
 													</div>
-												</div>-->
-											<?php //endif; ?>
+												</div>
+											<?php endif; ?>
 										</div>
 										
 										<div class="col-4">

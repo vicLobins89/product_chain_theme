@@ -422,8 +422,10 @@ NAVIGATION STYLES
           .nav > li ul.sub-menu li a:hover, .nav > li ul.sub-menu li a:focus,
           .nav > li ul.children li a:hover,
           .nav > li ul.children li a:focus {
-            text-decoration: underline;
-            text-decoration-style: dotted; }
+            color: #545959; }
+        .nav > li ul.sub-menu li.current_page_item a,
+        .nav > li ul.children li.current_page_item a {
+          color: #545959; }
         .nav > li ul.sub-menu li:last-child a,
         .nav > li ul.children li:last-child a {
           border-bottom: 0; }
@@ -451,6 +453,27 @@ NAVIGATION STYLES
   .sub-menu-active .nav > li.current_page_ancestor > a:after {
     content: '';
     display: none; }
+
+.parent-pageid-265 #menu-item-267 ul.sub-menu, .page-id-265 #menu-item-267 ul.sub-menu {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  max-height: 500px;
+  margin: 0;
+  padding-left: 8%;
+  border-bottom-right-radius: 0;
+  z-index: 10;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  .parent-pageid-265 #menu-item-267 ul.sub-menu li, .page-id-265 #menu-item-267 ul.sub-menu li {
+    display: inline-block;
+    width: calc(92% / 6);
+    vertical-align: top;
+    padding-right: 2rem; }
+    .parent-pageid-265 #menu-item-267 ul.sub-menu li a, .page-id-265 #menu-item-267 ul.sub-menu li a {
+      border: none; }
+.parent-pageid-265 #content, .page-id-265 #content {
+  margin-top: 3rem; }
 
 /*********************
 FOOTER STYLES

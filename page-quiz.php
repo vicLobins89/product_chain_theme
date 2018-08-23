@@ -70,7 +70,7 @@
 											<a href="/product-chain/contact-us/" class="btn alt1-btn">Contact us today</a>
 											
 											<div class="social">
-												<p>Share your thoughts</p>
+												<p>Share this quiz</p>
 												<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo home_url( $wp->request ); ?>&title=<?php the_title_attribute(); ?>&summary=&source=" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 												<a href="https://twitter.com/home?status=<?php echo home_url( $wp->request ); ?>" target="_blank"><i class="fab fa-twitter"></i></a>
 											</div>
