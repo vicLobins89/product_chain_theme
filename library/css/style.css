@@ -1620,10 +1620,7 @@ nav li {
       .nav > li ul.sub-menu.active,
       .nav > li ul.children.active {
         max-height: 550px;
-        z-index: 11;
-        -webkit-box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.25);
-        -moz-box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.25);
-        box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.25); }
+        z-index: 11; }
       .nav > li ul.sub-menu li,
       .nav > li ul.children li {
         border-top: 1px solid #545959; }
@@ -2789,18 +2786,23 @@ TABLET & SMALLER LAPTOPS
         width: 278px;
         border-bottom-right-radius: 60px;
         /* highlight sub-menu current page */ }
-        .nav > li ul.sub-menu.active:before,
-        .nav > li ul.children.active:before {
-          content: '';
-          position: absolute;
-          width: 0;
-          height: 0;
-          left: 50%;
-          top: 0;
-          margin-left: -14px;
-          border-left: 14px solid transparent;
-          border-right: 14px solid transparent;
-          border-top: 12px solid #fff; }
+        .nav > li ul.sub-menu.active,
+        .nav > li ul.children.active {
+          -webkit-box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 5px 5px 0px rgba(0, 0, 0, 0.25); }
+          .nav > li ul.sub-menu.active:before,
+          .nav > li ul.children.active:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 50%;
+            top: 0;
+            margin-left: -14px;
+            border-left: 14px solid transparent;
+            border-right: 14px solid transparent;
+            border-top: 12px solid #fff; }
         .nav > li ul.sub-menu li,
         .nav > li ul.children li {
           text-align: left;
@@ -2855,7 +2857,7 @@ TABLET & SMALLER LAPTOPS
     width: 100%;
     max-height: 500px;
     margin: 0;
-    padding-left: 8%;
+    padding: 0 8%;
     border-bottom-right-radius: 0;
     z-index: 10;
     -webkit-transition: all 0.2s ease-in-out;
@@ -2869,6 +2871,8 @@ TABLET & SMALLER LAPTOPS
         border: none; }
   .parent-pageid-265 #content, .page-id-265 #content {
     margin-top: 3rem; }
+  .parent-pageid-265.admin-bar #menu-item-267 ul.sub-menu, .page-id-265.admin-bar #menu-item-267 ul.sub-menu {
+    margin-top: 32px; }
 
   /*********************
   FOOTER STYLES

@@ -37,7 +37,7 @@
 								
 								
 								<?php // MAIN CONTENT ?>
-								<?php if( !empty(get_the_content()) ) : ?>
+								<?php if( get_the_content() ) : ?>
 									<section class="entry-content wrap cf top-row" itemprop="articleBody">
 										<div class="col-12"><?php the_content(); ?></div>
 									</section>

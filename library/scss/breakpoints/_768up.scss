@@ -404,6 +404,10 @@ NAVIGATION STYLES
 			border-bottom-right-radius: 60px;
 			
 			&.active {
+				-webkit-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.25);
+				-moz-box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.25);
+				box-shadow: 1px 5px 5px 0px rgba(0,0,0,0.25);
+				
 				&:before {
 					content: '';
 					position: absolute;
@@ -509,7 +513,7 @@ NAVIGATION STYLES
 			width: 100%;
 			max-height: 500px;
 			margin: 0;
-			padding-left: 8%;
+			padding: 0 8%;
 			border-bottom-right-radius: 0;
 			z-index: 10;
 			@include transition(all 0.2s ease-in-out);
@@ -529,6 +533,14 @@ NAVIGATION STYLES
 	
 	#content {
 		margin-top: 3rem;
+	}
+	
+	&.admin-bar {
+		#menu-item-267 {
+			ul.sub-menu {
+				margin-top: 32px;
+			}
+		}
 	}
 }
 
