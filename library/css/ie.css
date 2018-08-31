@@ -190,7 +190,7 @@ html {
 .page-title {
   top: 0;
   bottom: auto;
-  padding: 3rem; }
+  padding: 5rem; }
   .page-title p {
     font-size: 2.8rem; }
 
@@ -220,17 +220,18 @@ html {
     margin-left: 1rem; }
 
 .circle-el ul {
-  width: 80%; }
+  width: 90%; }
   .circle-el ul li {
-    font-size: 1.5rem !important;
-    padding: 0 10px; }
+    font-size: 1.4rem !important; }
 .circle-el h2 {
   font-size: 4rem; }
 .circle-el h3 {
   font-size: 2.5rem;
-  margin: 3rem 0; }
+  margin: 2rem 0; }
 .entry-content .circle-el p {
-  margin: 0 0 1.5em; }
+  margin: 0; }
+.circle-el img {
+  width: 6rem; }
 
 .case-studies .case-study {
   margin-bottom: 2.5rem; }
@@ -238,6 +239,11 @@ html {
   padding-bottom: 3rem; }
 .case-studies .more {
   margin: 0 0 1rem; }
+.case-studies .col-4 {
+  width: 32.9%;
+  float: none;
+  display: inline-block;
+  vertical-align: top; }
 
 .cs-thumbs {
   margin-left: -20px;
@@ -264,6 +270,9 @@ LAYOUT & GRID STYLES
 *********************/
 .wrap {
   max-width: 760px; }
+
+.single .wrap.post {
+  max-width: 71%; }
 
 /*********************
 HEADER STYLES
@@ -517,6 +526,29 @@ Author: Vic Lobins
 Stylesheet: Desktop Stylsheet
 
 ******************************************************************/
+h1, .h1 {
+  font-size: 2.85rem; }
+
+h2, .h2 {
+  font-size: 2.15rem; }
+
+h3, .h3 {
+  font-size: 1.75rem; }
+
+h4, .h4 {
+  font-size: 1.7rem; }
+
+h5, .h5 {
+  font-size: 1.2rem; }
+
+p {
+  font-size: 1rem; }
+
+.home .entry-content.top-row p {
+  font-size: 1.3rem; }
+.entry-content p {
+  font-size: 1.2rem; }
+
 #content {
   padding-top: 90px; }
 
@@ -525,6 +557,8 @@ Stylesheet: Desktop Stylsheet
 
 .row {
   padding: 3rem 5rem; }
+  .row h3 {
+    font-size: 1.35rem; }
 
 .pre-footer {
   padding: 12rem 5rem 5rem; }
@@ -539,14 +573,19 @@ Stylesheet: Desktop Stylsheet
   width: 360px;
   top: 90px; }
 
+.case-studies .col-4 {
+  width: 33%; }
+
 .centered-list li {
   margin-bottom: 0; }
 
-.circle-el ul li {
-  font-size: 1.75rem !important; }
-
 .quote.quote-xl p {
   font-size: 2.25rem; }
+
+.circle-el h3 {
+  font-size: 2.35rem; }
+.circle-el img {
+  width: 9rem; }
 
 /******************************************************************
 ADDITIONAL IE FIXES

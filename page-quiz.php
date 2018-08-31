@@ -19,7 +19,7 @@
 								
 								<?php if( get_the_content() ) : ?>
 									<section class="entry-content cf quiz-start active" itemprop="articleBody">
-										<?php echo '<div class="arrow arrow8">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-08.svg') . '</div>'; ?>
+										<?php echo '<div class="q-mark">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/question-mark.svg') . '</div>'; ?>
 										<div class="col-12">
 											<?php the_content(); ?>
 											<button class="quiz-next alt-btn">Start</button>
@@ -70,8 +70,8 @@
 											<a href="/product-chain/contact-us/" class="btn alt1-btn">Contact us today</a>
 											
 											<div class="social">
-												<p>Share this quiz</p>
-												<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo home_url( $wp->request ); ?>&title=<?php the_title_attribute(); ?>&summary=&source=" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+												<p>Share this Test with your colleagues</p>
+												<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo home_url( $wp->request ); ?>&title=Are%20we%20right%20for%20you?&summary=<?php echo home_url( $wp->request ); ?>&source=<?php echo home_url( $wp->request ); ?>" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 												<a href="https://twitter.com/home?status=<?php echo home_url( $wp->request ); ?>" target="_blank"><i class="fab fa-twitter"></i></a>
 											</div>
 										</div>

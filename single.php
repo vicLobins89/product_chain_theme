@@ -10,17 +10,17 @@
 						
 							<article id="post-<?php the_ID(); ?>" <?php post_class('cf wrap'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 
-							<section class="entry-content cf" itemprop="articleBody">
-								<h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
+								<section class="entry-content cf" itemprop="articleBody">
+									<h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 
-								<p class="byline entry-meta vcard">
-									<?php printf( __( 'Posted', 'bonestheme' ).' %1$s',
-									/* the time the post was published */
-									'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
-									); ?>
-								</p>
-								<?php the_content(); ?>
-							</section> <?php // end article section ?>
+									<p class="byline entry-meta vcard">
+										<?php printf( __( 'Posted', 'bonestheme' ).' %1$s',
+										/* the time the post was published */
+										'<time class="updated entry-time" datetime="' . get_the_time('Y-m-d') . '" itemprop="datePublished">' . get_the_time(get_option('date_format')) . '</time>'
+										); ?>
+									</p>
+									<?php the_content(); ?>
+								</section> <?php // end article section ?>
 
 						  </article> <?php // end article ?>
 						

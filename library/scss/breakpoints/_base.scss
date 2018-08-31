@@ -49,6 +49,25 @@ img {
 	display: none;
 }
 
+.q-mark {
+	width: 100px;
+    margin: 0 auto 3rem;
+	
+	&.in-view {
+		.st1 { animation: draw-line 800ms ease-out forwards; }
+		.st0, .st2 { animation: opacity--in 100ms linear 700ms forwards; }
+	}
+	
+	.st1 {
+		stroke-dasharray: 160px;
+		stroke-dashoffset: 160px;
+	}
+	
+	.st0, .st2 {
+		opacity: 0;
+	}
+}
+
 .ribbon {
 	position: relative;
 	background: $orange;
@@ -235,6 +254,12 @@ WORDPRESS BODY CLASSES
 .single {
 	.wrap.post {
 		max-width: 95%;
+	}
+	
+	img {
+		&.aligncenter {
+			width: 70%;
+		}
 	}
 }
 
@@ -451,7 +476,7 @@ LAYOUT & GRID STYLES
 			&:hover,
 			&:focus {
 				&:after {
-					border-color: $white;
+					border-color: $white !important;
 					left: 12px;
 				}
 			} // end hover// end active
@@ -461,12 +486,20 @@ LAYOUT & GRID STYLES
 				position: relative;
 				top: 1px;
 				left: 4px;
-				border: solid lighten($orange, 10%);
+				border: solid $orange;
 				border-width: 0 4px 4px 0;
 				display: inline-block;
 				padding: 7px;
 				transform: rotate(-45deg);
 				@include transition(all 0.2s ease-in-out);
+			}
+		}
+		
+		.cano-water {
+			.read-more {
+				&:after {
+					border-color: $blue;
+				}
 			}
 		}
 	}
@@ -487,7 +520,7 @@ LAYOUT & GRID STYLES
 	
 	.more {
 		font-weight: 400;
-		font-size: 3rem;
+		font-size: 2.5rem;
 		margin: 0 20px 1rem;
 	}
 	
@@ -514,7 +547,7 @@ LAYOUT & GRID STYLES
 		}
 		
 		p {
-			margin: .5rem 0 0 1rem;
+			margin: .5rem 1rem 0 1rem;
 			min-height: 5rem;
 			font-size: 1.15rem;
 		}
@@ -632,17 +665,15 @@ LAYOUT & GRID STYLES
 	
 	h1, h2 {
 		color: $white;
+		width: 80%;
+    	margin: 1rem auto;
 	}
 	
 	h2 {
 		span {
-			display: none;
+			display: block;
+			font-size: 50%;
 		}
-	}
-	
-	&.page-are-we-right-for-you-2 h2 span {
-		display: block !important;
-		font-size: 50%;
 	}
 	
 	.entry-content {
@@ -684,30 +715,27 @@ LAYOUT & GRID STYLES
 	background: $alt-blue;
 	
 	.quiz-next {
-		visibility: hidden;
-		position: fixed;
-		font-size: 1.5rem;
-		width: 8rem;
-		padding-top: 4rem;
-		bottom: 0rem;
-		right: 3rem;
-		opacity: 0;
-		border: none;
-		background: url(../images/arrow-next.png) no-repeat center top;
-		background-size: contain;
-		color: $white;
-		font-weight: bold;
-		@include transition(all 0.3s ease-in-out);
-
-		&.active {
-			visibility: visible;
-			opacity: 1;
-			bottom: 3rem;
-		}
-		
-		.page-are-we-right-for-you-2 & {
-			display: none !important;
-		}
+		display: none;
+//		visibility: hidden;
+//		position: fixed;
+//		font-size: 1.5rem;
+//		width: 8rem;
+//		padding-top: 4rem;
+//		bottom: 0rem;
+//		right: 3rem;
+//		opacity: 0;
+//		border: none;
+//		background: url(../images/arrow-next.png) no-repeat center top;
+//		background-size: contain;
+//		color: $white;
+//		font-weight: bold;
+//		@include transition(all 0.3s ease-in-out);
+//
+//		&.active {
+//			visibility: visible;
+//			opacity: 1;
+//			bottom: 3rem;
+//		}
 	}
 	
 	&:nth-child(odd) {
@@ -818,18 +846,18 @@ LAYOUT & GRID STYLES
 		@include transition(all 0.3s ease-in-out);
 	}
 	
-	.marker {
-		position: absolute;
-		width: 6px;
-		height: 14px;
-		margin-left: -3px;
-		background: $alt-blue;
-		@include transition(all 1s ease-in-out);
-		
-		&.odd {
-			background: $blue;
-		}
-	}
+//	.marker {
+//		position: absolute;
+//		width: 6px;
+//		height: 14px;
+//		margin-left: -3px;
+//		background: $alt-blue;
+//		@include transition(all 1s ease-in-out);
+//		
+//		&.odd {
+//			background: $blue;
+//		}
+//	}
 }
 
 .outcomes {
@@ -855,7 +883,7 @@ LINK STYLES
 *********************/
 
 a {
-	color: $link-color;
+	color: inherit;
 
 	/* on hover */
 	&:hover, &:focus {
@@ -1407,6 +1435,7 @@ POSTS & CONTENT STYLES
 	img {
 		position: relative;
 		@media only screen and (max-width: 480px) { max-width: 55%; }
+		max-width: 65% !important;
 		bottom: -30px;
 		padding: 2rem;
 		margin-bottom: 0 !important;
@@ -1454,7 +1483,7 @@ POSTS & CONTENT STYLES
 		
 		li {
 			width: 100%;
-			font-size: 1.5rem !important;
+			font-size: 1.2rem !important;
 			font-weight: normal;
 			text-align: left;
 			margin-bottom: 1rem;
@@ -1473,6 +1502,10 @@ POSTS & CONTENT STYLES
 				padding: 5px;
 				margin-right: 17px;
 				transform: rotate(-45deg);
+				
+				.page-our-services & {
+					border-color: $gray;
+				}
 			}
 		}
 		
@@ -1548,6 +1581,14 @@ POSTS & CONTENT STYLES
 	}
 }
 
+.page-the-product-chain-process .row {
+	.col-12 {
+		float: none;
+		width: 80%;
+		margin: auto;
+	}
+}
+
 .circle-el {
 	position: relative;
 	width: 100%;
@@ -1584,11 +1625,12 @@ POSTS & CONTENT STYLES
 		width: 90%;
 		margin: auto;
 		text-align: center;
+		padding: 0 !important;
 		
 		li {
 			display: inline-block;
 			width: 25%;
-			font-size: 0.8rem !important;
+			font-size: 0.75rem !important;
 			padding: 0;
 			color: $white;
 			font-weight: bold;
@@ -1603,9 +1645,7 @@ POSTS & CONTENT STYLES
 	}
 	
 	img {
-		@media only screen and (max-width: 767px) {
-			width: 5rem;
-		}
+		width: 4rem;
 	}
 	
 	.diagram {
@@ -1672,6 +1712,16 @@ POSTS & CONTENT STYLES
 	h2 {
 		margin-bottom: 1rem;
 	}
+	
+	h4 {
+		em {
+			font-size: 60%;
+		}
+	}
+	
+	.tnc {
+		font-size: 60%;
+	}
 
 	p {
 		font-size: 1.5rem;
@@ -1698,7 +1748,11 @@ POSTS & CONTENT STYLES
 		}
 	}
 
-	ul, ol, table, dl {}
+	ul, ol, table, dl, p {
+		a {
+			opacity: 0.8;
+		}
+	}
 
 	ul:not(.centered-list):not(.icon-list), ol {
 		font-size: 0;
@@ -1709,21 +1763,21 @@ POSTS & CONTENT STYLES
 		}
 
 		li {
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			margin-bottom: 1rem;
 		}
 		
 		&.arrows {
 			li {
-				text-indent: -2.5rem;
+				position: relative;
     			padding-left: 2rem;
 				
 				&:before {
 					content: '';
-					position: relative;
-					top: 0;
-					left: 4px;
-					border: solid #fff;
+					position: absolute;
+					top: .75rem;
+					left: 0;
+					border: solid $white;
 					border-width: 0 4px 4px 0;
 					display: inline-block;
 					padding: 5px;

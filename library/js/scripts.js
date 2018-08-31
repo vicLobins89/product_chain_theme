@@ -120,7 +120,7 @@ jQuery(document).ready(function($) {
 	
 	// Check if in view
 	var $window = $(window),
-		$animationElements = $('.arrow, .ribbon, .haggis-wrapper, .icon-list img, .animate-element, .bcd');
+		$animationElements = $('.arrow, .ribbon, .haggis-wrapper, .icon-list img, .animate-element, .bcd, .q-mark');
 	
 	function checkIfInView() {
 		var windowHeight = $window.height(),
@@ -189,58 +189,6 @@ jQuery(document).ready(function($) {
 			quizLength = $('.quiz').length,
 			progressPercentage = 100/quizLength;
 		
-		$('.quiz-option').on('click', function(){
-			clicks ++;
-			$(this).addClass('selected');
-			$(this).siblings().andSelf().prop('disabled', true);
-			$('.progress-bar .fill').css('width', (progressPercentage*clicks)+'%');
-			$(this).parent().next('.quiz-next').addClass('active');
-			
-			switch( $(this).data('option') ) {
-				case 'a':
-					option[0] ++;
-					break;
-				case 'b':
-					option[1] ++;
-					break;
-				case 'c':
-					option[2] ++;
-					break;
-			}
-			
-			if( clicks >= quizLength ) {
-				switch( indexOfMax(option) ) {
-					case 0:
-						$('.outcome-a').addClass('selected');
-						$('.quiz-end .btn').hide();
-						break;
-					case 1:
-						$('.outcome-b').addClass('selected');
-						$('.quiz-end .btn').show();
-						break;
-					case 2:
-						$('.outcome-c').addClass('selected');
-						$('.quiz-end .btn').show();
-						break;
-				}
-			}
-		});
-		
-		$('.quiz-next').on('click', function(){
-			if( clicks === 0 ) { $('.progress-bar').show(); }
-			if( clicks >= quizLength ) { $('.progress-bar').hide(); }
-			$(this).parents('.entry-content').removeClass('active').css('left', '-100%');
-			$(this).parents('.entry-content').next('.entry-content').addClass('active');
-			$(this).removeClass('active');
-		});
-	}
-	
-	function quiz2() {
-		var option = [0,0,0],
-			clicks = 0,
-			quizLength = $('.quiz').length,
-			progressPercentage = 100/quizLength;
-		
 		for(var i = 1; i < quizLength; i++) {
 			$('.progress-bar').append('<span class="marker" style="left: '+(100/quizLength)*i+'%;"></span>');
 		}
@@ -301,20 +249,8 @@ jQuery(document).ready(function($) {
 		$('.page-template-page-quiz .page').css('min-height', (viewport.height-headerHeight));
 	}
 	
-	/*if( $('body').hasClass('page-template-page-quiz') ) {
+	if( $('body').hasClass('page-template-page-quiz') ) {
 		quiz();
-		
-		$window.on('scroll resize', fullScreenQuiz);
-	}*/
-	
-	if( $('body').hasClass('page-are-we-right-for-you') ) {
-		quiz();
-		
-		$window.on('scroll resize', fullScreenQuiz);
-	}
-	
-	if( $('body').hasClass('page-are-we-right-for-you-2') ) {
-		quiz2();
 		
 		$window.on('scroll resize', fullScreenQuiz);
 	}

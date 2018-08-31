@@ -6,6 +6,42 @@ Stylesheet: Desktop Stylsheet
 
 ******************************************************************/
 
+h1, .h1 {
+	font-size: 2.85rem;
+}
+
+h2, .h2 {
+	font-size: 2.15rem;
+}
+
+h3, .h3 {
+	font-size: 1.75rem;
+}
+
+h4, .h4 {
+	font-size: 1.7rem;
+}
+
+h5, .h5 {
+	font-size: 1.2rem;
+}
+
+p {
+	font-size: 1rem;
+}
+
+.entry-content {
+	.home &.top-row {
+		p {
+			font-size: 1.3rem;
+		}
+	}
+	
+	p {
+		font-size: 1.2rem;
+	}
+}
+
 #content {
 	padding-top: 90px;
 }
@@ -16,6 +52,10 @@ Stylesheet: Desktop Stylsheet
 
 .row {
 	padding: 3rem 5rem;
+	
+	h3 {
+		font-size: 1.35rem;
+	}
 }
 
 .pre-footer {
@@ -38,17 +78,15 @@ Stylesheet: Desktop Stylsheet
 	}
 }
 
-.centered-list {
-	li {
-		margin-bottom: 0;
+.case-studies {
+	.col-4 {
+		width: 33%;
 	}
 }
 
-.circle-el {
-	ul {
-		li {
-			font-size: 1.75rem !important;
-		}
+.centered-list {
+	li {
+		margin-bottom: 0;
 	}
 }
 
@@ -57,5 +95,15 @@ Stylesheet: Desktop Stylsheet
 		p {
 			font-size: 2.25rem;
 		}
+	}
+}
+
+.circle-el {
+	h3 {
+		font-size: 2.35rem;
+	}
+	
+	img {
+		width: 9rem;
 	}
 }

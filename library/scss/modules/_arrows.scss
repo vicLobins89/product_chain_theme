@@ -1,142 +1,192 @@
+.cta {
+	position: relative;
+	width: 40rem;
+    margin: auto;
+}
+
 .arrow {
 	display: block;
 }
 
 .arrow1 {
-	width: 27%;
-	position: absolute;
-	left: -1%;
-	bottom: 2rem;
-	
-	.page-about-us &,
-	.page-consultancy &,
-	.page-new-product-launches &,
-	.page-account-management &,
-	.page-business-channel-development & {
-		width: 28%;
-		right: -2%;
-		left: auto;
-		bottom: -1rem;
-		transform: scale(-1);
-	}
-	
-	.page-consultancy &, 
-	.page-new-product-launches &,
-	.single-custom_type &,
-	.page-business-channel-development & {
-		.arrow1--path {
-			stroke: $alt-blue;
-		}
-		
-		.arrow1--arrowhead {
-			fill: $alt-blue;
-		}
-	}
-	
-	.page-the-product-chain-process & {
-		transform: scaleY(-1);
-	}
+	width: 240px;
+    position: absolute;
+    right: -270px;
+    bottom: -10px;
 	
 	&.in-view {
-		.arrow1--path { animation: draw-line 800ms ease-out forwards; }
-		.arrow1--arrowhead { animation: opacity--in 100ms linear 700ms forwards; }
+		.st0 { animation: draw-line 800ms ease-out forwards; }
+		.st1 { animation: opacity--in 100ms linear 700ms forwards; }
 	}
-}
-.arrow1--path {
-	stroke: $orange;
-	stroke-dasharray: 400px;
-	stroke-dashoffset: 400px;
-}
-.arrow1--arrowhead, .arrow2--arrowhead, .arrow3--pencil, .arrow4--fill {
-	opacity: 0;
+	
+	.st0 {
+		stroke-dasharray: 400px;
+		stroke-dashoffset: 400px;
+	}
+	
+	.st1 {
+		opacity: 0;
+	}
 }
 
 .arrow2 {
-	width: 32%;
+	width: 220px;
     position: absolute;
-    right: -7%;
-    bottom: 4.5rem;
-	opacity: 0;
-	@include transition(opacity 0.2s ease-in-out);
+    left: -240px;
+    bottom: -20px;
 	
 	&.in-view {
-		opacity: 1;
-		.arrow2--path { animation: draw-line 900ms ease-out forwards; }
-		.arrow2--arrowhead { animation: opacity--in 100ms linear 800ms forwards; }
+		.st1 { animation: draw-line 800ms ease-out forwards; }
+		.st0 { animation: opacity--in 100ms linear 700ms forwards; }
 	}
 	
-	.postid-139 & {
-		.arrow2--path {
-			stroke: #00bfb2;
-		}
-		
-		.arrow2--arrowhead path {
-			fill: #00bfb2;
-		}
+	.st1 {
+		stroke-dasharray: 200px;
+		stroke-dashoffset: 200px;
 	}
-}
-.arrow2--path {
-	stroke-dasharray: 700px;
-	stroke-dashoffset: 700px;
+	
+	.st0 {
+		opacity: 0;
+	}
 }
 
 .arrow3 {
+	width: 240px;
+    position: absolute;
+    right: -270px;
+    bottom: -20px;
+	
+	&.in-view {
+		.st1 { animation: draw-line 800ms ease-out forwards; }
+		.st0 { animation: opacity--in 100ms linear 700ms forwards; }
+	}
+	
+	.st1 {
+		stroke-dasharray: 210px;
+		stroke-dashoffset: 210px;
+	}
+	
+	.st0 {
+		opacity: 0;
+	}
+}
+
+.arrow4 {
+	width: 100px;
+    position: absolute;
+    left: -130px;
+    bottom: -20px;
+	
+	&.in-view {
+		.st0 { animation: draw-line 800ms ease-out forwards; }
+		.st1 { animation: opacity--in 100ms linear 700ms forwards; }
+	}
+	
+	.st0 {
+		stroke-dasharray: 80px;
+		stroke-dashoffset: 80px;
+	}
+	
+	.st1 {
+		opacity: 0;
+	}
+}
+
+.arrow-up {
+	position: absolute;
+	width: 25%;
+    max-width: 400px;
+    left: 70%;
+    bottom: -30px;
+	
+	+ .icon-list.alt {
+		width: 80%;
+	}
+	
+	&.in-view {
+		.st0 { animation: draw-line 800ms ease-out forwards; }
+		.st1 { animation: opacity--in 100ms linear 700ms forwards; }
+	}
+	
+	.st0 {
+		stroke-dasharray: 730px;
+		stroke-dashoffset: -730px;
+	}
+	
+	.st1 {
+		opacity: 0;
+	}
+}
+
+.chain {
+	position: absolute;
+	width: 12%;
+    max-width: 200px;
+    left: 72%;
+    bottom: -43%;
+	
+	+ .icon-list.alt {
+		width: 80%;
+	}
+	
+	&.in-view {
+		.st0 { animation: draw-line 800ms ease-out forwards; }
+		.st1 { animation: draw-line 800ms ease-out forwards; }
+		.st2, .st3 { animation: opacity--in 100ms linear 700ms forwards; }
+	}
+	
+	.st0 {
+		stroke-dasharray: 530px;
+		stroke-dashoffset: -530px;
+	}
+	
+	.st1 {
+		stroke-dasharray: 560px;
+		stroke-dashoffset: 560px;
+	}
+	
+	.st2, .st3 {
+		opacity: 0;
+	}
+}
+
+.pencil {
 	width: 54%;
     position: absolute;
     left: -10px;
     top: 2rem;
-	opacity: 0;
-	@include transition(opacity 0.2s ease-in-out);
 	
 	&.in-view {
-		opacity: 1;
-		.arrow3--path { animation: draw-line 1100ms ease-out forwards; }
-		.arrow3--pencil { animation: opacity--in 100ms linear 1000ms forwards; }
-	}
-}
-.arrow3--path {
-	stroke-dasharray: 850px;
-	stroke-dashoffset: 850px;
-}
-
-.arrow4 {
-	position: absolute;
-    width: 100%;
-    left: -7%;
-    bottom: -16%;
-	transform: rotate(-50deg);
-	
-	&.in-view {
-		opacity: 1;
-		.arrow4--path { animation: draw-line 3000ms ease-out forwards; }
-		.arrow4--fill { animation: opacity--in 300ms linear 2500ms forwards; }
-	}
-}
-
-.arrow4--path {
-	stroke-dasharray: 3800px;
-	stroke-dashoffset: -3800px;
-}
-
-.arrow8 {
-	position: absolute;
-    width: 30%;
-    top: -3%;
-    right: 4%;
-	
-	&.in-view {
-		opacity: 1;
-		.st0 { animation: draw-line 1300ms ease-out forwards; }
-		.st1, .st2 { animation: opacity--in 100ms linear 1200ms forwards; }
+		.pencil-path { animation: draw-line 1100ms ease-out forwards; }
+		.pencil-shape { animation: opacity--in 100ms linear 1000ms forwards; }
 	}
 	
-	.st1, .st2 {
+	.pencil-shape {
 		opacity: 0;
 	}
 	
-	.st0 {
-		stroke-dasharray: 870px;
-		stroke-dashoffset: 870px;
+	.pencil-path {
+		stroke-dasharray: 850px;
+		stroke-dashoffset: 850px;
+	}
+}
+
+.page-consultancy,
+.page-new-product-launches,
+.page-business-channel-development,
+.single-custom_type {
+	.arrow4 .st0,
+	.arrow3 .st1,
+	.arrow2 .st1,
+	.arrow1 .st0 {
+		stroke: $blue;
+	}
+	
+	.arrow4 .st1,
+	.arrow3 .st0,
+	.arrow2 .st0,
+	.arrow1 .st1 {
+		fill: $alt-blue;
 	}
 }
 

@@ -238,9 +238,9 @@ function bones_related_posts() {
 	
 	if($tags) {
 		if( !wp_get_post_tags( $post->ID ) ) {
-			echo '<section class="row case-highlights cf curved">
+			echo '<section class="row case-studies cf curved">
 				<div class="cf wrap entry-content">
-				<h2>Related Case Studies</h2>';
+				<h2>Further Case Studies</h2>';
 			foreach( $tags as $tag ) {
 				$tag_arr .= $tag->slug . ',';
 			}
@@ -274,10 +274,10 @@ function bones_related_posts() {
 		$related_posts = get_posts( $args );
 		if($related_posts) {
 			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
-				<div class="post-item col-4">
-					<p><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
+				<div class="col-4">
+					<div class="post-item"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
 						<?php the_post_thumbnail('rectangle-thumb-s'); ?>
-					</a></p>
+					</a>
 
 					<h3>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
@@ -285,7 +285,7 @@ function bones_related_posts() {
 						</a>
 					</h3>
 
-					<?php the_excerpt(); ?>
+					<?php the_excerpt(); ?></div>
 				</div>
 			<?php endforeach; }
 		else { ?>
@@ -382,18 +382,28 @@ function render_ribbon($atts) {
 add_shortcode('ribbon', 'render_ribbon');
 
 function render_haggis($atts) {
-	return file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-05.svg');
+	return file_get_contents(get_template_directory_uri() . '/library/images/svg/haggis.svg');
 }
 add_shortcode('haggis', 'render_haggis');
+
+function render_arrowUp($atts) {
+	return '<div class="arrow arrow-up">'.file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-up.svg').'</div>';
+}
+add_shortcode('arrow-up', 'render_arrowUp');
+
+function render_arrow5($atts) {
+	return file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-05.svg');
+}
+add_shortcode('arrow5', 'render_arrow5');
 
 function render_arrow6($atts) {
 	return file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-06.svg');
 }
 add_shortcode('arrow6', 'render_arrow6');
 
-function render_arrow7($atts) {
-	return file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-07.svg');
+function render_chain($atts) {
+	return '<div class="arrow chain">'.file_get_contents(get_template_directory_uri() . '/library/images/svg/chain.svg').'</div>';
 }
-add_shortcode('arrow7', 'render_arrow7');
+add_shortcode('chain', 'render_chain');
 
 ?>

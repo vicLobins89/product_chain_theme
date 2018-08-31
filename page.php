@@ -57,8 +57,8 @@
 												 if( $bgColor || $paddingTop || $paddingBottom ) { 
 													 $styles = ' style="';
 													 if( $bgColor ) { $styles .= 'background: '.$bgColor.';'; }
-													 if( $paddingTop == '0' ) { $styles .= ' padding-top: '.$paddingTop.';'; }
-													 if( $paddingBottom == '0' ) { $styles .= ' padding-bottom: '.$paddingBottom.';'; }
+													 if( $paddingTop ) { $styles .= ' padding-top: '.$paddingTop.';'; }
+													 if( $paddingBottom ) { $styles .= ' padding-bottom: '.$paddingBottom.';'; }
 													 $styles .= '"';
 													 echo $styles;
 												 }
@@ -126,26 +126,26 @@
 											
 										<?php if( get_sub_field('cta') ) : ?>
 											<div class="cf"></div>
-											<a
-											   href="<?php echo get_sub_field('cta_link'); ?>" 
-											   class="btn primary-btn<?php if( get_sub_field('cta_reverse') ) { echo ' alt1-btn'; } ?>">
-												<?php echo get_sub_field('cta_copy'); ?>
-											</a>
+											<div class="cta">
+												<a
+												   href="<?php echo get_sub_field('cta_link'); ?>" 
+												   class="btn primary-btn<?php if( get_sub_field('cta_reverse') ) { echo ' alt1-btn'; } ?>">
+													<?php echo get_sub_field('cta_copy'); ?>
+												</a>
+												
+												<?php 
+													if( get_sub_field('arrow_graphic') === 'arrow1' ) {
+														echo '<div class="arrow arrow1">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-01.svg') . '</div>';
+													} elseif( get_sub_field('arrow_graphic') === 'arrow2' ) {
+														echo '<div class="arrow arrow2">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-02.svg') . '</div>';
+													} elseif( get_sub_field('arrow_graphic') === 'arrow3' ) {
+														echo '<div class="arrow arrow3">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-03.svg') . '</div>';
+													} elseif( get_sub_field('arrow_graphic') === 'arrow4' ) {
+														echo '<div class="arrow arrow4">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-04.svg') . '</div>';
+													}
+												?>
+											</div>
 										<?php endif; ?>
-											
-										<?php 
-											if( get_sub_field('arrow_graphic') === 'arrow1' ) {
-												echo '<div class="arrow arrow1">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-01.svg') . '</div>';
-											} elseif( get_sub_field('arrow_graphic') === 'arrow2' ) {
-												echo '<div class="arrow arrow2">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-02.svg') . '</div>';
-											} elseif( get_sub_field('arrow_graphic') === 'arrow3' ) {
-												echo '<div class="arrow arrow3">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-03.svg') . '</div>';
-											} elseif( get_sub_field('arrow_graphic') === 'arrow4' ) {
-												echo '<div class="arrow arrow4">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-04.svg') . '</div>';
-											} elseif( get_sub_field('arrow_graphic') === 'arrow5' ) {
-												echo '<div class="arrow arrow5">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-05.svg') . '</div>';
-											}
-										?>
 											
 										</div>
 										</section>
@@ -271,13 +271,9 @@
 											<?php endif; ?>
 										</div>
 										
-										<?php 
-											if( get_field('arrow_graphic') === 'arrow1' ) {
-												echo '<div class="arrow arrow1">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-01.svg') . '</div>';
-											} elseif( get_field('arrow_graphic') === 'arrow2' ) {
-												echo '<div class="arrow arrow2">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-02.svg') . '</div>';
-											} elseif( get_field('arrow_graphic') === 'arrow3' ) {
-												echo '<div class="arrow arrow3">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-03.svg') . '</div>';
+										<?php
+											if( is_front_page() ) {
+												echo '<div class="arrow pencil">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/pencil.svg') . '</div>';
 											}
 										?>
 									</section>

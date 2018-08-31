@@ -88,7 +88,7 @@ body {}
 .page-title {
 	top: 0;
 	bottom: auto;
-	padding: 3rem;
+	padding: 5rem;
 	
 	p {
 		font-size: 2.8rem;
@@ -147,11 +147,10 @@ body {}
 
 .circle-el {
 	ul {
-		width: 80%;
+		width: 90%;
 		
 		li {
-			font-size: 1.5rem !important;
-			padding: 0 10px;
+			font-size: 1.4rem !important;
 		}
 	}
 	
@@ -161,13 +160,17 @@ body {}
 	
 	h3 {
 		font-size: 2.5rem;
-		margin: 3rem 0;
+		margin: 2rem 0;
 	}
 	
 	p {
 		.entry-content & {
-			margin: 0 0 1.5em;
+			margin: 0;
 		}
+	}
+	
+	img {
+		width: 6rem;
 	}
 }
 
@@ -181,8 +184,14 @@ body {}
 	}
 	
 	.more {
-
 		margin: 0 0 1rem;
+	}
+	
+	.col-4 {
+		width: 32.9%;
+		float: none;
+		display: inline-block;
+		vertical-align: top;
 	}
 }
 
@@ -229,6 +238,12 @@ LAYOUT & GRID STYLES
 
 .wrap {
 	max-width: 760px;
+}
+
+.single {
+	.wrap.post {
+		max-width: 71%;
+	}
 }
 
 /*********************

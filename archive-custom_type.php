@@ -45,7 +45,11 @@
 										<?php while ( $case_studies_f->have_posts() ) : $case_studies_f->the_post();
 											if( get_field('panel_colour') ) { $bgColour = get_field('panel_colour'); } ?>
 											
-											<div class="case-study cf"<?php if($bgColour) { echo ' style="background: '.$bgColour.';"'; } ?> onclick="window.location='<?php the_permalink(); ?>';">
+											<div 
+												class="case-study cf <?php echo $post->post_name; ?>"
+												<?php if($bgColour) { echo ' style="background: '.$bgColour.';"'; } ?> 
+												onclick="window.location='<?php the_permalink(); ?>';"
+												>
 												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb col-8">
 													<?php the_post_thumbnail('rectangle-thumb-l'); ?>
 												</a>

@@ -710,7 +710,7 @@ INPUTS
 .wpcf7-form-control.wpcf7-submit {
   float: right;
   width: 27%;
-  padding: 13px 0;
+  padding: 15px 0;
   text-align: center;
   background: #ed691c;
   font-weight: 800;
@@ -861,6 +861,19 @@ img {
 .arrow {
   display: none; }
 
+.q-mark {
+  width: 100px;
+  margin: 0 auto 3rem; }
+  .q-mark.in-view .st1 {
+    animation: draw-line 800ms ease-out forwards; }
+  .q-mark.in-view .st0, .q-mark.in-view .st2 {
+    animation: opacity--in 100ms linear 700ms forwards; }
+  .q-mark .st1 {
+    stroke-dasharray: 160px;
+    stroke-dashoffset: 160px; }
+  .q-mark .st0, .q-mark .st2 {
+    opacity: 0; }
+
 .ribbon {
   position: relative;
   background: #ed691c; }
@@ -1007,6 +1020,8 @@ WORDPRESS BODY CLASSES
 /* 404 page */
 .single .wrap.post {
   max-width: 95%; }
+.single img.aligncenter {
+  width: 70%; }
 
 /*********************
 LAYOUT & GRID STYLES
@@ -1133,20 +1148,22 @@ LAYOUT & GRID STYLES
       color: #fff;
       text-decoration: none; }
       .case-studies.featured .read-more:hover:after, .case-studies.featured .read-more:focus:after {
-        border-color: #fff;
+        border-color: #fff !important;
         left: 12px; }
       .case-studies.featured .read-more:after {
         content: '';
         position: relative;
         top: 1px;
         left: 4px;
-        border: solid #f1884b;
+        border: solid #ed691c;
         border-width: 0 4px 4px 0;
         display: inline-block;
         padding: 7px;
         transform: rotate(-45deg);
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out; }
+    .case-studies.featured .cano-water .read-more:after {
+      border-color: #0096a8; }
   .case-studies img {
     max-width: 100%;
     margin: 0 !important; }
@@ -1157,7 +1174,7 @@ LAYOUT & GRID STYLES
       max-width: 75%; }
   .case-studies .more {
     font-weight: 400;
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin: 0 20px 1rem; }
   .case-studies .col-4 {
     padding: 20px; }
@@ -1174,7 +1191,7 @@ LAYOUT & GRID STYLES
         .case-studies .post-item h3 a:hover, .case-studies .post-item h3 a:focus {
           color: #545959; }
     .case-studies .post-item p {
-      margin: .5rem 0 0 1rem;
+      margin: .5rem 1rem 0 1rem;
       min-height: 5rem;
       font-size: 1.15rem; }
     .case-studies .post-item h3 a, .case-studies .post-item p {
@@ -1241,11 +1258,11 @@ LAYOUT & GRID STYLES
   .page-template-page-quiz h1 strong, .page-template-page-quiz h1 b {
     font-weight: 900; }
 .page-template-page-quiz h1, .page-template-page-quiz h2 {
-  color: #fff; }
+  color: #fff;
+  width: 80%;
+  margin: 1rem auto; }
 .page-template-page-quiz h2 span {
-  display: none; }
-.page-template-page-quiz.page-are-we-right-for-you-2 h2 span {
-  display: block !important;
+  display: block;
   font-size: 50%; }
 .page-template-page-quiz .entry-content {
   position: absolute;
@@ -1278,27 +1295,7 @@ LAYOUT & GRID STYLES
 .quiz {
   background: #00bfb2; }
   .quiz .quiz-next {
-    visibility: hidden;
-    position: fixed;
-    font-size: 1.5rem;
-    width: 8rem;
-    padding-top: 4rem;
-    bottom: 0rem;
-    right: 3rem;
-    opacity: 0;
-    border: none;
-    background: url(../images/arrow-next.png) no-repeat center top;
-    background-size: contain;
-    color: #fff;
-    font-weight: bold;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out; }
-    .quiz .quiz-next.active {
-      visibility: visible;
-      opacity: 1;
-      bottom: 3rem; }
-    .page-are-we-right-for-you-2 .quiz .quiz-next {
-      display: none !important; }
+    display: none; }
   .quiz:nth-child(odd) {
     background: #0096a8; }
     .quiz:nth-child(odd) .quiz-option {
@@ -1371,16 +1368,6 @@ LAYOUT & GRID STYLES
     top: 0;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
-  .progress-bar .marker {
-    position: absolute;
-    width: 6px;
-    height: 14px;
-    margin-left: -3px;
-    background: #00bfb2;
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out; }
-    .progress-bar .marker.odd {
-      background: #0096a8; }
 
 .outcomes {
   margin-bottom: 5rem; }
@@ -1397,7 +1384,7 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a {
-  color: #545959;
+  color: inherit;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
@@ -1826,6 +1813,7 @@ POSTS & CONTENT STYLES
       font-size: 2rem !important; }
   .icon-list img {
     position: relative;
+    max-width: 65% !important;
     bottom: -30px;
     padding: 2rem;
     margin-bottom: 0 !important;
@@ -1861,7 +1849,7 @@ POSTS & CONTENT STYLES
     margin-bottom: 0; }
     .icon-list.alt li {
       width: 100%;
-      font-size: 1.5rem !important;
+      font-size: 1.2rem !important;
       font-weight: normal;
       text-align: left;
       margin-bottom: 1rem;
@@ -1879,6 +1867,8 @@ POSTS & CONTENT STYLES
         padding: 5px;
         margin-right: 17px;
         transform: rotate(-45deg); }
+        .page-our-services .icon-list.alt li:before {
+          border-color: #545959; }
     .icon-list.alt.copy li {
       width: 100%;
       font-size: 1.35rem; }
@@ -1927,6 +1917,11 @@ POSTS & CONTENT STYLES
     font-size: 1.35rem;
     vertical-align: top; }
 
+.page-the-product-chain-process .row .col-12 {
+  float: none;
+  width: 80%;
+  margin: auto; }
+
 .circle-el {
   position: relative;
   width: 100%;
@@ -1955,20 +1950,20 @@ POSTS & CONTENT STYLES
     font-size: 0;
     width: 90%;
     margin: auto;
-    text-align: center; }
+    text-align: center;
+    padding: 0 !important; }
     .circle-el ul li {
       display: inline-block;
       width: 25%;
-      font-size: 0.8rem !important;
+      font-size: 0.75rem !important;
       padding: 0;
       color: #fff;
       font-weight: bold;
       vertical-align: top; }
   .entry-content .circle-el p {
     margin: 0; }
-  @media only screen and (max-width: 767px) {
-    .circle-el img {
-      width: 5rem; } }
+  .circle-el img {
+    width: 4rem; }
   .circle-el .diagram {
     width: 70%;
     margin: auto; }
@@ -2009,6 +2004,10 @@ POSTS & CONTENT STYLES
     padding-bottom: 0; }
   .entry-content h2 {
     margin-bottom: 1rem; }
+  .entry-content h4 em {
+    font-size: 60%; }
+  .entry-content .tnc {
+    font-size: 60%; }
   .entry-content p {
     font-size: 1.5rem;
     margin: 0 0 1.5em; }
@@ -2022,22 +2021,24 @@ POSTS & CONTENT STYLES
       margin-bottom: 0.5em; }
     .entry-content p strong, .entry-content p b {
       font-size: 115%; }
+  .entry-content ul a, .entry-content ol a, .entry-content table a, .entry-content dl a, .entry-content p a {
+    opacity: 0.8; }
   .entry-content ul:not(.centered-list):not(.icon-list), .entry-content ol {
     font-size: 0; }
     .page-template-default .entry-content ul:not(.centered-list):not(.icon-list), .page-template-default .entry-content ol {
       list-style-type: disc;
       padding-left: 1.5rem; }
     .entry-content ul:not(.centered-list):not(.icon-list) li, .entry-content ol li {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin-bottom: 1rem; }
     .entry-content ul:not(.centered-list):not(.icon-list).arrows li, .entry-content ol.arrows li {
-      text-indent: -2.5rem;
+      position: relative;
       padding-left: 2rem; }
       .entry-content ul:not(.centered-list):not(.icon-list).arrows li:before, .entry-content ol.arrows li:before {
         content: '';
-        position: relative;
-        top: 0;
-        left: 4px;
+        position: absolute;
+        top: .75rem;
+        left: 0;
         border: solid #fff;
         border-width: 0 4px 4px 0;
         display: inline-block;
@@ -2582,7 +2583,7 @@ TABLET & SMALLER LAPTOPS
   .page-title {
     top: 0;
     bottom: auto;
-    padding: 3rem; }
+    padding: 5rem; }
     .page-title p {
       font-size: 2.8rem; }
 
@@ -2612,17 +2613,18 @@ TABLET & SMALLER LAPTOPS
       margin-left: 1rem; }
 
   .circle-el ul {
-    width: 80%; }
+    width: 90%; }
     .circle-el ul li {
-      font-size: 1.5rem !important;
-      padding: 0 10px; }
+      font-size: 1.4rem !important; }
   .circle-el h2 {
     font-size: 4rem; }
   .circle-el h3 {
     font-size: 2.5rem;
-    margin: 3rem 0; }
+    margin: 2rem 0; }
   .entry-content .circle-el p {
-    margin: 0 0 1.5em; }
+    margin: 0; }
+  .circle-el img {
+    width: 6rem; }
 
   .case-studies .case-study {
     margin-bottom: 2.5rem; }
@@ -2630,6 +2632,11 @@ TABLET & SMALLER LAPTOPS
     padding-bottom: 3rem; }
   .case-studies .more {
     margin: 0 0 1rem; }
+  .case-studies .col-4 {
+    width: 32.9%;
+    float: none;
+    display: inline-block;
+    vertical-align: top; }
 
   .cs-thumbs {
     margin-left: -20px;
@@ -2656,6 +2663,9 @@ TABLET & SMALLER LAPTOPS
   *********************/
   .wrap {
     max-width: 760px; }
+
+  .single .wrap.post {
+    max-width: 71%; }
 
   /*********************
   HEADER STYLES
@@ -2912,6 +2922,29 @@ DESKTOP
   Stylesheet: Desktop Stylsheet
   
   ******************************************************************/
+  h1, .h1 {
+    font-size: 2.85rem; }
+
+  h2, .h2 {
+    font-size: 2.15rem; }
+
+  h3, .h3 {
+    font-size: 1.75rem; }
+
+  h4, .h4 {
+    font-size: 1.7rem; }
+
+  h5, .h5 {
+    font-size: 1.2rem; }
+
+  p {
+    font-size: 1rem; }
+
+  .home .entry-content.top-row p {
+    font-size: 1.3rem; }
+  .entry-content p {
+    font-size: 1.2rem; }
+
   #content {
     padding-top: 90px; }
 
@@ -2920,6 +2953,8 @@ DESKTOP
 
   .row {
     padding: 3rem 5rem; }
+    .row h3 {
+      font-size: 1.35rem; }
 
   .pre-footer {
     padding: 12rem 5rem 5rem; }
@@ -2934,123 +2969,178 @@ DESKTOP
     width: 360px;
     top: 90px; }
 
+  .case-studies .col-4 {
+    width: 33%; }
+
   .centered-list li {
     margin-bottom: 0; }
 
-  .circle-el ul li {
-    font-size: 1.75rem !important; }
-
   .quote.quote-xl p {
     font-size: 2.25rem; }
+
+  .circle-el h3 {
+    font-size: 2.35rem; }
+  .circle-el img {
+    width: 9rem; }
+
+  .cta {
+    position: relative;
+    width: 40rem;
+    margin: auto; }
 
   .arrow {
     display: block; }
 
   .arrow1 {
-    width: 27%;
+    width: 240px;
     position: absolute;
-    left: -1%;
-    bottom: 2rem; }
-    .page-about-us .arrow1, .page-consultancy .arrow1, .page-new-product-launches .arrow1, .page-account-management .arrow1, .page-business-channel-development .arrow1 {
-      width: 28%;
-      right: -2%;
-      left: auto;
-      bottom: -1rem;
-      transform: scale(-1); }
-    .page-consultancy .arrow1 .arrow1--path, .page-new-product-launches .arrow1 .arrow1--path, .single-custom_type .arrow1 .arrow1--path, .page-business-channel-development .arrow1 .arrow1--path {
-      stroke: #00bfb2; }
-    .page-consultancy .arrow1 .arrow1--arrowhead, .page-new-product-launches .arrow1 .arrow1--arrowhead, .single-custom_type .arrow1 .arrow1--arrowhead, .page-business-channel-development .arrow1 .arrow1--arrowhead {
-      fill: #00bfb2; }
-    .page-the-product-chain-process .arrow1 {
-      transform: scaleY(-1); }
-    .arrow1.in-view .arrow1--path {
+    right: -270px;
+    bottom: -10px; }
+    .arrow1.in-view .st0 {
       animation: draw-line 800ms ease-out forwards; }
-    .arrow1.in-view .arrow1--arrowhead {
+    .arrow1.in-view .st1 {
       animation: opacity--in 100ms linear 700ms forwards; }
-
-  .arrow1--path {
-    stroke: #ed691c;
-    stroke-dasharray: 400px;
-    stroke-dashoffset: 400px; }
-
-  .arrow1--arrowhead, .arrow2--arrowhead, .arrow3--pencil, .arrow4--fill {
-    opacity: 0; }
+    .arrow1 .st0 {
+      stroke-dasharray: 400px;
+      stroke-dashoffset: 400px; }
+    .arrow1 .st1 {
+      opacity: 0; }
 
   .arrow2 {
-    width: 32%;
+    width: 220px;
     position: absolute;
-    right: -7%;
-    bottom: 4.5rem;
-    opacity: 0;
-    -webkit-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out; }
-    .arrow2.in-view {
-      opacity: 1; }
-      .arrow2.in-view .arrow2--path {
-        animation: draw-line 900ms ease-out forwards; }
-      .arrow2.in-view .arrow2--arrowhead {
-        animation: opacity--in 100ms linear 800ms forwards; }
-    .postid-139 .arrow2 .arrow2--path {
-      stroke: #00bfb2; }
-    .postid-139 .arrow2 .arrow2--arrowhead path {
-      fill: #00bfb2; }
-
-  .arrow2--path {
-    stroke-dasharray: 700px;
-    stroke-dashoffset: 700px; }
+    left: -240px;
+    bottom: -20px; }
+    .arrow2.in-view .st1 {
+      animation: draw-line 800ms ease-out forwards; }
+    .arrow2.in-view .st0 {
+      animation: opacity--in 100ms linear 700ms forwards; }
+    .arrow2 .st1 {
+      stroke-dasharray: 200px;
+      stroke-dashoffset: 200px; }
+    .arrow2 .st0 {
+      opacity: 0; }
 
   .arrow3 {
+    width: 240px;
+    position: absolute;
+    right: -270px;
+    bottom: -20px; }
+    .arrow3.in-view .st1 {
+      animation: draw-line 800ms ease-out forwards; }
+    .arrow3.in-view .st0 {
+      animation: opacity--in 100ms linear 700ms forwards; }
+    .arrow3 .st1 {
+      stroke-dasharray: 210px;
+      stroke-dashoffset: 210px; }
+    .arrow3 .st0 {
+      opacity: 0; }
+
+  .arrow4 {
+    width: 100px;
+    position: absolute;
+    left: -130px;
+    bottom: -20px; }
+    .arrow4.in-view .st0 {
+      animation: draw-line 800ms ease-out forwards; }
+    .arrow4.in-view .st1 {
+      animation: opacity--in 100ms linear 700ms forwards; }
+    .arrow4 .st0 {
+      stroke-dasharray: 80px;
+      stroke-dashoffset: 80px; }
+    .arrow4 .st1 {
+      opacity: 0; }
+
+  .arrow-up {
+    position: absolute;
+    width: 25%;
+    max-width: 400px;
+    left: 70%;
+    bottom: -30px; }
+    .arrow-up + .icon-list.alt {
+      width: 80%; }
+    .arrow-up.in-view .st0 {
+      animation: draw-line 800ms ease-out forwards; }
+    .arrow-up.in-view .st1 {
+      animation: opacity--in 100ms linear 700ms forwards; }
+    .arrow-up .st0 {
+      stroke-dasharray: 730px;
+      stroke-dashoffset: -730px; }
+    .arrow-up .st1 {
+      opacity: 0; }
+
+  .chain {
+    position: absolute;
+    width: 12%;
+    max-width: 200px;
+    left: 72%;
+    bottom: -43%; }
+    .chain + .icon-list.alt {
+      width: 80%; }
+    .chain.in-view .st0 {
+      animation: draw-line 800ms ease-out forwards; }
+    .chain.in-view .st1 {
+      animation: draw-line 800ms ease-out forwards; }
+    .chain.in-view .st2, .chain.in-view .st3 {
+      animation: opacity--in 100ms linear 700ms forwards; }
+    .chain .st0 {
+      stroke-dasharray: 530px;
+      stroke-dashoffset: -530px; }
+    .chain .st1 {
+      stroke-dasharray: 560px;
+      stroke-dashoffset: 560px; }
+    .chain .st2, .chain .st3 {
+      opacity: 0; }
+
+  .pencil {
     width: 54%;
     position: absolute;
     left: -10px;
-    top: 2rem;
-    opacity: 0;
-    -webkit-transition: opacity 0.2s ease-in-out;
-    transition: opacity 0.2s ease-in-out; }
-    .arrow3.in-view {
-      opacity: 1; }
-      .arrow3.in-view .arrow3--path {
-        animation: draw-line 1100ms ease-out forwards; }
-      .arrow3.in-view .arrow3--pencil {
-        animation: opacity--in 100ms linear 1000ms forwards; }
-
-  .arrow3--path {
-    stroke-dasharray: 850px;
-    stroke-dashoffset: 850px; }
-
-  .arrow4 {
-    position: absolute;
-    width: 100%;
-    left: -7%;
-    bottom: -16%;
-    transform: rotate(-50deg); }
-    .arrow4.in-view {
-      opacity: 1; }
-      .arrow4.in-view .arrow4--path {
-        animation: draw-line 3000ms ease-out forwards; }
-      .arrow4.in-view .arrow4--fill {
-        animation: opacity--in 300ms linear 2500ms forwards; }
-
-  .arrow4--path {
-    stroke-dasharray: 3800px;
-    stroke-dashoffset: -3800px; }
-
-  .arrow8 {
-    position: absolute;
-    width: 30%;
-    top: -3%;
-    right: 4%; }
-    .arrow8.in-view {
-      opacity: 1; }
-      .arrow8.in-view .st0 {
-        animation: draw-line 1300ms ease-out forwards; }
-      .arrow8.in-view .st1, .arrow8.in-view .st2 {
-        animation: opacity--in 100ms linear 1200ms forwards; }
-    .arrow8 .st1, .arrow8 .st2 {
+    top: 2rem; }
+    .pencil.in-view .pencil-path {
+      animation: draw-line 1100ms ease-out forwards; }
+    .pencil.in-view .pencil-shape {
+      animation: opacity--in 100ms linear 1000ms forwards; }
+    .pencil .pencil-shape {
       opacity: 0; }
-    .arrow8 .st0 {
-      stroke-dasharray: 870px;
-      stroke-dashoffset: 870px; }
+    .pencil .pencil-path {
+      stroke-dasharray: 850px;
+      stroke-dashoffset: 850px; }
+
+  .page-consultancy .arrow4 .st0,
+  .page-consultancy .arrow3 .st1,
+  .page-consultancy .arrow2 .st1,
+  .page-consultancy .arrow1 .st0,
+  .page-new-product-launches .arrow4 .st0,
+  .page-new-product-launches .arrow3 .st1,
+  .page-new-product-launches .arrow2 .st1,
+  .page-new-product-launches .arrow1 .st0,
+  .page-business-channel-development .arrow4 .st0,
+  .page-business-channel-development .arrow3 .st1,
+  .page-business-channel-development .arrow2 .st1,
+  .page-business-channel-development .arrow1 .st0,
+  .single-custom_type .arrow4 .st0,
+  .single-custom_type .arrow3 .st1,
+  .single-custom_type .arrow2 .st1,
+  .single-custom_type .arrow1 .st0 {
+    stroke: #0096a8; }
+  .page-consultancy .arrow4 .st1,
+  .page-consultancy .arrow3 .st0,
+  .page-consultancy .arrow2 .st0,
+  .page-consultancy .arrow1 .st1,
+  .page-new-product-launches .arrow4 .st1,
+  .page-new-product-launches .arrow3 .st0,
+  .page-new-product-launches .arrow2 .st0,
+  .page-new-product-launches .arrow1 .st1,
+  .page-business-channel-development .arrow4 .st1,
+  .page-business-channel-development .arrow3 .st0,
+  .page-business-channel-development .arrow2 .st0,
+  .page-business-channel-development .arrow1 .st1,
+  .single-custom_type .arrow4 .st1,
+  .single-custom_type .arrow3 .st0,
+  .single-custom_type .arrow2 .st0,
+  .single-custom_type .arrow1 .st1 {
+    fill: #00bfb2; }
 
   .haggis-wrapper {
     position: relative; }
