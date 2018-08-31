@@ -3198,7 +3198,18 @@ DESKTOP
     stroke-dashoffset: 370px; }
 
   .bcd3 svg {
-    transform: rotate(26deg); } }
+    transform: rotate(26deg); }
+
+  .no-js svg path,
+  .lt-ie7 svg path,
+  .lt-ie8 svg path,
+  .lt-ie9 svg path {
+    stroke-dasharray: 0 !important;
+    stroke-dashoffset: 0 !important; } }
+@media only screen and (min-width: 1030px) and (-ms-high-contrast: active) {
+  svg path {
+    stroke-dasharray: 0 !important;
+    stroke-dashoffset: 0 !important; } }
 /*********************
 LARGE VIEWING SIZE
 *********************/

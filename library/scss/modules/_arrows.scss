@@ -282,3 +282,20 @@
 		transform: rotate(26deg);
 	}
 }
+
+.no-js, 
+.lt-ie7, 
+.lt-ie8, 
+.lt-ie9 {
+	svg path {
+		stroke-dasharray: 0 !important;
+		stroke-dashoffset: 0 !important;
+	}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	svg path {
+		stroke-dasharray: 0 !important;
+		stroke-dashoffset: 0 !important;
+	}
+}
