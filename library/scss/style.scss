@@ -112,3 +112,26 @@ PRINT STYLESHEET
 	@import "partials/print";
 
 }
+
+.no-js, 
+.lt-ie7, 
+.lt-ie8, 
+.lt-ie9,
+_:-ms-lang(x), 
+.ie10up,
+_:-ms-fullscreen, 
+:root .ie11up {
+	svg path {
+		stroke-dasharray: 0 !important;
+		stroke-dashoffset: 0 !important;
+		opacity: 1 !important;
+	}
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	svg path {
+		stroke-dasharray: 0 !important;
+		stroke-dashoffset: 0 !important;
+		opacity: 1 !important;
+	}
+}

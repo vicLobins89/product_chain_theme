@@ -3198,18 +3198,7 @@ DESKTOP
     stroke-dashoffset: 370px; }
 
   .bcd3 svg {
-    transform: rotate(26deg); }
-
-  .no-js svg path,
-  .lt-ie7 svg path,
-  .lt-ie8 svg path,
-  .lt-ie9 svg path {
-    stroke-dasharray: 0 !important;
-    stroke-dashoffset: 0 !important; } }
-@media only screen and (min-width: 1030px) and (-ms-high-contrast: active) {
-  svg path {
-    stroke-dasharray: 0 !important;
-    stroke-dashoffset: 0 !important; } }
+    transform: rotate(26deg); } }
 /*********************
 LARGE VIEWING SIZE
 *********************/
@@ -3348,3 +3337,20 @@ PRINT STYLESHEET
   .respond-form,
   nav {
     display: none; } }
+.no-js svg path,
+.lt-ie7 svg path,
+.lt-ie8 svg path,
+.lt-ie9 svg path,
+_:-ms-lang(x) svg path,
+.ie10up svg path,
+_:-ms-fullscreen svg path,
+:root .ie11up svg path {
+  stroke-dasharray: 0 !important;
+  stroke-dashoffset: 0 !important;
+  opacity: 1 !important; }
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  svg path {
+    stroke-dasharray: 0 !important;
+    stroke-dashoffset: 0 !important;
+    opacity: 1 !important; } }
