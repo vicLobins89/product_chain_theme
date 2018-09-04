@@ -84,7 +84,7 @@
 	
 	.st0 {
 		stroke-dasharray: 80px;
-		stroke-dashoffset: 80px;
+		stroke-dashoffset: -80px;
 	}
 	
 	.st1 {
@@ -96,8 +96,17 @@
 	position: absolute;
 	width: 25%;
     max-width: 400px;
+    height: 70%;
+    max-height: 326px;
     left: 70%;
-    bottom: -30px;
+    bottom: -10px;
+	
+	svg {
+		position: absolute;
+		width: 100%;
+		height: auto;
+		bottom: -10px;
+	}
 	
 	+ .icon-list.alt {
 		width: 80%;
@@ -120,19 +129,23 @@
 
 .chain {
 	position: absolute;
-	width: 12%;
-    max-width: 200px;
+	width: 13rem;
+    height: 41rem;
     left: 72%;
-    bottom: -43%;
+    bottom: -9rem;
 	
 	+ .icon-list.alt {
 		width: 80%;
 	}
 	
 	&.in-view {
-		.st0 { animation: draw-line 800ms ease-out forwards; }
-		.st1 { animation: draw-line 800ms ease-out forwards; }
-		.st2, .st3 { animation: opacity--in 100ms linear 700ms forwards; }
+		.st0a { animation: draw-line 500ms ease-out forwards; }
+		.st1 { animation: draw-line 500ms ease-out 500ms forwards; }
+		.st0b { animation: draw-line 500ms ease-out 1000ms forwards; }
+		
+		.st3a { animation: opacity--in 100ms linear 400ms forwards; }
+		.st2 { animation: opacity--in 100ms linear 900ms forwards; }
+		.st3b { animation: opacity--in 100ms linear 1400ms forwards; }
 	}
 	
 	.st0 {

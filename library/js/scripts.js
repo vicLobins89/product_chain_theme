@@ -35,6 +35,12 @@ jQuery(document).ready(function($) {
 	
 	$(window).on('load resize', function(){
 		masonryInit();
+		
+		if( viewport.width < 768 ) {
+			$('.current_page_ancestor > .sub-menu').addClass('active');
+		} else {
+			$('.current_page_ancestor > .sub-menu').removeClass('active');
+		}
 	});
 	
 	

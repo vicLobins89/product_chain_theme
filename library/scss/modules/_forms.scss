@@ -36,6 +36,12 @@ INPUTS
 	#wpcf7-f366-p31-o1 & {
 		float: none;
 	}
+	
+	@media only screen and (max-width: 767px) {
+		float: none;
+		display: block;
+		margin: auto;
+	}
 }
 
 #wpcf7-f5-p2-o2 {

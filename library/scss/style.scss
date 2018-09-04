@@ -121,17 +121,27 @@ _:-ms-lang(x),
 .ie10up,
 _:-ms-fullscreen, 
 :root .ie11up {
-	svg path {
+	svg path, svg g {
 		stroke-dasharray: 0 !important;
 		stroke-dashoffset: 0 !important;
 		opacity: 1 !important;
 	}
+	
+	.ribbon {
+		width: 100%;
+		height: 41rem;
+	}
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-	svg path {
+	svg path, svg g {
 		stroke-dasharray: 0 !important;
 		stroke-dashoffset: 0 !important;
 		opacity: 1 !important;
+	}
+	
+	.ribbon {
+		width: 100%;
+		height: 41rem;
 	}
 }

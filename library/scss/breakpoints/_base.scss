@@ -50,8 +50,8 @@ img {
 }
 
 .q-mark {
-	width: 100px;
-    margin: 0 auto 3rem;
+	width: 70px;
+    margin: 0 auto 1rem;
 	
 	&.in-view {
 		.st1 { animation: draw-line 800ms ease-out forwards; }
@@ -83,10 +83,11 @@ img {
 	
 	.widget_text {
 		position: absolute;
-		left: 3rem;
-		top: 3rem;
+		left: 1.5rem;
+		top: 1.5rem;
 		margin: 0;
-		width: 80%;
+		width: 70%;
+		z-index: 999;
 		
 		p, a {
 			color: $white;
@@ -117,9 +118,9 @@ img {
 				top: 1px;
 				left: 4px;
 				border: solid lighten($blue, 10%);
-				border-width: 0 6px 6px 0;
+				border-width: 0 3px 3px 0;
 				display: inline-block;
-				padding: 11px;
+				padding: 6px;
 				transform: rotate(-45deg);
 				@include transition(all 0.2s ease-in-out);
 			}
@@ -531,7 +532,7 @@ LAYOUT & GRID STYLES
 	.post-item {
 		background: $white;
 		padding: 0 0 1.75rem 0;
-		border-bottom-right-radius: 60px;
+		border-bottom-right-radius: 40px;
 		@include transition(background 0.2s ease-in-out);
 		
 		h3 {
@@ -655,7 +656,7 @@ LAYOUT & GRID STYLES
 .page-template-page-quiz {
 	h1 {
 		font-weight: normal;
-		font-size: 2.75rem;
+		font-size: 2rem;
 		
 		strong, b {
 			font-weight: 900;
@@ -670,6 +671,8 @@ LAYOUT & GRID STYLES
 	}
 	
 	h2 {
+		font-size: 1.9rem;
+		
 		span {
 			display: block;
 			font-size: 50%;
@@ -804,8 +807,8 @@ LAYOUT & GRID STYLES
 		max-width: 100%;
 		background-color: $blue;
 		border-color: $blue;
-		padding-left: 10px;
-    	padding-right: 10px;
+		padding-left: 20px;
+    	padding-right: 20px;
 		
 		&:not([disabled]) {
 			&:hover,
@@ -861,7 +864,7 @@ LAYOUT & GRID STYLES
 }
 
 .outcomes {
-	margin-bottom: 5rem;
+	margin-bottom: 2rem;
 	
 	li {
 		color: $gray;
@@ -977,6 +980,9 @@ HEADER STYLES
 	font-size: 0;
 	width: 100%;
 	z-index: 999;
+	@media only screen and (max-width: 767px) {
+		@include prefix(box-shadow, 0px 1px 5px 0px rgba(0,0,0,0.35), webkit moz);
+	}
 	
 	&.active {
 		position: fixed;
@@ -1002,9 +1008,9 @@ HEADER STYLES
 
 #logo {
 	display: block;
-	width: 10rem;
+	width: 9rem;
 	height: 100%;
-    margin: 0.75rem 1.25rem;
+    padding: 1rem;
     float: left;
     font-size: 0;
 	@include transition(all 0.2s ease-in-out);
@@ -1059,7 +1065,7 @@ NAVIGATION STYLES
 .menu-button {
 	color: $green !important;
 	float: right;
-	margin: 1.8rem 1.25rem 1.4rem;
+	margin: 1.4rem 1.25rem;
 	line-height: 1;
     font-size: 2.4rem;
 	background-image: url(../images/menu-button.png);
@@ -1100,7 +1106,7 @@ nav {
 
 .primary-nav {
 	position: fixed;
-	top: 66px;
+	top: 58px;
 	margin: 0 auto;
 	text-align: center;
 	max-height: 0px;
@@ -1200,16 +1206,7 @@ nav {
 			}
 		}
 
-	} /* end .menu li */
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
-
-		a {}
-
-	}  /* end current highlighters */
+	}
 
 }
 
@@ -1220,7 +1217,7 @@ POSTS & CONTENT STYLES
 
 #content {
 	position: relative;
-	padding-top: 67px;
+	padding-top: 58px;
 	@include transition(padding-top 0.2s ease-in-out);
 }
 
@@ -1448,7 +1445,7 @@ POSTS & CONTENT STYLES
 		}
 	}
 	
-	&.left-align {
+	&.left-align, &.center-align {
 		li {
 			vertical-align: top;
 			text-align: left;
@@ -1456,24 +1453,33 @@ POSTS & CONTENT STYLES
 			img {
 				display: block;
 				margin: auto;
-				max-height: 200px;
-				width: auto;
+				width: 75%;
+				max-width: none !important;
+				padding: 0;
+				margin-top: -2rem;
 				
-				@media only screen and (min-width: 768px) and (max-width: 1029px) {
-					max-height: 160px;
+				+ span {
+					width: 75%;
+					margin: auto;
+					margin-top: -1.25rem;
 				}
 			}
 			
 			span {
 				display: block;
 				font-size: 1.35rem;
-				margin-right: 1.5rem;
 				font-weight: 400;
 			}
 			
 			b, strong {
 				font-size: 2rem;
 			}
+		}
+	}
+	
+	&.center-align {
+		li {
+			text-align: center;
 		}
 	}
 	
@@ -1534,6 +1540,7 @@ POSTS & CONTENT STYLES
 	font-size: 0;
 	text-align: center;
 	margin: 2rem 0;
+	padding-left: 0 !important;
 	
 	li {
 		display: inline-block;
@@ -1701,7 +1708,7 @@ POSTS & CONTENT STYLES
 	
 	.home &.top-row {
 		p {
-			font-size: 1.85rem;
+			font-size: 1.375rem;
 		}
 	}
 	
@@ -1724,7 +1731,7 @@ POSTS & CONTENT STYLES
 	}
 
 	p {
-		font-size: 1.5rem;
+		font-size: 1.275rem;
 		margin: 0 0 1.5em;
 		
 		&.fw900 {
@@ -1741,10 +1748,6 @@ POSTS & CONTENT STYLES
 		
 		&:last-child {
 			margin-bottom: 0.5em;
-		}
-		
-		strong, b {
-			font-size: 115%;
 		}
 	}
 

@@ -604,7 +604,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   font-size: 1.4rem;
   line-height: 1;
   font-weight: 800;
-  padding: 0.95rem 1rem;
+  padding: 0.95rem 2rem;
   margin: 0.85rem auto;
   cursor: pointer;
   width: 40rem;
@@ -650,9 +650,9 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   border-color: #ed691c;
   color: #fff; }
   .primary-btn:hover, a.comment-reply-link:hover, #submit:hover, .primary-btn:focus, a.comment-reply-link:focus, #submit:focus, a.primary-btn:hover, a.comment-reply-link:hover, a#submit:hover, a.primary-btn:focus, a.comment-reply-link:focus, a#submit:focus {
-    background-color: #f59c28;
+    background-color: #f59c26;
     color: #fff;
-    border-color: #f59c28; }
+    border-color: #f59c26; }
     .primary-btn:hover:after, a.comment-reply-link:hover:after, #submit:hover:after, .primary-btn:focus:after, a.comment-reply-link:focus:after, #submit:focus:after, a.primary-btn:hover:after, a.comment-reply-link:hover:after, a#submit:hover:after, a.primary-btn:focus:after, a.comment-reply-link:focus:after, a#submit:focus:after {
       border-color: #fff;
       left: 12px; }
@@ -719,9 +719,14 @@ INPUTS
   -webkit-transition: all 0.24s ease-in-out;
   transition: all 0.24s ease-in-out; }
   .wpcf7-form-control.wpcf7-submit:hover, .wpcf7-form-control.wpcf7-submit:focus {
-    background: #f59c28; }
+    background: #f59c26; }
   #wpcf7-f366-p31-o1 .wpcf7-form-control.wpcf7-submit {
     float: none; }
+  @media only screen and (max-width: 767px) {
+    .wpcf7-form-control.wpcf7-submit {
+      float: none;
+      display: block;
+      margin: auto; } }
 
 #wpcf7-f5-p2-o2 input[type="text"] {
   width: 36%;
@@ -862,8 +867,8 @@ img {
   display: none; }
 
 .q-mark {
-  width: 100px;
-  margin: 0 auto 3rem; }
+  width: 70px;
+  margin: 0 auto 1rem; }
   .q-mark.in-view .st1 {
     animation: draw-line 800ms ease-out forwards; }
   .q-mark.in-view .st0, .q-mark.in-view .st2 {
@@ -885,10 +890,11 @@ img {
     animation: opacity--in 200ms linear 1300ms forwards; }
   .ribbon .widget_text {
     position: absolute;
-    left: 3rem;
-    top: 3rem;
+    left: 1.5rem;
+    top: 1.5rem;
     margin: 0;
-    width: 80%; }
+    width: 70%;
+    z-index: 999; }
     .ribbon .widget_text p, .ribbon .widget_text a {
       color: #fff;
       font-size: 1.5rem; }
@@ -908,9 +914,9 @@ img {
         top: 1px;
         left: 4px;
         border: solid #00c4db;
-        border-width: 0 6px 6px 0;
+        border-width: 0 3px 3px 0;
         display: inline-block;
-        padding: 11px;
+        padding: 6px;
         transform: rotate(-45deg);
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out; }
@@ -1181,7 +1187,7 @@ LAYOUT & GRID STYLES
   .case-studies .post-item {
     background: #fff;
     padding: 0 0 1.75rem 0;
-    border-bottom-right-radius: 60px;
+    border-bottom-right-radius: 40px;
     -webkit-transition: background 0.2s ease-in-out;
     transition: background 0.2s ease-in-out; }
     .case-studies .post-item h3 {
@@ -1254,16 +1260,18 @@ LAYOUT & GRID STYLES
 
 .page-template-page-quiz h1 {
   font-weight: normal;
-  font-size: 2.75rem; }
+  font-size: 2rem; }
   .page-template-page-quiz h1 strong, .page-template-page-quiz h1 b {
     font-weight: 900; }
 .page-template-page-quiz h1, .page-template-page-quiz h2 {
   color: #fff;
   width: 80%;
   margin: 1rem auto; }
-.page-template-page-quiz h2 span {
-  display: block;
-  font-size: 50%; }
+.page-template-page-quiz h2 {
+  font-size: 1.9rem; }
+  .page-template-page-quiz h2 span {
+    display: block;
+    font-size: 50%; }
 .page-template-page-quiz .entry-content {
   position: absolute;
   display: flex;
@@ -1339,8 +1347,8 @@ LAYOUT & GRID STYLES
     max-width: 100%;
     background-color: #0096a8;
     border-color: #0096a8;
-    padding-left: 10px;
-    padding-right: 10px; }
+    padding-left: 20px;
+    padding-right: 20px; }
     .quiz-options .quiz-option:not([disabled]):hover, .quiz-options .quiz-option:not([disabled]):focus {
       background-color: #006875;
       border-color: #006875; }
@@ -1357,7 +1365,7 @@ LAYOUT & GRID STYLES
   height: 14px;
   bottom: 0;
   left: 0;
-  background: #f59c28;
+  background: #f59c26;
   z-index: 30; }
   .progress-bar .fill {
     position: absolute;
@@ -1370,7 +1378,7 @@ LAYOUT & GRID STYLES
     transition: all 0.3s ease-in-out; }
 
 .outcomes {
-  margin-bottom: 5rem; }
+  margin-bottom: 2rem; }
   .outcomes li {
     color: #545959;
     margin-bottom: 2.5rem !important; }
@@ -1454,6 +1462,11 @@ HEADER STYLES
   font-size: 0;
   width: 100%;
   z-index: 999; }
+  @media only screen and (max-width: 767px) {
+    .header {
+      -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.35);
+      -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.35);
+      box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.35); } }
   .header.active {
     position: fixed;
     width: 100%;
@@ -1472,9 +1485,9 @@ HEADER STYLES
 
 #logo {
   display: block;
-  width: 10rem;
+  width: 9rem;
   height: 100%;
-  margin: 0.75rem 1.25rem;
+  padding: 1rem;
   float: left;
   font-size: 0;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1518,7 +1531,7 @@ NAVIGATION STYLES
 .menu-button {
   color: #0b6b4e !important;
   float: right;
-  margin: 1.8rem 1.25rem 1.4rem;
+  margin: 1.4rem 1.25rem;
   line-height: 1;
   font-size: 2.4rem;
   background-image: url(../images/menu-button.png);
@@ -1546,7 +1559,7 @@ nav li {
 
 .primary-nav {
   position: fixed;
-  top: 66px;
+  top: 58px;
   margin: 0 auto;
   text-align: center;
   max-height: 0px;
@@ -1567,10 +1580,7 @@ nav li {
 .nav {
   border-bottom: 0;
   margin: 1.65em 0;
-  background: #eeeeee;
-  /* end .menu li */
-  /* highlight current page */
-  /* end current highlighters */ }
+  background: #eeeeee; }
   .nav > li {
     list-style: none;
     border-bottom: 1px solid #545959; }
@@ -1626,7 +1636,7 @@ POSTS & CONTENT STYLES
 *********************/
 #content {
   position: relative;
-  padding-top: 67px;
+  padding-top: 58px;
   -webkit-transition: padding-top 0.2s ease-in-out;
   transition: padding-top 0.2s ease-in-out; }
 
@@ -1826,24 +1836,28 @@ POSTS & CONTENT STYLES
     .icon-list img.in-view {
       bottom: 0;
       opacity: 1; }
-  .icon-list.left-align li {
+  .icon-list.left-align li, .icon-list.center-align li {
     vertical-align: top;
     text-align: left; }
-    .icon-list.left-align li img {
+    .icon-list.left-align li img, .icon-list.center-align li img {
       display: block;
       margin: auto;
-      max-height: 200px;
-      width: auto; }
-      @media only screen and (min-width: 768px) and (max-width: 1029px) {
-        .icon-list.left-align li img {
-          max-height: 160px; } }
-    .icon-list.left-align li span {
+      width: 75%;
+      max-width: none !important;
+      padding: 0;
+      margin-top: -2rem; }
+      .icon-list.left-align li img + span, .icon-list.center-align li img + span {
+        width: 75%;
+        margin: auto;
+        margin-top: -1.25rem; }
+    .icon-list.left-align li span, .icon-list.center-align li span {
       display: block;
       font-size: 1.35rem;
-      margin-right: 1.5rem;
       font-weight: 400; }
-    .icon-list.left-align li b, .icon-list.left-align li strong {
+    .icon-list.left-align li b, .icon-list.left-align li strong, .icon-list.center-align li b, .icon-list.center-align li strong {
       font-size: 2rem; }
+  .icon-list.center-align li {
+    text-align: center; }
   .icon-list.alt {
     text-align: left;
     margin-bottom: 0; }
@@ -1880,7 +1894,8 @@ POSTS & CONTENT STYLES
 .thumbs-list {
   font-size: 0;
   text-align: center;
-  margin: 2rem 0; }
+  margin: 2rem 0;
+  padding-left: 0 !important; }
   .thumbs-list li {
     display: inline-block;
     width: 100%;
@@ -1999,7 +2014,7 @@ POSTS & CONTENT STYLES
     padding-top: 0;
     padding-bottom: 0; }
   .home .entry-content.top-row p {
-    font-size: 1.85rem; }
+    font-size: 1.375rem; }
   .page-our-core-team .entry-content.top-row {
     padding-bottom: 0; }
   .entry-content h2 {
@@ -2009,7 +2024,7 @@ POSTS & CONTENT STYLES
   .entry-content .tnc {
     font-size: 60%; }
   .entry-content p {
-    font-size: 1.5rem;
+    font-size: 1.275rem;
     margin: 0 0 1.5em; }
     .entry-content p.fw900 {
       margin-bottom: 0.8rem; }
@@ -2019,8 +2034,6 @@ POSTS & CONTENT STYLES
       margin: 0; }
     .entry-content p:last-child {
       margin-bottom: 0.5em; }
-    .entry-content p strong, .entry-content p b {
-      font-size: 115%; }
   .entry-content ul a, .entry-content ol a, .entry-content table a, .entry-content dl a, .entry-content p a {
     opacity: 0.8; }
   .entry-content ul:not(.centered-list):not(.icon-list), .entry-content ol {
@@ -2605,12 +2618,24 @@ TABLET & SMALLER LAPTOPS
     .thumbs-list li:nth-child(even) {
       padding-left: 10px; }
 
+  .page-template-page-quiz h1 {
+    font-size: 2.75rem; }
+  .page-template-page-quiz h2 {
+    font-size: 2.5rem; }
+
+  .q-mark {
+    width: 100px;
+    margin: 0 auto 3rem; }
+
   .quiz-end {
     background: #ed691c; }
     .quiz-end .social p {
       font-size: 1.75rem; }
     .quiz-end .social a {
       margin-left: 1rem; }
+
+  .outcomes {
+    margin-bottom: 5rem; }
 
   .circle-el ul {
     width: 90%; }
@@ -2645,9 +2670,14 @@ TABLET & SMALLER LAPTOPS
   .ribbon {
     margin: 3rem auto !important; }
     .ribbon .widget_text {
+      left: 3rem;
+      top: 3rem;
       width: 50%; }
       .ribbon .widget_text p, .ribbon .widget_text a {
         font-size: 3rem; }
+      .ribbon .widget_text a:after {
+        border-width: 0 6px 6px 0;
+        padding: 11px; }
 
   .quote.quote-xl p {
     font-size: 2rem; }
@@ -2727,6 +2757,7 @@ TABLET & SMALLER LAPTOPS
     font-size: 0;
     float: none;
     margin: 0;
+    padding: 0;
     background-image: url(../images/product-chain-logo-alt.png);
     background-repeat: no-repeat;
     background-size: 33px !important; }
@@ -2861,29 +2892,6 @@ TABLET & SMALLER LAPTOPS
       content: '';
       display: none; }
 
-  .parent-pageid-265 #menu-item-267 ul.sub-menu, .page-id-265 #menu-item-267 ul.sub-menu {
-    position: fixed;
-    left: 0;
-    width: 100%;
-    max-height: 500px;
-    margin: 0;
-    padding: 0 8%;
-    border-bottom-right-radius: 0;
-    z-index: 10;
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-    .parent-pageid-265 #menu-item-267 ul.sub-menu li, .page-id-265 #menu-item-267 ul.sub-menu li {
-      display: inline-block;
-      width: calc(92% / 6);
-      vertical-align: top;
-      padding-right: 2rem; }
-      .parent-pageid-265 #menu-item-267 ul.sub-menu li a, .page-id-265 #menu-item-267 ul.sub-menu li a {
-        border: none; }
-  .parent-pageid-265 #content, .page-id-265 #content {
-    margin-top: 3rem; }
-  .parent-pageid-265.admin-bar #menu-item-267 ul.sub-menu, .page-id-265.admin-bar #menu-item-267 ul.sub-menu {
-    margin-top: 32px; }
-
   /*********************
   FOOTER STYLES
   *********************/
@@ -2939,11 +2947,6 @@ DESKTOP
 
   p {
     font-size: 1rem; }
-
-  .home .entry-content.top-row p {
-    font-size: 1.3rem; }
-  .entry-content p {
-    font-size: 1.2rem; }
 
   #content {
     padding-top: 90px; }
@@ -3047,7 +3050,7 @@ DESKTOP
       animation: opacity--in 100ms linear 700ms forwards; }
     .arrow4 .st0 {
       stroke-dasharray: 80px;
-      stroke-dashoffset: 80px; }
+      stroke-dashoffset: -80px; }
     .arrow4 .st1 {
       opacity: 0; }
 
@@ -3055,8 +3058,15 @@ DESKTOP
     position: absolute;
     width: 25%;
     max-width: 400px;
+    height: 70%;
+    max-height: 326px;
     left: 70%;
-    bottom: -30px; }
+    bottom: -10px; }
+    .arrow-up svg {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      bottom: -10px; }
     .arrow-up + .icon-list.alt {
       width: 80%; }
     .arrow-up.in-view .st0 {
@@ -3071,18 +3081,24 @@ DESKTOP
 
   .chain {
     position: absolute;
-    width: 12%;
-    max-width: 200px;
+    width: 13rem;
+    height: 41rem;
     left: 72%;
-    bottom: -43%; }
+    bottom: -9rem; }
     .chain + .icon-list.alt {
       width: 80%; }
-    .chain.in-view .st0 {
-      animation: draw-line 800ms ease-out forwards; }
+    .chain.in-view .st0a {
+      animation: draw-line 500ms ease-out forwards; }
     .chain.in-view .st1 {
-      animation: draw-line 800ms ease-out forwards; }
-    .chain.in-view .st2, .chain.in-view .st3 {
-      animation: opacity--in 100ms linear 700ms forwards; }
+      animation: draw-line 500ms ease-out 500ms forwards; }
+    .chain.in-view .st0b {
+      animation: draw-line 500ms ease-out 1000ms forwards; }
+    .chain.in-view .st3a {
+      animation: opacity--in 100ms linear 400ms forwards; }
+    .chain.in-view .st2 {
+      animation: opacity--in 100ms linear 900ms forwards; }
+    .chain.in-view .st3b {
+      animation: opacity--in 100ms linear 1400ms forwards; }
     .chain .st0 {
       stroke-dasharray: 530px;
       stroke-dashoffset: -530px; }
@@ -3337,20 +3353,41 @@ PRINT STYLESHEET
   .respond-form,
   nav {
     display: none; } }
-.no-js svg path,
+.no-js svg path, .no-js svg g,
 .lt-ie7 svg path,
+.lt-ie7 svg g,
 .lt-ie8 svg path,
+.lt-ie8 svg g,
 .lt-ie9 svg path,
+.lt-ie9 svg g,
 _:-ms-lang(x) svg path,
+_:-ms-lang(x) svg g,
 .ie10up svg path,
+.ie10up svg g,
 _:-ms-fullscreen svg path,
-:root .ie11up svg path {
+_:-ms-fullscreen svg g,
+:root .ie11up svg path,
+:root .ie11up svg g {
   stroke-dasharray: 0 !important;
   stroke-dashoffset: 0 !important;
   opacity: 1 !important; }
+.no-js .ribbon,
+.lt-ie7 .ribbon,
+.lt-ie8 .ribbon,
+.lt-ie9 .ribbon,
+_:-ms-lang(x) .ribbon,
+.ie10up .ribbon,
+_:-ms-fullscreen .ribbon,
+:root .ie11up .ribbon {
+  width: 100%;
+  height: 41rem; }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  svg path {
+  svg path, svg g {
     stroke-dasharray: 0 !important;
     stroke-dashoffset: 0 !important;
-    opacity: 1 !important; } }
+    opacity: 1 !important; }
+
+  .ribbon {
+    width: 100%;
+    height: 41rem; } }
