@@ -65,6 +65,9 @@ TABLET & SMALLER LAPTOPS
 
 	// styles in 768up.scss
 	@import "breakpoints/768up";
+	
+	// arrows
+	@import "modules/arrows";
 
 } // end of media query
 
@@ -75,9 +78,6 @@ DESKTOP
 
 	// styles in 1030up.scss
 	@import "breakpoints/1030up";
-	
-	// arrows
-	@import "modules/arrows";
 
 } // end of media query
 

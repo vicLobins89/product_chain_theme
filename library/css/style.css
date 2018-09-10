@@ -1188,6 +1188,7 @@ LAYOUT & GRID STYLES
     background: #fff;
     padding: 0 0 1.75rem 0;
     border-bottom-right-radius: 40px;
+    cursor: pointer;
     -webkit-transition: background 0.2s ease-in-out;
     transition: background 0.2s ease-in-out; }
     .case-studies .post-item h3 {
@@ -1474,7 +1475,8 @@ HEADER STYLES
     z-index: 999; }
     .header.active .primary-nav {
       max-height: 1000px;
-      max-height: 100vh; }
+      max-height: 100vh;
+      overflow-y: scroll; }
     .header.active .menu-button {
       position: absolute;
       z-index: 9999;
@@ -2035,7 +2037,8 @@ POSTS & CONTENT STYLES
     .entry-content p:last-child {
       margin-bottom: 0.5em; }
   .entry-content ul a, .entry-content ol a, .entry-content table a, .entry-content dl a, .entry-content p a {
-    opacity: 0.8; }
+    opacity: 0.8;
+    text-decoration: underline !important; }
   .entry-content ul:not(.centered-list):not(.icon-list), .entry-content ol {
     font-size: 0; }
     .page-template-default .entry-content ul:not(.centered-list):not(.icon-list), .page-template-default .entry-content ol {
@@ -2367,6 +2370,8 @@ FOOTER STYLES
     width: 75%;
     max-width: 800px;
     margin: auto; }
+  .pre-footer > .wrap > .col-12 > p {
+    font-size: 1.275rem; }
 
 .footer-social {
   text-align: center; }
@@ -2619,9 +2624,9 @@ TABLET & SMALLER LAPTOPS
       padding-left: 10px; }
 
   .page-template-page-quiz h1 {
-    font-size: 2.75rem; }
-  .page-template-page-quiz h2 {
     font-size: 2.5rem; }
+  .page-template-page-quiz h2 {
+    font-size: 2.35rem; }
 
   .q-mark {
     width: 100px;
@@ -2918,79 +2923,19 @@ TABLET & SMALLER LAPTOPS
   .contact-details {
     float: right;
     text-align: left;
-    margin: 0; } }
-/*********************
-DESKTOP
-*********************/
-@media only screen and (min-width: 1030px) {
-  /******************************************************************
-  Site Name: Honey
-  Author: Vic Lobins
-  
-  Stylesheet: Desktop Stylsheet
-  
-  ******************************************************************/
-  h1, .h1 {
-    font-size: 2.85rem; }
-
-  h2, .h2 {
-    font-size: 2.15rem; }
-
-  h3, .h3 {
-    font-size: 1.75rem; }
-
-  h4, .h4 {
-    font-size: 1.7rem; }
-
-  h5, .h5 {
-    font-size: 1.2rem; }
-
-  p {
-    font-size: 1rem; }
-
-  #content {
-    padding-top: 90px; }
-
-  .wrap {
-    max-width: 1020px; }
-
-  .row {
-    padding: 3rem 5rem; }
-    .row h3 {
-      font-size: 1.35rem; }
-
-  .pre-footer {
-    padding: 12rem 5rem 5rem; }
-
-  #logo {
-    width: 150px;
-    background-size: 39px !important; }
-
-  .nav > li ul.sub-menu,
-  .nav > li ul.children {
-    margin: 0 0 0 -180px;
-    width: 360px;
-    top: 90px; }
-
-  .case-studies .col-4 {
-    width: 33%; }
-
-  .centered-list li {
-    margin-bottom: 0; }
-
-  .quote.quote-xl p {
-    font-size: 2.25rem; }
-
-  .circle-el h3 {
-    font-size: 2.35rem; }
-  .circle-el img {
-    width: 9rem; }
+    margin: 0; }
 
   .cta {
     position: relative;
     width: 40rem;
-    margin: auto; }
+    margin: auto; } }
+  @media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1029px) {
+    .cta {
+      max-width: 50%; }
+      .cta .primary-btn:after, .cta a.comment-reply-link:after, .cta #submit:after {
+        padding: 5px; } }
 
+@media only screen and (min-width: 768px) {
   .arrow {
     display: block; }
 
@@ -3215,6 +3160,72 @@ DESKTOP
 
   .bcd3 svg {
     transform: rotate(26deg); } }
+/*********************
+DESKTOP
+*********************/
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+  Site Name: Honey
+  Author: Vic Lobins
+  
+  Stylesheet: Desktop Stylsheet
+  
+  ******************************************************************/
+  h1, .h1 {
+    font-size: 2.85rem; }
+
+  h2, .h2 {
+    font-size: 2.15rem; }
+
+  h3, .h3 {
+    font-size: 1.75rem; }
+
+  h4, .h4 {
+    font-size: 1.7rem; }
+
+  h5, .h5 {
+    font-size: 1.2rem; }
+
+  p {
+    font-size: 1rem; }
+
+  #content {
+    padding-top: 90px; }
+
+  .wrap {
+    max-width: 1020px; }
+
+  .row {
+    padding: 3rem 5rem; }
+    .row h3 {
+      font-size: 1.35rem; }
+
+  .pre-footer {
+    padding: 12rem 5rem 5rem; }
+
+  #logo {
+    width: 150px;
+    background-size: 39px !important; }
+
+  .nav > li ul.sub-menu,
+  .nav > li ul.children {
+    margin: 0 0 0 -180px;
+    width: 360px;
+    top: 90px; }
+
+  .case-studies .col-4 {
+    width: 33%; }
+
+  .centered-list li {
+    margin-bottom: 0; }
+
+  .quote.quote-xl p {
+    font-size: 2.25rem; }
+
+  .circle-el h3 {
+    font-size: 2.35rem; }
+  .circle-el img {
+    width: 9rem; } }
 /*********************
 LARGE VIEWING SIZE
 *********************/

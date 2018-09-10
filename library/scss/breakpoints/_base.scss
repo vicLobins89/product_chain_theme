@@ -533,6 +533,7 @@ LAYOUT & GRID STYLES
 		background: $white;
 		padding: 0 0 1.75rem 0;
 		border-bottom-right-radius: 40px;
+		cursor: pointer;
 		@include transition(background 0.2s ease-in-out);
 		
 		h3 {
@@ -993,6 +994,7 @@ HEADER STYLES
 		.primary-nav {
 			max-height: 1000px;
 			max-height: 100vh;
+			overflow-y: scroll;
 		}
 		
 		.menu-button {
@@ -1697,7 +1699,7 @@ POSTS & CONTENT STYLES
 }
 
 /* entry content */
-.entry-content {
+.entry-content{
 	position: static;
 	padding: 4rem 2rem;
 	
@@ -1754,6 +1756,7 @@ POSTS & CONTENT STYLES
 	ul, ol, table, dl, p {
 		a {
 			opacity: 0.8;
+			text-decoration: underline !important;
 		}
 	}
 
@@ -2294,6 +2297,10 @@ FOOTER STYLES
 		width: 75%;
 		max-width: 800px;
 		margin: auto;
+	}
+	
+	> .wrap > .col-12 > p {
+		font-size: 1.275rem;
 	}
 }
 

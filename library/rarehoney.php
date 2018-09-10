@@ -275,17 +275,19 @@ function bones_related_posts() {
 		if($related_posts) {
 			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
 				<div class="col-4">
-					<div class="post-item"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
-						<?php the_post_thumbnail('rectangle-thumb-s'); ?>
-					</a>
-
-					<h3>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
-							<?php the_title(); ?>
+					<div class="post-item" onclick="window.location='<?php the_permalink(); ?>';">
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
+							<?php the_post_thumbnail('rectangle-thumb-s'); ?>
 						</a>
-					</h3>
 
-					<?php the_excerpt(); ?></div>
+						<h3>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title">
+								<?php the_title(); ?>
+							</a>
+						</h3>
+
+						<?php the_excerpt(); ?>
+					</div>
 				</div>
 			<?php endforeach; }
 		else { ?>

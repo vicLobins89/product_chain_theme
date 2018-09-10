@@ -210,7 +210,7 @@
 												<h2>Case Studies</h2>
 												<?php while ( $case_studies->have_posts() ) : $case_studies->the_post(); ?>
 													<div class="col-4">
-														<div class="post-item">
+														<div class="post-item" onclick="window.location='<?php the_permalink(); ?>';">
 															<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb">
 																<?php the_post_thumbnail('rectangle-thumb-s'); ?>
 															</a>
