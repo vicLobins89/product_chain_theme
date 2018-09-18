@@ -50,10 +50,6 @@
 												<?php if($bgColour) { echo ' style="background: '.$bgColour.';"'; } ?> 
 												onclick="window.location='<?php the_permalink(); ?>';"
 												>
-												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb col-8">
-													<?php the_post_thumbnail('rectangle-thumb-l'); ?>
-												</a>
-												
 												<div class="post-description col-4">
 													<?php
 													if( get_field('cs_logo') ) {
@@ -64,6 +60,10 @@
 													?>
 													<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="read-more">See how we did it</a>
 												</div>
+												
+												<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-thumb col-8">
+													<?php the_post_thumbnail('rectangle-thumb-l'); ?>
+												</a>
 											</div>
 										<?php endwhile; ?>
 										<?php get_sidebar('ribbon'); ?>

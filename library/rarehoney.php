@@ -386,7 +386,7 @@ add_shortcode('ribbon', 'render_ribbon');
 function render_haggis($atts) {
 	return file_get_contents(get_template_directory_uri() . '/library/images/svg/haggis.svg');
 }
-add_shortcode('haggis', 'render_haggis');
+add_shortcode('much-more', 'render_haggis');
 
 function render_arrowUp($atts) {
 	return '<div class="arrow arrow-up">'.file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-up.svg').'</div>';

@@ -63,11 +63,11 @@ body {}
 	padding: 4rem 3rem;
 	
 	blockquote {
-		padding: 0 5rem 0 12rem;
+		padding: 0 5rem 0 9rem;
 		
 		&:before {
-			width: 9rem;
-			height: 9rem;
+			width: 7rem;
+			height: 5rem;
 		}
 		
 		p {
@@ -271,6 +271,12 @@ LAYOUT & GRID STYLES
 .single {
 	.wrap.post {
 		max-width: 71%;
+	}
+	
+	img {
+		&.aligncenter {
+			width: 70%;
+		}
 	}
 }
 

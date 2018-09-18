@@ -177,10 +177,10 @@ html {
 .entry-content {
   padding: 4rem 3rem; }
   .entry-content blockquote {
-    padding: 0 5rem 0 12rem; }
+    padding: 0 5rem 0 9rem; }
     .entry-content blockquote:before {
-      width: 9rem;
-      height: 9rem; }
+      width: 7rem;
+      height: 5rem; }
     .entry-content blockquote p {
       font-size: 1.5rem; }
   .entry-content ul:not(.centered-list):not(.icon-list) .arrows li, .entry-content ol .arrows li {
@@ -290,6 +290,8 @@ LAYOUT & GRID STYLES
 
 .single .wrap.post {
   max-width: 71%; }
+.single img.aligncenter {
+  width: 70%; }
 
 /*********************
 HEADER STYLES

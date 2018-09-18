@@ -141,6 +141,16 @@ img {
 		stroke-dashoffset: 0px;
 	}
 }
+@include keyframes(draw-arrow-up) {
+	to {
+		stroke-dashoffset: 1460px;
+	}
+}
+@include keyframes(draw-chain) {
+	to {
+		stroke-dashoffset: 1060px;
+	}
+}
 @include keyframes(opacity--in) {
 	to {
 		opacity: 1;
@@ -259,7 +269,7 @@ WORDPRESS BODY CLASSES
 	
 	img {
 		&.aligncenter {
-			width: 70%;
+			width: 100%;
 		}
 	}
 }
@@ -433,6 +443,7 @@ LAYOUT & GRID STYLES
 	.case-study {
 		font-size: 0;
 		cursor: pointer;
+		background: $gray;
 		
 		&:nth-child(even) {
 			.post-thumb {
@@ -462,6 +473,7 @@ LAYOUT & GRID STYLES
 
 		.post-thumb {
 			padding: 0;
+			display: block;
 			
 			img {
 				width: 100%;
@@ -629,6 +641,19 @@ LAYOUT & GRID STYLES
 			background: $alt-blue url(../images/icon-arrow-01.png) no-repeat left bottom;
 			background-size: 90%;
     		padding-bottom: 40%;
+		}
+		
+		@media only screen and (max-width: 360px) {
+			padding: 2rem;
+			
+			p {
+				padding-right: 0;
+			}
+			
+			.xl {
+				font-size: 40px !important;
+				text-indent: 0 !important;
+			}
 		}
 	}
 }
@@ -1303,6 +1328,10 @@ POSTS & CONTENT STYLES
 	border-bottom-right-radius: 60px;
 	overflow: hidden;
 	font-size: 0;
+	
+	img {
+		width: 100%;
+	}
 }
 
 .page-title {
@@ -1314,6 +1343,14 @@ POSTS & CONTENT STYLES
 	width: 100%;
 	@include transition(all 1s ease-in-out);
 	z-index: 100;
+	
+	&.featured {
+		left: 0;
+		top: 0;
+		bottom: auto;
+		right: auto;
+		opacity: 1;
+	}
 	
 	&.right {
 		left: auto !important;
@@ -1729,9 +1766,16 @@ POSTS & CONTENT STYLES
 	}
 	
 	.tnc {
-		font-size: 60%;
+		font-size: 12px;
+		font-weight: normal;
+		color: $gray;
 	}
-
+	
+	h4 .tnc {
+		display: inline-block;
+		line-height: 1.5;
+	}
+	
 	p {
 		font-size: 1.275rem;
 		margin: 0 0 1.5em;
@@ -1853,9 +1897,8 @@ POSTS & CONTENT STYLES
 	}
 
 	blockquote {
-		color: $white;
 		position: relative;
-		margin: 0;
+		margin: 2rem 0;
 		padding: 0 1rem 0 4rem;
 
 		&:before {
@@ -2343,6 +2386,7 @@ FOOTER STYLES
 	
 	.page-template-page-quiz &,
 	.blog &,
+	.single &,
 	.page-cookie-policy &,
 	.page-privacy-policy &,
 	.page-terms-conditions & {
@@ -2355,6 +2399,7 @@ FOOTER STYLES
 	
 	.page-template-page-quiz &,
 	.blog &,
+	.single &,
 	.page-cookie-policy &,
 	.page-privacy-policy &,
 	.page-terms-conditions & {
@@ -2496,5 +2541,28 @@ a, a:focus, a:active, a:hover {
 	.top-row + .curved {
 		border-bottom-right-radius: 0;
 		padding-bottom: 0;
+	}
+}
+
+#container {
+	.addtoany_content {
+		margin: 4rem 0 0;
+		clear: both;
+
+		&:before {
+			content: '';
+			display: table;
+		}
+
+		.a2a_kit .a2a_svg {
+			border-radius: 0 !important;
+		}
+	}
+	
+	#ctf .ctf-author-name, 
+	#ctf .ctf-author-screenname, 
+	#ctf .ctf-verified, 
+	#ctf .ctf-tweet-meta {
+		margin-left: 0 !important;	
 	}
 }

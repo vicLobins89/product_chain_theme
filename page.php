@@ -12,22 +12,21 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 								
 								<?php // HERO AREA ?>
-								<?php
-								if( !has_post_thumbnail() && is_front_page() ){
-									echo do_shortcode('[slide-anything id="6"]');
-								}
-								?>
-								
-								<?php if( has_post_thumbnail() ) : ?>
+								<?php if( get_field('slider') ) : ?>
+									<?php
+									$slider = get_field('slider');
+									echo do_shortcode('[slide-anything id="'.$slider->ID.'"]');
+									?>
+								<?php elseif( has_post_thumbnail() && !get_field('slider') ) : ?>
 								<div class="featured-image">
 									<?php the_post_thumbnail('full'); ?>
 									<?php
 									if( get_field('hero_text') ) {
-										echo '<div class="page-title">';
+										echo '<div class="page-title featured">';
 										the_field('hero_text');
 										echo '</div>';
 									} else {
-										echo '<div class="page-title">
+										echo '<div class="page-title featured">
 												<h1 itemprop="headline">'.get_the_title().'</h1>
 											</div>';
 									}

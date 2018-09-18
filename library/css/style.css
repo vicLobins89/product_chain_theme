@@ -940,6 +940,30 @@ img {
 @keyframes draw-line {
   to {
     stroke-dashoffset: 0px; } }
+@-webkit-keyframes draw-arrow-up {
+  to {
+    stroke-dashoffset: 1460px; } }
+@-moz-keyframes draw-arrow-up {
+  to {
+    stroke-dashoffset: 1460px; } }
+@-o-keyframes draw-arrow-up {
+  to {
+    stroke-dashoffset: 1460px; } }
+@keyframes draw-arrow-up {
+  to {
+    stroke-dashoffset: 1460px; } }
+@-webkit-keyframes draw-chain {
+  to {
+    stroke-dashoffset: 1060px; } }
+@-moz-keyframes draw-chain {
+  to {
+    stroke-dashoffset: 1060px; } }
+@-o-keyframes draw-chain {
+  to {
+    stroke-dashoffset: 1060px; } }
+@keyframes draw-chain {
+  to {
+    stroke-dashoffset: 1060px; } }
 @-webkit-keyframes opacity--in {
   to {
     opacity: 1; } }
@@ -1027,7 +1051,7 @@ WORDPRESS BODY CLASSES
 .single .wrap.post {
   max-width: 95%; }
 .single img.aligncenter {
-  width: 70%; }
+  width: 100%; }
 
 /*********************
 LAYOUT & GRID STYLES
@@ -1129,7 +1153,8 @@ LAYOUT & GRID STYLES
   background: #eeeeee; }
   .case-studies .case-study {
     font-size: 0;
-    cursor: pointer; }
+    cursor: pointer;
+    background: #545959; }
     .case-studies .case-study:nth-child(even) .post-thumb {
       float: right; }
     .case-studies .case-study:nth-child(even) .post-description {
@@ -1145,7 +1170,8 @@ LAYOUT & GRID STYLES
         font-size: 1.5rem;
         margin-top: 1.5rem; }
     .case-studies.featured .post-thumb {
-      padding: 0; }
+      padding: 0;
+      display: block; }
       .case-studies.featured .post-thumb img {
         width: 100%;
         height: auto; }
@@ -1244,6 +1270,14 @@ LAYOUT & GRID STYLES
     background: #00bfb2 url(../images/icon-arrow-01.png) no-repeat left bottom;
     background-size: 90%;
     padding-bottom: 40%; }
+  @media only screen and (max-width: 360px) {
+    .quote.quote-xl {
+      padding: 2rem; }
+      .quote.quote-xl p {
+        padding-right: 0; }
+      .quote.quote-xl .xl {
+        font-size: 40px !important;
+        text-indent: 0 !important; } }
 
 .filter-wrapper {
   position: relative;
@@ -1745,6 +1779,8 @@ POSTS & CONTENT STYLES
   border-bottom-right-radius: 60px;
   overflow: hidden;
   font-size: 0; }
+  .featured-image img {
+    width: 100%; }
 
 .page-title {
   position: absolute;
@@ -1756,6 +1792,12 @@ POSTS & CONTENT STYLES
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
   z-index: 100; }
+  .page-title.featured {
+    left: 0;
+    top: 0;
+    bottom: auto;
+    right: auto;
+    opacity: 1; }
   .page-title.right {
     left: auto !important;
     right: -100px; }
@@ -2024,7 +2066,12 @@ POSTS & CONTENT STYLES
   .entry-content h4 em {
     font-size: 60%; }
   .entry-content .tnc {
-    font-size: 60%; }
+    font-size: 12px;
+    font-weight: normal;
+    color: #545959; }
+  .entry-content h4 .tnc {
+    display: inline-block;
+    line-height: 1.5; }
   .entry-content p {
     font-size: 1.275rem;
     margin: 0 0 1.5em; }
@@ -2090,9 +2137,8 @@ POSTS & CONTENT STYLES
     .entry-content th:last-child {
       border-right: 0; }
   .entry-content blockquote {
-    color: #fff;
     position: relative;
-    margin: 0;
+    margin: 2rem 0;
     padding: 0 1rem 0 4rem; }
     .entry-content blockquote:before {
       position: absolute;
@@ -2398,12 +2444,12 @@ FOOTER STYLES
   padding: 2rem 1rem; }
   .footer a, .footer p, .footer li {
     color: #fff; }
-  .page-template-page-quiz .footer, .blog .footer, .archive:not(.post-type-archive-custom_type) .footer, .page-cookie-policy .footer, .page-privacy-policy .footer, .page-terms-conditions .footer {
+  .page-template-page-quiz .footer, .blog .footer, .archive:not(.post-type-archive-custom_type) .footer, .single .footer, .page-cookie-policy .footer, .page-privacy-policy .footer, .page-terms-conditions .footer {
     margin-top: 0; }
 
 #inner-footer {
   margin-top: 60px; }
-  .page-template-page-quiz #inner-footer, .blog #inner-footer, .archive:not(.post-type-archive-custom_type) #inner-footer, .page-cookie-policy #inner-footer, .page-privacy-policy #inner-footer, .page-terms-conditions #inner-footer {
+  .page-template-page-quiz #inner-footer, .blog #inner-footer, .archive:not(.post-type-archive-custom_type) #inner-footer, .single #inner-footer, .page-cookie-policy #inner-footer, .page-privacy-policy #inner-footer, .page-terms-conditions #inner-footer {
     margin-top: 0; }
 
 .footer-links {
@@ -2499,6 +2545,20 @@ a, a:focus, a:active, a:hover {
   border-bottom-right-radius: 0;
   padding-bottom: 0; }
 
+#container .addtoany_content {
+  margin: 4rem 0 0;
+  clear: both; }
+  #container .addtoany_content:before {
+    content: '';
+    display: table; }
+  #container .addtoany_content .a2a_kit .a2a_svg {
+    border-radius: 0 !important; }
+#container #ctf .ctf-author-name,
+#container #ctf .ctf-author-screenname,
+#container #ctf .ctf-verified,
+#container #ctf .ctf-tweet-meta {
+  margin-left: 0 !important; }
+
 /*********************
 LARGER MOBILE DEVICES
 *********************/
@@ -2588,10 +2648,10 @@ TABLET & SMALLER LAPTOPS
   .entry-content {
     padding: 4rem 3rem; }
     .entry-content blockquote {
-      padding: 0 5rem 0 12rem; }
+      padding: 0 5rem 0 9rem; }
       .entry-content blockquote:before {
-        width: 9rem;
-        height: 9rem; }
+        width: 7rem;
+        height: 5rem; }
       .entry-content blockquote p {
         font-size: 1.5rem; }
     .entry-content ul:not(.centered-list):not(.icon-list) .arrows li, .entry-content ol .arrows li {
@@ -2701,6 +2761,8 @@ TABLET & SMALLER LAPTOPS
 
   .single .wrap.post {
     max-width: 71%; }
+  .single img.aligncenter {
+    width: 70%; }
 
   /*********************
   HEADER STYLES
@@ -3015,12 +3077,12 @@ TABLET & SMALLER LAPTOPS
     .arrow-up + .icon-list.alt {
       width: 80%; }
     .arrow-up.in-view .st0 {
-      animation: draw-line 800ms ease-out forwards; }
+      animation: draw-arrow-up 800ms ease-out forwards; }
     .arrow-up.in-view .st1 {
       animation: opacity--in 100ms linear 700ms forwards; }
     .arrow-up .st0 {
       stroke-dasharray: 730px;
-      stroke-dashoffset: -730px; }
+      stroke-dashoffset: 730px; }
     .arrow-up .st1 {
       opacity: 0; }
 
@@ -3033,11 +3095,11 @@ TABLET & SMALLER LAPTOPS
     .chain + .icon-list.alt {
       width: 80%; }
     .chain.in-view .st0a {
-      animation: draw-line 500ms ease-out forwards; }
+      animation: draw-chain 500ms ease-out forwards; }
     .chain.in-view .st1 {
-      animation: draw-line 500ms ease-out 500ms forwards; }
+      animation: draw-chain 500ms ease-out 500ms forwards; }
     .chain.in-view .st0b {
-      animation: draw-line 500ms ease-out 1000ms forwards; }
+      animation: draw-chain 500ms ease-out 1000ms forwards; }
     .chain.in-view .st3a {
       animation: opacity--in 100ms linear 400ms forwards; }
     .chain.in-view .st2 {
@@ -3046,7 +3108,7 @@ TABLET & SMALLER LAPTOPS
       animation: opacity--in 100ms linear 1400ms forwards; }
     .chain .st0 {
       stroke-dasharray: 530px;
-      stroke-dashoffset: -530px; }
+      stroke-dashoffset: 530px; }
     .chain .st1 {
       stroke-dasharray: 560px;
       stroke-dashoffset: 560px; }

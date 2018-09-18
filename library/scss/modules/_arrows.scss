@@ -120,13 +120,13 @@
 	}
 	
 	&.in-view {
-		.st0 { animation: draw-line 800ms ease-out forwards; }
+		.st0 { animation: draw-arrow-up 800ms ease-out forwards; }
 		.st1 { animation: opacity--in 100ms linear 700ms forwards; }
 	}
 	
 	.st0 {
 		stroke-dasharray: 730px;
-		stroke-dashoffset: -730px;
+		stroke-dashoffset: 730px;
 	}
 	
 	.st1 {
@@ -146,9 +146,9 @@
 	}
 	
 	&.in-view {
-		.st0a { animation: draw-line 500ms ease-out forwards; }
-		.st1 { animation: draw-line 500ms ease-out 500ms forwards; }
-		.st0b { animation: draw-line 500ms ease-out 1000ms forwards; }
+		.st0a { animation: draw-chain 500ms ease-out forwards; }
+		.st1 { animation: draw-chain 500ms ease-out 500ms forwards; }
+		.st0b { animation: draw-chain 500ms ease-out 1000ms forwards; }
 		
 		.st3a { animation: opacity--in 100ms linear 400ms forwards; }
 		.st2 { animation: opacity--in 100ms linear 900ms forwards; }
@@ -157,7 +157,7 @@
 	
 	.st0 {
 		stroke-dasharray: 530px;
-		stroke-dashoffset: -530px;
+		stroke-dashoffset: 530px;
 	}
 	
 	.st1 {
