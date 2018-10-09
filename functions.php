@@ -167,7 +167,7 @@ add_action('wp_enqueue_scripts', 'bones_fonts');
 
 // Google Maps API for ACF
 function my_acf_google_map_api( $api ){
-	$api['key'] = 'AIzaSyAYkSQ40G1hKISa4JT2Ryk7ushGIWEOpjI';
+	$api['key'] = 'AIzaSyA9pbur58_0NG3_FUUpv_cpg_MpkPPd41E';
 	return $api;
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

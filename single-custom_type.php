@@ -25,14 +25,22 @@
 								<?php
 								$rowCount;
 								if( have_rows('cs_rows') ) : 
+								$fieldObject = get_field_object('cs_rows');
+								$totalRows = count($fieldObject['value']);
 								while( have_rows('cs_rows') ) : 
 								$rowCount += 1;
 								the_row(); 
 								?>
-									<section class="row cs-row cf <?php echo ($rowCount % 2 == 0 ? 'even' : 'odd curved'); ?>">
+									<section class="row cs-row cf <?php echo ($rowCount % 2 == 0 ? 'even' : 'odd curved'); echo ($rowCount === $totalRows ? ' last' : ''); ?>">
 										<div class="entry-content cf wrap">
 											<div class="col-6"><?php the_sub_field('column_a'); ?></div>
 											<div class="col-6"><?php the_sub_field('columns_b'); ?></div>
+											<?php
+											if( $rowCount % 2 !== 0 ) {
+												 echo '<div class="arrow arrow4 cs-arrow top">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-04.svg') . '</div>';
+												 echo '<div class="arrow arrow4 cs-arrow bottom">' . file_get_contents(get_template_directory_uri() . '/library/images/svg/arrow-outline-04.svg') . '</div>';
+											}
+											?>
 										</div>
 									</section>
 								<?php endwhile; endif; ?>

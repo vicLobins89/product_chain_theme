@@ -728,13 +728,13 @@ INPUTS
       display: block;
       margin: auto; } }
 
-#wpcf7-f5-p2-o2 input[type="text"] {
+.home .wpcf7 input[type="text"] {
   width: 36%;
   border-right: 1px solid #fff; }
-#wpcf7-f5-p2-o2 input[type="email"] {
+.home .wpcf7 input[type="email"] {
   width: 37%; }
 @media only screen and (max-width: 767px) {
-  #wpcf7-f5-p2-o2 input[type="text"], #wpcf7-f5-p2-o2 input[type="email"] {
+  .home .wpcf7 input[type="text"], .home .wpcf7 input[type="email"] {
     width: 100%; } }
 
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], select, textarea, .field {
@@ -1070,6 +1070,7 @@ LAYOUT & GRID STYLES
   .row .primary-btn, .row a.comment-reply-link, .row #submit {
     margin: 3rem auto; }
   .row.curved {
+    width: 100%;
     border-bottom-right-radius: 60px;
     z-index: 4;
     overflow: hidden; }
@@ -1238,12 +1239,21 @@ LAYOUT & GRID STYLES
 .custom_type .cta {
   margin: 3rem auto; }
 
+.cs-row.curved {
+  overflow: visible; }
 .cs-row.odd {
   background: #eeeeee; }
 .cs-row .col-6 {
   padding: 1.5rem; }
   .cs-row .col-6:last-child p, .cs-row .col-6:last-child img {
     margin-bottom: 0; }
+.cs-row .entry-content {
+  position: relative; }
+.cs-row.last .arrow.bottom {
+  display: none; }
+
+.entry-content + .cs-row .arrow.top {
+  display: none; }
 
 .quote.quote-xl {
   background: #00bfb2;
@@ -1304,6 +1314,10 @@ LAYOUT & GRID STYLES
   margin: 1rem auto; }
 .page-template-page-quiz h2 {
   font-size: 1.9rem; }
+  @media only screen and (max-width: 359px) {
+    .page-template-page-quiz h2 {
+      font-size: 1.5rem;
+      width: 100%; } }
   .page-template-page-quiz h2 span {
     display: block;
     font-size: 50%; }
@@ -1320,6 +1334,9 @@ LAYOUT & GRID STYLES
   visibility: hidden;
   -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out; }
+  @media only screen and (max-width: 359px) {
+    .page-template-page-quiz .entry-content {
+      padding: 10px; } }
   .page-template-page-quiz .entry-content.active {
     left: 0%;
     z-index: 10;
@@ -2444,12 +2461,12 @@ FOOTER STYLES
   padding: 2rem 1rem; }
   .footer a, .footer p, .footer li {
     color: #fff; }
-  .page-template-page-quiz .footer, .blog .footer, .archive:not(.post-type-archive-custom_type) .footer, .single .footer, .page-cookie-policy .footer, .page-privacy-policy .footer, .page-terms-conditions .footer {
+  .page-template-page-quiz .footer, .blog .footer, .archive:not(.post-type-archive-custom_type) .footer, .single:not(.single-custom_type) .footer, .page-cookie-policy .footer, .page-privacy-policy .footer, .page-terms-conditions .footer {
     margin-top: 0; }
 
 #inner-footer {
   margin-top: 60px; }
-  .page-template-page-quiz #inner-footer, .blog #inner-footer, .archive:not(.post-type-archive-custom_type) #inner-footer, .single #inner-footer, .page-cookie-policy #inner-footer, .page-privacy-policy #inner-footer, .page-terms-conditions #inner-footer {
+  .page-template-page-quiz #inner-footer, .blog #inner-footer, .archive:not(.post-type-archive-custom_type) #inner-footer, .single:not(.single-custom_type) #inner-footer, .page-cookie-policy #inner-footer, .page-privacy-policy #inner-footer, .page-terms-conditions #inner-footer {
     margin-top: 0; }
 
 .footer-links {
@@ -2558,6 +2575,12 @@ a, a:focus, a:active, a:hover {
 #container #ctf .ctf-verified,
 #container #ctf .ctf-tweet-meta {
   margin-left: 0 !important; }
+
+.fts-twitter-div a {
+  color: #ed691c !important; }
+
+#twitter-feed-ProductChain .fts-powered-by-text {
+  display: none !important; }
 
 /*********************
 LARGER MOBILE DEVICES
@@ -2810,7 +2833,7 @@ TABLET & SMALLER LAPTOPS
     bottom: -58px;
     width: 100%;
     height: 60px;
-    background: url(../images/shadow-bg.png) repeat 0 0;
+    background: url(../images/shadow-bg.png) repeat-x 0 0;
     background-size: contain;
     z-index: 10; }
 
@@ -3051,6 +3074,14 @@ TABLET & SMALLER LAPTOPS
     position: absolute;
     left: -130px;
     bottom: -20px; }
+    .arrow4.cs-arrow {
+      transform: rotate(72deg);
+      left: 0; }
+      .arrow4.cs-arrow.top {
+        bottom: auto;
+        top: -5rem; }
+      .arrow4.cs-arrow.bottom {
+        bottom: -5rem; }
     .arrow4.in-view .st0 {
       animation: draw-line 800ms ease-out forwards; }
     .arrow4.in-view .st1 {
@@ -3130,36 +3161,36 @@ TABLET & SMALLER LAPTOPS
       stroke-dasharray: 850px;
       stroke-dashoffset: 850px; }
 
-  .page-consultancy .arrow4 .st0,
+  .page-consultancy .arrow4:not(.cs-arrow) .st0,
   .page-consultancy .arrow3 .st1,
   .page-consultancy .arrow2 .st1,
   .page-consultancy .arrow1 .st0,
-  .page-new-product-launches .arrow4 .st0,
+  .page-new-product-launches .arrow4:not(.cs-arrow) .st0,
   .page-new-product-launches .arrow3 .st1,
   .page-new-product-launches .arrow2 .st1,
   .page-new-product-launches .arrow1 .st0,
-  .page-business-channel-development .arrow4 .st0,
+  .page-business-channel-development .arrow4:not(.cs-arrow) .st0,
   .page-business-channel-development .arrow3 .st1,
   .page-business-channel-development .arrow2 .st1,
   .page-business-channel-development .arrow1 .st0,
-  .single-custom_type .arrow4 .st0,
+  .single-custom_type .arrow4:not(.cs-arrow) .st0,
   .single-custom_type .arrow3 .st1,
   .single-custom_type .arrow2 .st1,
   .single-custom_type .arrow1 .st0 {
     stroke: #0096a8; }
-  .page-consultancy .arrow4 .st1,
+  .page-consultancy .arrow4:not(.cs-arrow) .st1,
   .page-consultancy .arrow3 .st0,
   .page-consultancy .arrow2 .st0,
   .page-consultancy .arrow1 .st1,
-  .page-new-product-launches .arrow4 .st1,
+  .page-new-product-launches .arrow4:not(.cs-arrow) .st1,
   .page-new-product-launches .arrow3 .st0,
   .page-new-product-launches .arrow2 .st0,
   .page-new-product-launches .arrow1 .st1,
-  .page-business-channel-development .arrow4 .st1,
+  .page-business-channel-development .arrow4:not(.cs-arrow) .st1,
   .page-business-channel-development .arrow3 .st0,
   .page-business-channel-development .arrow2 .st0,
   .page-business-channel-development .arrow1 .st1,
-  .single-custom_type .arrow4 .st1,
+  .single-custom_type .arrow4:not(.cs-arrow) .st1,
   .single-custom_type .arrow3 .st0,
   .single-custom_type .arrow2 .st0,
   .single-custom_type .arrow1 .st1 {

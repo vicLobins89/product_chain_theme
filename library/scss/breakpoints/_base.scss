@@ -301,6 +301,7 @@ LAYOUT & GRID STYLES
 	}
 	
 	&.curved {
+		width: 100%;
 		border-bottom-right-radius: 60px;
 		z-index: 4;
 		overflow: hidden;
@@ -587,6 +588,10 @@ LAYOUT & GRID STYLES
 }
 
 .cs-row {
+	&.curved {
+		overflow: visible;
+	}
+	
 	&.odd {
 		background: $light-gray;
 	}
@@ -603,6 +608,22 @@ LAYOUT & GRID STYLES
 				margin-bottom: 0;
 			}
 		}
+	}
+	
+	.entry-content {
+		position: relative;
+	}
+	
+	&.last {
+		.arrow.bottom {
+			display: none;
+		}
+	}
+}
+
+.entry-content + .cs-row {
+	.arrow.top {
+		display: none;
 	}
 }
 
@@ -698,6 +719,10 @@ LAYOUT & GRID STYLES
 	
 	h2 {
 		font-size: 1.9rem;
+		@media only screen and (max-width: 359px) {
+			font-size: 1.5rem;
+			width: 100%;
+		}
 		
 		span {
 			display: block;
@@ -717,6 +742,7 @@ LAYOUT & GRID STYLES
 		z-index: 2;
 		visibility: hidden;
 		@include transition(all 1s ease-in-out);
+		@media only screen and (max-width: 359px) { padding: 10px; }
 		
 		&.active {
 			left: 0%;
@@ -2386,7 +2412,7 @@ FOOTER STYLES
 	
 	.page-template-page-quiz &,
 	.blog &,
-	.single &,
+	.single:not(.single-custom_type) &,
 	.page-cookie-policy &,
 	.page-privacy-policy &,
 	.page-terms-conditions & {
@@ -2399,7 +2425,7 @@ FOOTER STYLES
 	
 	.page-template-page-quiz &,
 	.blog &,
-	.single &,
+	.single:not(.single-custom_type) &,
 	.page-cookie-policy &,
 	.page-privacy-policy &,
 	.page-terms-conditions & {
@@ -2565,4 +2591,12 @@ a, a:focus, a:active, a:hover {
 	#ctf .ctf-tweet-meta {
 		margin-left: 0 !important;	
 	}
+}
+
+.fts-twitter-div a {
+	color: $orange !important;
+}
+
+#twitter-feed-ProductChain .fts-powered-by-text {
+	display: none !important;
 }

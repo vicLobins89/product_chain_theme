@@ -84,6 +84,20 @@
     left: -130px;
     bottom: -20px;
 	
+	&.cs-arrow {
+		transform: rotate(72deg);
+		left: 0;
+		
+		&.top {
+			bottom: auto;
+    		top: -5rem;
+		}
+		
+		&.bottom {
+			bottom: -5rem;
+		}
+	}
+	
 	&.in-view {
 		.st0 { animation: draw-line 800ms ease-out forwards; }
 		.st1 { animation: opacity--in 100ms linear 700ms forwards; }
@@ -195,14 +209,14 @@
 .page-new-product-launches,
 .page-business-channel-development,
 .single-custom_type {
-	.arrow4 .st0,
+	.arrow4:not(.cs-arrow) .st0,
 	.arrow3 .st1,
 	.arrow2 .st1,
 	.arrow1 .st0 {
 		stroke: $blue;
 	}
 	
-	.arrow4 .st1,
+	.arrow4:not(.cs-arrow) .st1,
 	.arrow3 .st0,
 	.arrow2 .st0,
 	.arrow1 .st1 {

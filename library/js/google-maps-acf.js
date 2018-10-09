@@ -76,7 +76,7 @@ function add_marker( $marker, map ) {
 	var marker = new google.maps.Marker({
 		position	: latlng,
 		map			: map,
-		icon		: '/product-chain/wp-content/themes/product_chain_theme/library/images/map-marker.png'
+		icon		: '/wp-content/themes/product_chain_theme/library/images/map-marker.png'
 	});
 
 	// add to array

@@ -139,7 +139,7 @@ function bones_scripts_and_styles() {
 		// adding scripts file in the footer
 		wp_register_script( 'masonry-js', get_stylesheet_directory_uri() . '/library/js/masonry.pkgd.min.js', array( 'jquery' ), '', true );
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '0', true );
-		wp_register_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAYkSQ40G1hKISa4JT2Ryk7ushGIWEOpjI', array( 'jquery' ), '', true );
+		wp_register_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA9pbur58_0NG3_FUUpv_cpg_MpkPPd41E', array( 'jquery' ), '', true );
 		wp_register_script( 'google-maps-acf', get_stylesheet_directory_uri() . '/library/js/google-maps-acf.js', array( 'jquery' ), '', true );
 
 		// enqueue styles and scripts
