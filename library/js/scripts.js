@@ -85,7 +85,7 @@ jQuery(document).ready(function($) {
 		$catLink = $('.cat-item a'),
 		$contentArea = $('.posts-main');
 	
-	$catLink.each(function(i, el){	
+	$catLink.each(function(i, el) {
 		$(el).on('mouseover', function(){
 			catLinkHref = $(el).attr('href');
 			
@@ -113,7 +113,7 @@ jQuery(document).ready(function($) {
 			}
 		}
 		
-		$(el).on('click', function(e){
+		$(el).on('click', function(e) {
 			e.preventDefault();
 			
 			if( !$(this).hasClass('active') ) {
